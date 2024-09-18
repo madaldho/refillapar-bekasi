@@ -1,0 +1,143 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { contentfulClient } from "../../lib/contentful";
+import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
+import type { BlogPost } from "../../lib/contentful";
+import { SocialShare } from "astro-social-share"; // socialshare icon page
+import { marked } from "marked"; // Import package marked untuk parsing Markdown
+
+
+
+// Ambil semua paths untuk halaman dynamic
+export async function getStaticPaths() {
+  const entries = await contentfulClient.getEntries<BlogPost>({
+    content_type: "blogPost",
+  });
+
+  return entries.items.map((item) => ({
+    params: { slug: item.fields.slug }, // Menentukan slug yang akan di-generate
+  }));
+}
+
+// Ambil data post berdasarkan slug
+const { slug } = Astro.params;
+const entries = await contentfulClient.getEntries<BlogPost>({
+  content_type: "blogPost",
+  "fields.slug": slug,
+});
+
+if (!entries.items.length) {
+  throw new Error("Post not found");
+}
+
+const post = entries.items[0].fields;
+
+
+
+// Konversi markdown menjadi HTML
+const contentHtml = marked(post.content); // Konversi Markdown ke HTML
+
+
+// Ambil 3 related posts yang tidak memiliki slug yang sama
+const relatedPostsEntries = await contentfulClient.getEntries<BlogPost>({
+  content_type: "blogPost",
+  limit: 3, // Batasi jumlah related posts
+  "fields.slug[ne]": slug, // Exclude current post by slug
+});
+
+
+
+const relatedPosts = relatedPostsEntries.items.map((item) => {
+  const { title, slug, description, date, image } = item.fields;
+  return {
+    title,
+    slug,
+    description,
+    date: new Date(date).toLocaleDateString(),
+    imageUrl: image?.fields?.file?.url,
+  };
+});
+---
+
+<BaseLayout>
+  <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+    <!-- Bagian Header -->
+    <time class="block text-center text-gray-500 text-sm">
+      {new Date(post.date).toLocaleDateString()}
+    </time>
+    <h1 class="text-5xl font-extrabold text-center text-gray-900 mb-8">
+      {post.title}
+    </h1>
+
+    <div class="border-t-2 border-gray-400 mb-10"></div>
+
+    <!-- Gambar Post -->
+    {post.image && (
+      <div class="flex items-center justify-center overflow-hidden rounded-lg shadow-lg mb-11">
+        <img
+          src={post.image.fields.file.url}
+          alt={post.title}
+          class="w-40"
+        />
+      </div>
+    )}
+ <!-- Bagian Artikel -->
+ <article class="prose lg:prose-xl mx-auto bg-white shadow-md rounded-lg p-8">
+  <!-- Konten yang sudah dikonversi dari Markdown ke HTML -->
+  <div set:html={contentHtml}></div>
+</article>
+
+
+    <!-- Bagian Footer atau tambahan lainnya -->
+    <div class="text-center mt-12">
+      <a href="/posts" class="inline-block text-blue-600 text-lg font-semibold hover:underline">
+        &larr; Kembali ke Blog
+      </a>
+    </div>
+  </div>
+
+  <div class="text-center">
+    <p>Share Social Media</p>
+    <SocialShare description="" title="" />
+  </div>
+
+  <!-- Bagian Related Posts -->
+<div class="container max-w-7xl mx-auto px-5 md:px-20 py-12">
+  <h2 class="text-3xl font-bold text-center mb-8">Related Posts</h2>
+  <!-- Grid Container for 3 Posts per Row -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+    {relatedPosts.map((post) => (
+      <div key={post.slug} class="group relative bg-white overflow-hidden rounded-3xl transition-all duration-500 ease-in-out transform hover:scale-105">
+        
+        <!-- Image Section -->
+        <div class="relative overflow-hidden rounded-3xl transition-shadow duration-500 ease-in-out">
+          {post.imageUrl && (
+            <img
+              src={post.imageUrl}
+              alt={post.title}
+              class="w-full h-full max-h-fit object-cover transition-all duration-500 ease-in-out"
+            />
+          )}
+          <!-- Overlay on hover -->
+          <div class="absolute inset-0 bg-gray-100 opacity-0 hover:opacity-60 transition-opacity duration-500 ease-in-out"></div>
+        </div>
+
+        <!-- Content Section -->
+        <div class="p-3">
+          <h2 class="text-xl font-bold text-gray-800 group-hover:text-red-600 transition-colors duration-300 truncate">
+            {post.title}
+          </h2>
+          <p class="text-gray-600 mt-3 truncate">
+            {post.description}
+          </p>
+          <a href={`/posts/${post.slug}`} class="mt-4 inline-flex items-center justify-center px-4 py-2 border-2 border-black text-black rounded-3xl hover:bg-black hover:text-white transition duration-300 ease-in-out">
+            Read more
+          </a>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+</BaseLayout>
+

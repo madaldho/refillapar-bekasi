@@ -1,0 +1,335 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Title dan description untuk meta
+const titlemeta = "Layanan Proteksi Kebakaran Tangguh-Tentang Kami";
+const descriptionmeta =
+  "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
+---
+
+<BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
+  <section
+    class="relative py-16 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 overflow-hidden">
+    <!-- Animated Background Particles -->
+    <div class="absolute inset-0">
+      <div
+        class="w-80 h-80 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 opacity-40 rounded-full blur-2xl absolute -top-10 -left-10 animate-float-slow">
+      </div>
+      <div
+        class="w-64 h-64 bg-gradient-to-r from-orange-300 via-yellow-400 to-red-400 opacity-40 rounded-full blur-2xl absolute top-20 right-0 animate-float-slow">
+      </div>
+      <div
+        class="w-72 h-72 bg-gradient-to-r from-yellow-500 via-orange-300 to-red-600 opacity-40 rounded-full blur-2xl absolute -bottom-20 right-16 animate-float-slow">
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div
+      class="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 text-white">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold  leading-tight tracking-tight text-shadow-md">
+          Produk Kami Yang Luarbiasa
+        </h2>
+        <p
+          class="mt-4 text-lg lg:text-xl max-w-2xl mx-auto opacity-90 leading-relaxed">
+          Kami berkomitmen untuk menjaga keselamatan Anda dengan teknologi
+          mutakhir dan tim ahli yang berdedikasi tinggi.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 md:px-52 px-2">
+    <h2 class="text-center text-2xl mb-2 font-bold leading-8">
+      Lihat Lebih Dekat Dengan Produk Kami
+    </h2>
+    <div class="container mx-auto px-4 md:px-8">
+      <!-- Section for Cards 5, 6, 7 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-10 my-10">
+  
+        <!-- Card 5 -->
+        <div class="relative group shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img src="../../public/logo page rumah api/firesplink.webp" alt="Fire Sprinkler" class="object-cover w-full h-48 rounded-lg transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50 rounded-lg"></div>
+          <div class="absolute bottom-4 left-4 text-white font-bold text-lg transition-all duration-300 group-hover:bottom-0">
+            Fire Sprinkler
+          </div>
+        </div>
+  
+        <!-- Card 6 -->
+        <div class="relative group shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img src="../../public/logo page rumah api/fire system.webp" alt="Fire System" class="object-cover w-full h-48 rounded-lg transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50 rounded-lg"></div>
+          <div class="absolute bottom-4 left-4 text-white font-bold text-lg transition-all duration-300 group-hover:bottom-0">
+            Fire System
+          </div>
+        </div>
+  
+        <!-- Card 7 -->
+        <div class="relative group shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img src="../../public/logo page rumah api/firedoor.webp" alt="Fire Door" class="object-cover w-full h-48 rounded-lg transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50 rounded-lg"></div>
+          <div class="absolute bottom-4 left-4 text-white font-bold text-lg transition-all duration-300 group-hover:bottom-0">
+            Fire Door
+          </div>
+        </div>
+  
+      </div>
+  
+      <!-- Section for Cards 1, 2, 3, 4 -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+  
+        <!-- Card 1 -->
+        <div class="relative group shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img src="../../public/logo page rumah api/1.fireexhaus.webp" alt="Fire Extinguisher" class="object-cover w-full h-48 rounded-lg transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50 rounded-lg"></div>
+          <div class="absolute bottom-4 left-4 text-white font-bold text-lg transition-all duration-300 group-hover:bottom-0">
+            Fire Extinguisher
+          </div>
+        </div>
+  
+        <!-- Card 2 -->
+        <div class="relative group shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img src="../../public/logo page rumah api/fire alarm.webp" alt="Fire Alarm" class="object-cover w-full h-48 rounded-lg transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50 rounded-lg"></div>
+          <div class="absolute bottom-4 left-4 text-white font-bold text-lg transition-all duration-300 group-hover:bottom-0">
+            Fire Alarm
+          </div>
+        </div>
+  
+        <!-- Card 3 -->
+        <div class="relative group shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img src="../../public/logo page rumah api/fire hydrant.webp" alt="Fire Hydrant" class="object-cover w-full h-48 rounded-lg transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50 rounded-lg"></div>
+          <div class="absolute bottom-4 left-4 text-white font-bold text-lg transition-all duration-300 group-hover:bottom-0">
+            Fire Hydrant
+          </div>
+        </div>
+  
+        <!-- Card 4 -->
+        <div class="relative group shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img src="../../public/logo page rumah api/firew pump.webp" alt="Fire Pump" class="object-cover w-full h-48 rounded-lg transition-transform duration-300 group-hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-t from-black opacity-50 rounded-lg"></div>
+          <div class="absolute bottom-4 left-4 text-white font-bold text-lg transition-all duration-300 group-hover:bottom-0">
+            Fire Pump
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  
+  
+  
+  
+  
+ 
+  <!--Swipper logo -->
+  <section class="bg-gray-200 text-black py-8 shadow-md">
+    <h2 class="text-center text-2xl mb-2 font-bold leading-8">
+      Produk Andalan RumahApi
+    </h2>
+    <p class="text-center text-lg font-extralight leading-8 px-3 md:px-36">
+      RumahApi menawarkan produk proteksi kebakaran berkualitas tinggi yang
+      dirancang untuk ketahanan maksimal dan keandalan jangka panjang. Kami
+      memastikan keamanan terbaik dengan teknologi terkini yang siap melindungi
+      aset Anda.
+    </p>
+
+    <!-- Carousel container -->
+    <div
+      class="logos group relative overflow-hidden whitespace-nowrap py-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+      <!-- First set of logos -->
+      <!-- Loop pertama gambar-gambar mitra -->
+      <div
+        class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/1.pertamina.webp"
+          alt="Pertamina"
+        />
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/2.bi.webp"
+          alt="Bank Indonesia"
+        />
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/3.kemenker.webp"
+          alt="Kementerian Ketenagakerjaan"
+        />
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/4.telkom.webp"
+          alt="Telkom"
+        />
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/5.pustekom.webp"
+          alt="Pustekom"
+        />
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/6.lp.webp"
+          alt="Lembaga Pendidikan"
+        />
+      </div>
+
+      <!-- Loop kedua gambar-gambar mitra untuk efek infinite scroll -->
+      <div
+        class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/1.pertamina.webp"
+          alt="Pertamina"
+        />
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/2.bi.webp"
+          alt="Bank Indonesia"
+        />
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/3.kemenker.webp"
+          alt="Kementerian Ketenagakerjaan"
+        />
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/4.telkom.webp"
+          alt="Telkom"
+        />
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/5.pustekom.webp"
+          alt="Pustekom"
+        />
+        <img
+          class="mx-4 inline h-16"
+          src="../../public/mitra rumahapi/6.lp.webp"
+          alt="Lembaga Pendidikan"
+        />
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .swiper-button-next,
+    .swiper-button-prev {
+      color: #333; /* Ubah warna tombol navigasi */
+    }
+  </style>
+
+  <!--Klient Terpercaya -->
+  <section class="text-gray-900 bg-white py-16">
+    <div class="container mx-auto">
+      <!-- Section Header -->
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-gray-800">Klien Terpercaya Kami</h2>
+        <p class="mt-4 text-gray-600 px-10 md:px-36">
+          Kami bangga telah bekerja sama dengan berbagai perusahaan terkemuka
+          untuk menghadirkan solusi perlindungan kebakaran yang terbaik. Jadilah
+          bagian dari mereka dan pastikan keamanan bisnis Anda bersama kami.
+        </p>
+      </div>
+
+      <!-- Partners Logos -->
+      <div
+        class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center p-3">
+        <img
+          src="../../public/mitra rumahapi/1.pertamina.webp"
+          alt="Pertamina"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/2.bi.webp"
+          alt="BI"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/3.kemenker.webp"
+          alt="Kemenker"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/4.telkom.webp"
+          alt="Telkom"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/5.pustekom.webp"
+          alt="Pustekom"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/6.lp.webp"
+          alt="LP"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/7.esar.webp"
+          alt="Esar"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/8.pt delta djakarta.webp"
+          alt="PT Delta Djakarta"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/9.mikie.webp"
+          alt="Mikie"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/10.oalkwood.webp"
+          alt="Oalkwood"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/11.indokomas.webp"
+          alt="Indokomas"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/12.deut bank.webp"
+          alt="Deut Bank"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/13.kominfo.webp"
+          alt="Kominfo"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/14.bank jateng.webp"
+          alt="Bank Jateng"
+          class="h-16 mx-auto"
+        />
+        <img
+          src="../../public/mitra rumahapi/15.lg.webp"
+          alt="LG"
+          class="h-16 mx-auto"
+        />
+      </div>
+      <div>
+        <img
+          src="../../public/mitra rumahapi/lebihdari100klient.webp"
+          alt="100 klien lebih"
+          class="w-full md:w-9/12 mx-auto mt-10"
+        />
+      </div>
+
+      <!-- CTA Buttons -->
+      <div class="flex justify-center mt-10 space-x-6">
+        <a href="/portofolio" class="no-underline">
+          <button
+            class="px-6 py-2 bg-gradient-to-r from-red-500 via-red-600 to-red-700 text-white rounded-lg shadow hover:bg-red-800 transition-all duration-300 hover:shadow-lg transform hover:scale-105">
+            Lihat Portofolio Klien
+          </button>
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

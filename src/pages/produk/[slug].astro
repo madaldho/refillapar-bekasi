@@ -1,0 +1,72 @@
+---
+// Import layout dan client untuk mengambil data dari Contentful
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { contentfulClient } from '../../lib/contentful';
+import type { Product } from '../../lib/contentful';
+
+// Ambil semua paths untuk halaman dynamic
+export async function getStaticPaths() {
+  const entries = await contentfulClient.getEntries<Product>({
+    content_type: 'product', // Sesuaikan dengan content_type produk di Contentful
+  });
+
+  return entries.items.map((item) => ({
+    params: { slug: item.fields.slug }, // Menentukan slug yang akan di-generate
+  }));
+}
+
+// Ambil parameter slug dari URL
+const { slug } = Astro.params;
+
+// Ambil data produk dari Contentful berdasarkan slug
+const entries = await contentfulClient.getEntries<Product>({
+  content_type: 'product',
+  'fields.slug': slug,
+});
+
+// Jika produk tidak ditemukan
+if (!entries.items.length) {
+  throw new Error("Product not found");
+}
+
+const product = entries.items[0].fields;
+---
+
+<BaseLayout>
+    <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap items-center justify-center">
+            <!-- Gambar Produk -->
+            <div class="w-full lg:w-1/2 flex justify-center">
+              <img 
+                alt={product.title} 
+                class="object-cover object-center rounded shadow-lg w-full lg:h-auto"
+                src={product.image[0].fields.file.url}>
+            </div>
+            
+            <!-- Detail Produk -->
+            <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest ">PRODUCT</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-1 ">{product.title}</h1>
+              
+              <!-- Spesifikasi Produk -->
+              <div class="prose lg:prose-xl mb-4 mt-6" set:html={product.spesifikasi}></div>
+
+              <div class="flex mt-6 items-center justify-center border-b-2 border-gray-100 mb-5"></div>
+              
+              <!-- Harga dan Tombol Beli -->
+              <div class="flex justify-between items-center">
+                <span class="title-font font-medium text-2xl text-gray-900">Rp. {product.price.toLocaleString()}</span>
+                <button class="ml-auto text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded">
+                  Beli Sekarang
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Deskripsi Produk (di bawah konten utama) -->
+      <p class="leading-relaxed prose lg:prose-lg mb-4 p-10" set:html={product.content}></p>
+</BaseLayout>
+
