@@ -1,0 +1,173 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Title dan description untuk meta
+const titlemeta = "Layanan Proteksi Kebakaran Tangguh-Refil APAR";
+const descriptionmeta =
+  "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
+---
+
+<BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
+  <section
+    class="relative py-16 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 overflow-hidden">
+    <!-- Animated Background Particles -->
+    <div class="absolute inset-0">
+      <div
+        class="w-80 h-80 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 opacity-40 rounded-full blur-2xl absolute -top-10 -left-10 animate-float-slow">
+      </div>
+      <div
+        class="w-64 h-64 bg-gradient-to-r from-orange-300 via-yellow-400 to-red-400 opacity-40 rounded-full blur-2xl absolute top-20 right-0 animate-float-slow">
+      </div>
+      <div
+        class="w-72 h-72 bg-gradient-to-r from-yellow-500 via-orange-300 to-red-600 opacity-40 rounded-full blur-2xl absolute -bottom-20 right-16 animate-float-slow">
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div
+      class="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 text-white">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2
+          class="text-5xl font-bold leading-tight tracking-tight text-shadow-md">
+          Layanan Isi Ulang APAR On-Site
+        </h2>
+        <p
+          class="mt-4 text-lg lg:text-xl max-w-2xl mx-auto opacity-90 leading-relaxed">
+          Solusi mudah untuk pengisian ulang alat pemadam api langsung di lokasi
+          Anda. Kami hadir untuk memberikan kenyamanan tanpa repot!
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <a
+          href="#"
+          class="inline-block px-8 py-3 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+          Buat Jadwal
+        </a>
+      
+      </div>
+    </div>
+  </section>
+
+  <!-- Section: Refill APAR Services -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-6">
+      
+      
+      <!-- Service Features Section -->
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <!-- Feature 1 -->
+        <div
+          class="p-6 bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-12 h-12 mx-auto bg-blue-100 rounded-full flex items-center justify-center mb-4">
+            <svg
+              class="w-6 h-6 text-blue-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path d="M12 8v4l3 3M8 12h8"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Media Berkualitas Tinggi
+          </h3>
+          <p class="text-gray-600">
+            Kami hanya menggunakan bahan isi ulang APAR terbaik yang memenuhi
+            standar internasional untuk keamanan maksimal.
+          </p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div
+          class="p-6 bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-12 h-12 mx-auto bg-green-100 rounded-full flex items-center justify-center mb-4">
+            <svg
+              class="w-6 h-6 text-green-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path d="M12 8v4l3 3M8 12h8"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Layanan Hemat Waktu
+          </h3>
+          <p class="text-gray-600">
+            Tidak perlu membawa APAR ke tempat kami. Tim kami akan datang
+            langsung untuk melakukan pengisian ulang di lokasi Anda.
+          </p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div
+          class="p-6 bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-12 h-12 mx-auto bg-orange-100 rounded-full flex items-center justify-center mb-4">
+            <svg
+              class="w-6 h-6 text-orange-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path d="M12 8v4l3 3M8 12h8"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Backup APAR Gratis
+          </h3>
+          <p class="text-gray-600">
+            Kami menyediakan alat pengganti sementara jika proses pengisian
+            ulang memakan waktu lebih lama, memastikan perlindungan Anda tetap
+            optimal.
+          </p>
+        </div>
+
+        <!-- Feature 4 -->
+        <div
+          class="p-6 bg-white rounded-3xl shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+          <div
+            class="w-12 h-12 mx-auto bg-purple-100 rounded-full flex items-center justify-center mb-4">
+            <svg
+              class="w-6 h-6 text-purple-500"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path d="M12 8v4l3 3M8 12h8"></path>
+            </svg>
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-2">
+            Pelatihan Singkat APAR
+          </h3>
+          <p class="text-gray-600">
+            Dapatkan pelatihan gratis tentang penggunaan APAR yang benar ketika
+            kami melakukan pengisian ulang.
+          </p>
+        </div>
+      </div>
+
+   
+      <!-- Final CTA Section -->
+      <div class="mt-12 text-center">
+        <h3 class="text-3xl font-bold text-gray-900">
+          Semua Jenis dan Merek APAR Dapat Kami Tangani
+        </h3>
+        <p class="mt-4 text-gray-600">
+          Kami melayani pengisian ulang berbagai jenis alat pemadam api, mulai
+          dari APAR Powder hingga CO2 dan foam. Garansi kualitas terbaik untuk
+          setiap layanan kami.
+        </p>
+        <a
+          href="#"
+          class="mt-6 inline-block px-8 py-3 bg-gradient-to-r from-red-500 to-yellow-500 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-105"
+          >Buat Jadwal</a
+        >
+      </div>
+    </div>
+  </section>
+</BaseLayout>

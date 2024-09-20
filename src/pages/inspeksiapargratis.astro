@@ -1,0 +1,101 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+// Title dan description untuk meta
+const titlemeta = "Layanan Proteksi Kebakaran Tangguh-Inspeksi APAR FREE";
+const descriptionmeta =
+  "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
+---
+
+<BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
+  <section
+    class="relative py-16 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 overflow-hidden">
+    <!-- Animated Background Particles -->
+    <div class="absolute inset-0">
+      <div
+        class="w-80 h-80 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 opacity-40 rounded-full blur-2xl absolute -top-10 -left-10 animate-float-slow">
+      </div>
+      <div
+        class="w-64 h-64 bg-gradient-to-r from-orange-300 via-yellow-400 to-red-400 opacity-40 rounded-full blur-2xl absolute top-20 right-0 animate-float-slow">
+      </div>
+      <div
+        class="w-72 h-72 bg-gradient-to-r from-yellow-500 via-orange-300 to-red-600 opacity-40 rounded-full blur-2xl absolute -bottom-20 right-16 animate-float-slow">
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div
+      class="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 text-white">
+      <!-- Section Header -->
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold leading-tight tracking-tight text-shadow-md">
+            Kenapa Inspeksi APAR Penting dan Sering Terlupakan?
+        </h2>
+        <p
+          class="mt-4 text-lg lg:text-xl max-w-2xl mx-auto opacity-90 leading-relaxed">
+          Pemeriksaan APAR seharusnya dilakukan setiap 6 bulan. Namun, dalam praktiknya, banyak perusahaan yang lalai melakukannya karena berbagai alasan seperti kesibukan atau kurangnya pengawasan. Jangan biarkan keamanan Anda terancam!
+        </p>
+      </div>
+      <div class="flex flex-col sm:flex-row justify-center gap-6">
+        <a href="#" class="inline-block px-8 py-3 bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+          Pelajari Lebih Lanjut
+        </a>
+        <a href="#" class="inline-block px-8 py-3 bg-green-600 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+          Daftar Inspeksi APAR Gratis
+        </a>
+      </div>
+    </div>
+  </section>
+
+ <!-- Services Section -->
+<section class="py-12 bg-white">
+    <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+      <!-- Service 1 -->
+      <div class="bg-blue-50 p-8 rounded-3xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 hover:scale-105">
+        <img src="/icons/checklist-icon.svg" alt="Tim Inspeksi APAR" class="w-10 mx-auto mb-4">
+        <h3 class="text-lg font-bold text-blue-900 text-center">Tidak Ada Tim Inspeksi? Jadwal Terlewat!</h3>
+        <p class="text-gray-700 mt-3 text-center">Kekurangan tenaga khusus seringkali membuat pengecekan APAR terabaikan. Kami bisa membantu dengan tim ahli yang siap memastikan peralatan Anda diperiksa tepat waktu.</p>
+        <div class="mt-5 flex justify-center gap-3">
+          <a href="#" class="px-5 py-2 bg-gradient-to-r from-red-500 to-yellow-500 text-white rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-105 text-sm">Daftar Inspeksi</a>
+          <a href="#" class="px-5 py-2 border-2 border-gray-300 text-gray-700 rounded-full hover:bg-gray-100 transition-all text-sm">Konsultasi</a>
+        </div>
+      </div>
+  
+      <!-- Service 2 -->
+      <div class="bg-blue-50 p-8 rounded-3xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 hover:scale-105">
+        <img src="/icons/busy-icon.svg" alt="Tim Sibuk" class="w-10 mx-auto mb-4">
+        <h3 class="text-lg font-bold text-blue-900 text-center">Punya Tim, Tapi Terlalu Sibuk</h3>
+        <p class="text-gray-700 mt-3 text-center">Kesibukan sehari-hari kadang membuat inspeksi APAR terlupakan. Kami hadir untuk memastikan jadwal inspeksi tidak terlewat dan semua alat Anda berfungsi dengan baik.</p>
+        <div class="mt-5 flex justify-center gap-3">
+          <a href="#" class="px-5 py-2 bg-gradient-to-r from-red-500 to-yellow-500 text-white rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-105 text-sm">Daftar Inspeksi</a>
+          <a href="#" class="px-5 py-2 border-2 border-gray-300 text-gray-700 rounded-full hover:bg-gray-100 transition-all text-sm">Konsultasi</a>
+        </div>
+      </div>
+  
+      <!-- Service 3 -->
+      <div class="bg-blue-50 p-8 rounded-3xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 hover:scale-105">
+        <img src="/icons/fire-extinguisher-icon.svg" alt="Jangan Terlambat" class="w-10 mx-auto mb-4">
+        <h3 class="text-lg font-bold text-blue-900 text-center">Jangan Sampai Terlambat, Pastikan Keamanan Anda!</h3>
+        <p class="text-gray-700 mt-3 text-center">Pengecekan berkala memastikan alat pemadam kebakaran siap digunakan kapanpun dibutuhkan. Jangan menunggu hingga terlambat, amankan aset dan keselamatan karyawan Anda.</p>
+        <div class="mt-5 flex justify-center gap-3">
+          <a href="#" class="px-5 py-2 bg-gradient-to-r from-red-500 to-yellow-500 text-white rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-105 text-sm">Daftar Inspeksi</a>
+          <a href="#" class="px-5 py-2 border-2 border-gray-300 text-gray-700 rounded-full hover:bg-gray-100 transition-all text-sm">Konsultasi</a>
+        </div>
+      </div>
+  
+      <!-- Service 4 -->
+      <div class="bg-blue-50 p-8 rounded-3xl shadow-md hover:shadow-lg transition-all duration-300 hover:-translate-y-2 hover:scale-105">
+        <img src="/icons/calendar-icon.svg" alt="Kontrak Layanan" class="w-10 mx-auto mb-4">
+        <h3 class="text-lg font-bold text-blue-900 text-center">Solusi Praktis dengan Layanan Kontrak</h3>
+        <p class="text-gray-700 mt-3 text-center">Layanan kontrak APAR memberikan inspeksi rutin yang terjamin. Kami memastikan peralatan proteksi Anda selalu berfungsi optimal sepanjang tahun.</p>
+        <div class="mt-5 flex justify-center gap-3">
+          <a href="#" class="px-5 py-2 bg-gradient-to-r from-red-500 to-yellow-500 text-white rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-105 text-sm">Daftar Kontrak</a>
+          <a href="#" class="px-5 py-2 border-2 border-gray-300 text-gray-700 rounded-full hover:bg-gray-100 transition-all text-sm">Konsultasi</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+</BaseLayout>
