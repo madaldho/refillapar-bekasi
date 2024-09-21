@@ -35,7 +35,7 @@ const post = entries.items[0].fields;
 
 
 // Konversi markdown menjadi HTML
-const contentHtml = marked(post.content); // Konversi Markdown ke HTML
+const contentHtml = marked(post.content.toString()); // Konversi Markdown ke HTML
 
 
 // Ambil 3 related posts yang tidak memiliki slug yang sama
@@ -54,7 +54,7 @@ const relatedPosts = relatedPostsEntries.items.map((item) => {
     slug,
     description,
     date: new Date(date).toLocaleDateString(),
-    imageUrl: image?.fields?.file?.url,
+    imageUrl: image ? image['fields']['file']['url'] : null,
   };
 });
 ---
@@ -65,7 +65,7 @@ const relatedPosts = relatedPostsEntries.items.map((item) => {
     <time class="block text-center text-gray-500 text-sm">
       {new Date(post.date).toLocaleDateString()}
     </time>
-    <h1 class="text-5xl font-extrabold text-center text-gray-900 mb-8">
+    <h1 class="text-5xl font-extrabold text-center text-white mb-8">
       {post.title}
     </h1>
 
@@ -75,7 +75,7 @@ const relatedPosts = relatedPostsEntries.items.map((item) => {
     {post.image && (
       <div class="flex items-center justify-center overflow-hidden rounded-lg shadow-lg mb-11">
         <img
-          src={post.image.fields.file.url}
+          src={post['image']['fields']['file']['url']}
           alt={post.title}
           class="w-40"
         />
@@ -108,7 +108,7 @@ const relatedPosts = relatedPostsEntries.items.map((item) => {
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
     {relatedPosts.map((post) => (
       <div ={post.slug} class="group relative bg-white overflow-hidden rounded-3xl transition-all duration-500 ease-in-out transform hover:scale-105">
-        
+
         <!-- Image Section -->
         <div class="relative overflow-hidden rounded-3xl transition-shadow duration-500 ease-in-out">
           {post.imageUrl && (
@@ -140,4 +140,3 @@ const relatedPosts = relatedPostsEntries.items.map((item) => {
 </div>
 
 </BaseLayout>
-
