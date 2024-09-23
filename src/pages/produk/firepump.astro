@@ -1,0 +1,226 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Klikporto from "../../components/klikporto.astro";
+
+// Title dan description untuk meta
+const titlemeta =
+  "Layanan Proteksi Kebakaran Tangguh-Fire Alarm Sistem Product";
+const descriptionmeta =
+  "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
+---
+
+<BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
+  <section
+    class="relative py-16 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 overflow-hidden">
+    <!-- Animated Background Particles -->
+    <div class="absolute inset-0">
+      <div
+        class="w-80 h-80 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 opacity-40 rounded-full blur-2xl absolute -top-10 -left-10 animate-float-slow">
+      </div>
+      <div
+        class="w-64 h-64 bg-gradient-to-r from-orange-300 via-yellow-400 to-red-400 opacity-40 rounded-full blur-2xl absolute top-20 right-0 animate-float-slow">
+      </div>
+      <div
+        class="w-72 h-72 bg-gradient-to-r from-yellow-500 via-orange-300 to-red-600 opacity-40 rounded-full blur-2xl absolute -bottom-20 right-16 animate-float-slow">
+      </div>
+    </div>
+
+    <!-- Content -->
+    <div
+      class="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 text-white">
+      <!-- Section Header -->
+      <div class="text-center">
+        <h2
+          class="text-5xl font-bold leading-tight tracking-tight text-shadow-md">
+          Our Fire Pump
+        </h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-16" id="products">
+    <div class="container mx-auto">
+      <section class="grid grid-cols-1 md:grid-cols-1 gap-10 md:px-20 px-2">
+        <!-- Electric Fire Pump -->
+        <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Electric Fire Pump"
+            class="w-28 md:w-60 h-auto rounded-lg mr-6"
+          />
+          <div>
+            <h3 class="text-3xl font-bold text-orange-600 mb-3">
+              Electric Fire Pump
+            </h3>
+            <p class="text-gray-700 mb-4">
+              The primary pump in a fire hydrant installation, powered by
+              electricity to ensure quick response during emergencies.
+            </p>
+            <a
+              href="#"
+              class="inline-block px-6 py-3 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-500 transition"
+              >View Product</a
+            >
+          </div>
+        </div>
+
+        <!-- Diesel Fire Pump -->
+        <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Diesel Fire Pump"
+            class="w-28 md:w-60 h-auto rounded-lg mr-6"
+          />
+          <div>
+            <h3 class="text-3xl font-bold text-orange-600 mb-3">
+              Diesel Fire Pump
+            </h3>
+            <p class="text-gray-700 mb-4">
+              Powered by diesel, this pump serves as a backup for the electric
+              pump, ensuring fire safety even during power outages.
+            </p>
+            <a
+              href="#"
+              class="inline-block px-6 py-3 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-500 transition"
+              >View Product</a
+            >
+          </div>
+        </div>
+
+        <!-- Jockey Fire Pump -->
+        <div class="bg-white rounded-lg shadow-lg p-6 flex items-center">
+          <img
+            src="https://via.placeholder.com/150"
+            alt="Jockey Fire Pump"
+            class="w-28 md:w-60 h-auto rounded-lg mr-6"
+          />
+          <div>
+            <h3 class="text-3xl font-bold text-orange-600 mb-3">
+              Jockey Fire Pump
+            </h3>
+            <p class="text-gray-700 mb-4">
+              A pump designed to maintain water pressure in the fire hydrant
+              system to avoid water hammer.
+            </p>
+            <a
+              href="#"
+              class="inline-block px-6 py-3 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-500 transition"
+              >View Product</a
+            >
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!--Swipper logo -->
+  <section class="bg-gray-200 text-black py-8 shadow-md">
+    <h2 class="text-center text-2xl mb-2 font-bold leading-8">
+      Produk Fire Alarm Kami
+    </h2>
+    <p class="text-center text-lg font-extralight leading-8 px-3 md:px-36">
+      RumahApi menawarkan produk proteksi kebakaran berkualitas tinggi yang
+      dirancang untuk ketahanan maksimal dan keandalan jangka panjang. Kami
+      memastikan keamanan terbaik dengan teknologi terkini yang siap melindungi
+      aset Anda.
+    </p>
+
+    <!-- Carousel container -->
+    <div
+      class="logos group relative overflow-hidden whitespace-nowrap py-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+      <!-- First set of logos -->
+      <!-- Loop pertama gambar-gambar mitra -->
+      <div
+        class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/secutron.png"
+          alt="secutron"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/notifier.png"
+          alt="notifier"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/GuardALL.jpg"
+          alt="guardall"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/hooseki.png"
+          alt="hooseki"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/horing lih.png"
+          alt="horing lih"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/nittan.png"
+          alt="nittan"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/nohmi.png"
+          alt="nohmi"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/hongchang.png"
+          alt="hong chang"
+        />
+      </div>
+
+      <!-- Loop kedua gambar-gambar mitra untuk efek infinite scroll -->
+      <div
+        class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/secutron.png"
+          alt="secutron"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/notifier.png"
+          alt="notifier"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/GuardALL.jpg"
+          alt="guardall"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/hooseki.png"
+          alt="hooseki"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/horing lih.png"
+          alt="horing lih"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/nittan.png"
+          alt="nittan"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/nohmi.png"
+          alt="nohmi"
+        />
+        <img
+          class="mx-4 inline h-36"
+          src="/logo firealarm/hongchang.png"
+          alt="hong chang"
+        />
+      </div>
+    </div>
+  </section>
+
+  <Klikporto />
+</BaseLayout>

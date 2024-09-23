@@ -14,7 +14,7 @@ const projects = entries.items.map((item) => {
   const { title, image } = item.fields;
   return {
     title,
-    imageUrl: image?.fields?.file?.url, // Mendapatkan URL gambar dari image field
+    imageUrl: image ? image["fields"]["file"]["url"] : null,
   };
 });
 

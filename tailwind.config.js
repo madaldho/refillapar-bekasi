@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default  {
+  darkMode: 'media',
   content: [
     "./src/**/*.{html,js,astro}", // Add the necessary paths
   ],
@@ -19,26 +20,27 @@ module.exports = {
         },
       },
       animation: {
-        "slide-left-infinite": "slide-left 10s linear infinite",
+        "slide-left-infinite": "slide-left 20s linear infinite",
       },
     },
   },
   plugins: [
-    require('@tailwindcss/typography'),
+    require("@tailwindcss/typography"),
     function ({ addUtilities }) {
       addUtilities({
-        '.text-shadow-sm': {
-          textShadow: '1px 1px 2px rgba(0, 0, 0, 0.5)',
+        ".text-shadow-sm": {
+          textShadow: "1px 1px 2px rgba(0, 0, 0, 0.5)",
         },
-        '.text-shadow-md': {
-          textShadow: '2px 2px 4px rgba(0, 0, 0, 0.5)',
+        ".text-shadow-md": {
+          textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
         },
-        '.text-shadow-lg': {
-          textShadow: '3px 3px 6px rgba(0, 0, 0, 0.6)',
+        ".text-shadow-lg": {
+          textShadow: "3px 3px 6px rgba(0, 0, 0, 0.6)",
         },
-        '.text-shadow-xl': {
-          textShadow: '4px 4px 8px rgba(0, 0, 0, 0.7)',
+        ".text-shadow-xl": {
+          textShadow: "4px 4px 8px rgba(0, 0, 0, 0.7)",
         },
       });
-    },],
+    },
+  ],
 };

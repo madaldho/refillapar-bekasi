@@ -1,7 +1,8 @@
 ---
 import "../styles/global.css";
+import "../styles/slider.css";
+
 //import transitions effect
-import { ViewTransitions } from "astro:transitions";
 import Navbar from "../components/navbar.astro";
 import Footer from "../components/Footer.astro";
 
@@ -21,24 +22,11 @@ const {
     <title>{titlemeta}</title>
     <meta name="description" content={descriptionmeta} />
 
-    <ViewTransitions />
-    <script
-      src="https://cdn.jsdelivr.net/npm/alpinejs@3.0.0/dist/cdn.min.js"
-      defer></script>
+
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"
     ></script>
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
-
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/sheet-slider@3/dist/css/main.min.css"
-    />
 
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
@@ -67,7 +55,7 @@ const {
           </p>
         </div>
         <a
-          href="#"
+          href="https://wa.me/6287787500580?text=Hallo%20RumahApi,%20Saya%20Mau%20Konsultasi"
           class="relative text-white bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 shadow-md hover:shadow-xl transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-offset-2">
           <span class="relative z-10">Konsultasi Sekarang</span>
           <!-- Animate the hover background and create movement -->
@@ -77,6 +65,18 @@ const {
         </a>
       </div>
     </div>
+  </div>
+  <div class="fixed bottom-4 right-4 z-50">
+    <a
+      href="https://wa.me/6281234567890"
+      target="_blank"
+      class="flex items-center">
+      <img
+        src="/wa.webp"
+        alt="WhatsApp"
+        class="h-12 w-12 rounded-full bg-green-500 p-2"
+      />
+    </a>
   </div>
 
   <Footer />

@@ -34,7 +34,13 @@ export interface proyekkami {
   contentTypeId: 'proyekkami';
   fields: {
     title: EntryFieldTypes.Text;
-    image: EntryFieldTypes.AssetLink;
+    image: {
+      sys: {
+        id: string;
+        linkType: 'Asset';
+        type: 'Link';
+      };
+    };
   };
 }
 

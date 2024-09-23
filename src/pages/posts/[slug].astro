@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { contentfulClient } from "../../lib/contentful";
-import { documentToHtmlString } from "@contentful/rich-text-html-renderer";
 import type { BlogPost } from "../../lib/contentful";
 import { SocialShare } from "astro-social-share"; // socialshare icon page
 import { marked } from "marked"; // Import package marked untuk parsing Markdown
@@ -65,7 +64,7 @@ const relatedPosts = relatedPostsEntries.items.map((item) => {
     <time class="block text-center text-gray-500 text-sm">
       {new Date(post.date).toLocaleDateString()}
     </time>
-    <h1 class="text-5xl font-extrabold text-center text-white mb-8">
+    <h1 class="text-5xl font-extrabold text-center text-black mb-8">
       {post.title}
     </h1>
 
@@ -73,16 +72,16 @@ const relatedPosts = relatedPostsEntries.items.map((item) => {
 
     <!-- Gambar Post -->
     {post.image && (
-      <div class="flex items-center justify-center overflow-hidden rounded-lg shadow-lg mb-11">
+      <div class="flex items-center justify-center overflow-hidden rounded-lg mb-11">
         <img
           src={post['image']['fields']['file']['url']}
           alt={post.title}
-          class="w-40"
+          class=" object-cover"
         />
       </div>
     )}
  <!-- Bagian Artikel -->
- <article class="prose lg:prose-xl mx-auto bg-white shadow-md rounded-lg p-8">
+ <article class="prose mx-auto bg-white shadow-md rounded-lg p-2">
   <!-- Konten yang sudah dikonversi dari Markdown ke HTML -->
   <div set:html={contentHtml}></div>
 </article>
