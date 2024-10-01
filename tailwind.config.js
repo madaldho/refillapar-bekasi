@@ -1,11 +1,14 @@
 /** @type {import('tailwindcss').Config} */
-export default  {
-  darkMode: 'media',
+export default {
+  darkMode: "media",
   content: [
     "./src/**/*.{html,js,astro}", // Add the necessary paths
   ],
   theme: {
     extend: {
+      fontFamily: {
+        nunito: ['"Nunito Sans"', 'sans-serif'], // Tambahkan font Nunito Sans
+      },
       textShadow: {
         sm: "1px 1px 2px rgba(0, 0, 0, 0.5)",
         md: "2px 2px 4px rgba(0, 0, 0, 0.5)",

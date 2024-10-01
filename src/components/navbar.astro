@@ -1,13 +1,20 @@
 ---
-
+import { Image } from "astro:assets";
+import favicon from "../assets/rumahapilogo.webp";
 ---
-
 
 <nav class="bg-white border-gray-20 z-50">
   <div
     class="flex flex-wrap items-center justify-between max-w-screen-xl mx-auto p-4">
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="/rumahapilogo.svg" class="h-16" alt="RumahApi Logo" />
+      <Image
+        src={favicon}
+        alt="RumahApi Logo"
+        width={64}
+        height={64}
+        class="h-16"
+        loading="lazy" 
+      />
     </a>
     <div
       class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
@@ -184,6 +191,25 @@
                   Produk Kami
                 </a>
               </li>
+              <li class="relative">
+                <a href="/robotfire" class="block px-4 py-2 hover:bg-gray-100">
+                  Robot Firefighting
+                </a>
+                <span class="absolute top-0 right-0 mt-1 mr-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                  NEW
+                </span>
+              </li>
+              
+              <li class="relative">
+                <a href="/cctv" class="block px-4 py-2 hover:bg-gray-100">
+                  Camera Fire Detection AI
+                </a>
+                <span class="absolute top-0 right-0 mt-1 mr-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                  NEW
+                </span>
+              </li>
+              
+              
               <li>
                 <a
                   href="/produk/firealarm"
@@ -191,18 +217,18 @@
                   Fire Alarm
                 </a>
               </li>
+             
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">
-                  Fire Hydrant
-                </a>
-              </li>
-              <li>
-                <a href="/produk/firepump" class="block px-4 py-2 hover:bg-gray-100">
+                <a
+                  href="/produk/firepump"
+                  class="block px-4 py-2 hover:bg-gray-100">
                   Fire Pump
                 </a>
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                <a
+                  href="/produk/apar"
+                  class="block px-4 py-2 hover:bg-gray-100">
                   Alat Pemadam Api
                 </a>
               </li>
@@ -211,13 +237,11 @@
                   Fire Systems
                 </a>
               </li>
+            
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">
-                  Fire Door
-                </a>
-              </li>
-              <li>
-                <a href="/produk/firesprinkler" class="block px-4 py-2 hover:bg-gray-100">
+                <a
+                  href="/produk/firesprinkler"
+                  class="block px-4 py-2 hover:bg-gray-100">
                   Fire Sprinkler
                 </a>
               </li>

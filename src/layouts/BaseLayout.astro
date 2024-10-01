@@ -1,83 +1,113 @@
 ---
+import { SEO } from "astro-seo";
 import "../styles/global.css";
 import "../styles/slider.css";
-
-//import transitions effect
 import Navbar from "../components/navbar.astro";
 import Footer from "../components/Footer.astro";
 
-// Ambil props yang dikirim dari halaman
+
+// Mengambil props titlemeta dan descriptionmeta dari halaman
 const {
-  titlemeta = "LAYANAN PROTEKSI KEBAKARAN",
-  descriptionmeta = "AMANKAN ASSET BERHARGAMU DI MASA DEPAN DENGAN KAMI AHLINYA",
+  titlemeta = "LAYANAN PROTEKSI KEBAKARAN - Beranda Rumah APi",
+  descriptionmeta = "AMANKAN ASSET BERHARGAMU DI MASA DEPAN DENGAN KAMI AHLINYA.",
 } = Astro.props;
+
+const siteURL = new URL("https://rumahapi.tigrisfire.com/"); // Ganti dengan URL situs Anda
+const imageURL = "../assets/favicon.png"; // Path gambar OpenGraph harus sesuai dengan path yang ada
+const twitterHandle = "@rumahapi"; // Ganti dengan username Twitter Anda
+
 ---
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO optimization menggunakan astro-seo -->
+    <SEO
+      title={titlemeta}
+      description={descriptionmeta}
+      canonical={siteURL.href}
+      openGraph={{
+        basic: {
+          title: titlemeta,
+          type: "website",
+          image: `${siteURL}${imageURL}`, // Properti image hanya string di basic
+          url: siteURL.href,
+        },
+        image: {
+          url: new URL(imageURL, siteURL).href, // Properti URL di-build menggunakan objek URL
+          alt: "RumahApi OpenGraph Image", // Alt text gambar
+          width: 1200, // Lebar gambar OG
+          height: 630, // Tinggi gambar OG
+        },
+      }}
+      twitter={{
+        card: "summary_large_image", // Menggunakan gambar besar untuk Twitter Card
+        creator: twitterHandle,
+        image: `${siteURL}${imageURL}`, // Properti image sebagai URL string
+      }}
+      extend={{
+        // Menambahkan favicon
+        link: [{ rel: "icon", href: "/favicon.png", type: "image/png" }],
+        // Menambahkan meta tambahan
+        meta: [
+          { name: "author", content: "RumahApi" },
+          {
+            name: "keywords",
+            content:
+              "proteksi kebakaran, rumah api, fire protection, amankan aset, alat pemadam, apar",
+          },
+          { name: "robots", content: "index, follow" }, // Memberikan izin mesin pencari untuk mengindeks halaman
+          { name: "twitter:site", content: twitterHandle },
+          { name: "twitter:image", content: new URL(imageURL, siteURL).href }, // Menggunakan URL objek yang valid untuk Twitter
+        ],
+      }}
+    />
 
-    <!-- Gunakan titlemeta dan descriptionmeta dari props -->
-    <title>{titlemeta}</title>
-    <meta name="description" content={descriptionmeta} />
-
-
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"
-    ></script>
-
-    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <!-- Menambahkan CSS external untuk Flowbite -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet">
   </head>
-  <!-- Header -->
-  <Navbar />
 
-  <!-- Main Content -->
-  <main class="mx-auto scroll-smooth">
-    <slot />
-  </main>
+  <body class="font-nunito">
+    <!-- Navigasi -->
+    <Navbar />
 
-  <!-- CTA -->
-  <div class="relative bg- mt-52">
-    <div
-      class="absolute w-full left-0 right-0 transform -translate-y-1/2 z-30 p-2">
+    <!-- Slot konten utama -->
+    <main class="mx-auto scroll-smooth">
+      <slot />
+    </main>
+
+    <!-- Bagian CTA -->
+    <div class="relative bg-gray-100 mt-52">
       <div
-        class="bg-white shadow-lg rounded-lg p-4 py-5 md:p-10 flex flex-col md:flex-row justify-between items-center mx-auto md:max-w-7xl space-y-4 md:space-y-0 hover:shadow-2xl transition-shadow duration-500 ease-in-out">
-        <div class="text-center md:text-left">
-          <h2
-            class="text-xl md:text-2xl font-bold text-gray-800 leading-snug hover:text-red-600 transition-colors duration-500 ease-in-out">
-            Bisnis Aman, Hidup Tenang!
-          </h2>
-          <p class="text-gray-500 mt-2 text-sm md:text-base">
-            Kebakaran bisa terjadi kapan saja – jangan ambil risiko! <br
-            />Dengan RumahApi, perlindungan bisnis Anda ada di tangan para ahli.
-          </p>
+        class="absolute w-full left-0 right-0 transform -translate-y-1/2 z-30 p-2">
+        <div
+          class="bg-white shadow-lg rounded-lg p-4 py-5 md:p-10 flex flex-col md:flex-row justify-between items-center mx-auto md:max-w-7xl space-y-4 md:space-y-0 hover:shadow-2xl transition-shadow duration-500 ease-in-out">
+          <div class="text-center md:text-left">
+            <h2
+              class="text-xl md:text-2xl font-bold text-gray-800 leading-snug hover:text-red-600 transition-colors duration-500 ease-in-out">
+              Bisnis Aman, Hidup Tenang!
+            </h2>
+            <p class="text-gray-500 mt-2 text-sm md:text-base">
+              Kebakaran bisa terjadi kapan saja – jangan ambil risiko! <br />
+              Dengan RumahApi, perlindungan bisnis Anda ada di tangan para ahli.
+            </p>
+          </div>
+          <a
+            href="https://wa.me/6287787500580?text=Hallo%20RumahApi,%20Saya%20Mau%20Konsultasi"
+            class="relative text-white bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 shadow-md hover:shadow-xl transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-offset-2">
+            Konsultasi Sekarang
+          </a>
         </div>
-        <a
-          href="https://wa.me/6287787500580?text=Hallo%20RumahApi,%20Saya%20Mau%20Konsultasi"
-          class="relative text-white bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 shadow-md hover:shadow-xl transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-offset-2">
-          <span class="relative z-10">Konsultasi Sekarang</span>
-          <!-- Animate the hover background and create movement -->
-          <span
-            class="absolute inset-0 bg-red-600 opacity-0 transition-opacity duration-300 ease-in-out rounded-lg"
-          ></span>
-        </a>
       </div>
     </div>
-  </div>
-  <div class="fixed bottom-4 right-4 z-50">
-    <a
-      href="https://wa.me/6281234567890"
-      target="_blank"
-      class="flex items-center">
-      <img
-        src="/wa.webp"
-        alt="WhatsApp"
-        class="h-12 w-12 rounded-full bg-green-500 p-2"
-      />
-    </a>
-  </div>
 
-  <Footer />
+    <!-- Footer -->
+    <Footer />
+
+    <!-- Memuat script tambahan secara defer -->
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+
+  </body>
 </html>

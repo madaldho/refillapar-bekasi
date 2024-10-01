@@ -1,0 +1,50 @@
+  <!-- Tombol Beli -->
+  <a href="https://wa.me/6281382529368?text=" class="whatsapp-button">Pesan Produk Ini</a>
+
+  <style>
+      .whatsapp-button {
+          display: inline-block;
+          padding: 10px 20px;
+          background: linear-gradient(45deg, #ff3b3b, #ff0000); /* Gradien merah */
+          color: white;
+          text-decoration: none;
+          border-radius: 50px; /* Membuat tombol berbentuk oval */
+          font-size: 18px;
+          font-weight: bold;
+          text-align: center;
+          box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
+          transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Transisi pada warna dan transformasi */
+      }
+      .whatsapp-button:hover {
+          background: linear-gradient(45deg, #ff4d4d, #e60000); /* Gradien merah yang lebih terang saat hover */
+          transform: translateY(-5px); /* Efek hover dengan gerakan */
+          color: #ffcccc; /* Warna teks saat hover, lebih soft (light pink) */
+      }
+  </style>
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+          // Ambil elemen <h2> yang berisi nama produk (menggunakan kelas .product-title)
+          var productTitleElement = document.querySelector('.product-title')as HTMLHeadingElement;;
+  
+          // Pastikan elemen productTitleElement tidak null sebelum mengakses innerText
+         var productTitle = productTitleElement ? productTitleElement.innerText : "Produk";
+  
+          // Tangkap URL halaman saat ini
+          var pageURL = window.location.href;
+  
+          // Teks pesan dinamis yang diinginkan
+          var message = "Hallo RumahApi, Saya Mau Pesan Produk " + productTitle + " di " + pageURL;
+  
+          // Dapatkan elemen tombol WhatsApp, dengan memastikan bahwa elemen yang diambil adalah anchor
+          var whatsappButton = document.querySelector('.whatsapp-button') as HTMLAnchorElement;
+  
+          // Pastikan whatsappButton bukan null sebelum mengakses href
+          if (whatsappButton) {
+              // Tambahkan pesan dinamis ke URL WhatsApp (judul bersih, URL diencode)
+              whatsappButton.href += encodeURIComponent(message);
+          } else {
+              console.error("WhatsApp button not found!");
+          }
+      });
+  </script>

@@ -29,6 +29,18 @@ export interface Product {
     spesifikasi: EntryFieldTypes.Text;
   };
 }
+export interface Produkcctv {
+  contentTypeId: 'produkcctv';
+  fields: {
+    title: EntryFieldTypes.Text;
+    slug: EntryFieldTypes.Text;
+    image: EntryFieldTypes.AssetLink;
+    price: EntryFieldTypes.Number;
+    content: EntryFieldTypes.Text;
+    spesifikasi: EntryFieldTypes.Text;
+    imagespek?:EntryFieldTypes.AssetLink;
+  };
+}
 
 export interface proyekkami {
   contentTypeId: 'proyekkami';

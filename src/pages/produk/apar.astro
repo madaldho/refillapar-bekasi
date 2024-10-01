@@ -1,136 +1,83 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Heropagetitle from "../../components/heropagetitle.astro";
 
-// Title dan description untuk meta
-const titlemeta =
-  "Layanan Proteksi Kebakaran Tangguh-Fire Alarm Sistem Product";
-const descriptionmeta =
-  "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
+const {
+  titlemeta = "Hubungi Kami",
+  descriptionmeta = "AMANKAN ASSET BERHARGAMU DI MASA DEPAN DENGAN KAMI AHLINYA",
+  pagetitle = "APAR-Alat Pemadam Api Ringan",
+} = Astro.props;
 ---
 
 <BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
-  <section
-    class="relative py-16 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 overflow-hidden">
-    <!-- Animated Background Particles -->
-    <div class="absolute inset-0">
-      <div
-        class="w-80 h-80 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 opacity-40 rounded-full blur-2xl absolute -top-10 -left-10 animate-float-slow">
-      </div>
-      <div
-        class="w-64 h-64 bg-gradient-to-r from-orange-300 via-yellow-400 to-red-400 opacity-40 rounded-full blur-2xl absolute top-20 right-0 animate-float-slow">
-      </div>
-      <div
-        class="w-72 h-72 bg-gradient-to-r from-yellow-500 via-orange-300 to-red-600 opacity-40 rounded-full blur-2xl absolute -bottom-20 right-16 animate-float-slow">
-      </div>
-    </div>
-
-    <!-- Content -->
-    <div
-      class="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 text-white">
-      <!-- Section Header -->
-      <div class="text-center">
-        <h2
-          class="text-5xl font-bold leading-tight tracking-tight text-shadow-md">
-          APAR
-        </h2>
-      </div>
-    </div>
-  </section>
+  <Heropagetitle pagetitle={pagetitle} />
 
   <!-- Classes of Fire Section -->
-  <section class="bg-gray-200 py-10">
-    <div class="container mx-auto text-center">
+  <section class="bg-gray-50 py-16">
+    <div class="container mx-auto text-center mb-12">
       <!-- Headline Section -->
-      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+      <h2 class="text-5xl font-extrabold text-gray-900 mb-6">
         Kategori Alat Pemadam Api
       </h2>
-      <p class="text-lg text-gray-600 mb-6 md:px-28 px-2">
-        Pilih alat pemadam api yang sesuai dengan jenis kebakaran yang dapat
-        terjadi di lingkungan Anda. Setiap kategori dilengkapi dengan media yang
-        dirancang khusus untuk mengatasi risiko kebakaran tertentu.
+      <p class="text-lg text-gray-600 mb-8 md:px-36 px-4">
+        Pilih alat pemadam api yang dirancang khusus untuk mengatasi berbagai jenis kebakaran. Setiap kategori dilengkapi dengan media pemadam terbaik, disesuaikan untuk kebutuhan perlindungan Anda.
       </p>
     </div>
-    <div
-      class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:px-20 px-10">
+  
+    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:px-16 px-8">
+  
       <!-- Class A - Wood Fires -->
-      <a
-        href="#"
-        class="flex flex-col items-center bg-orange-500 border border-gray-200 rounded-lg shadow hover:bg-orange-600 transition-all duration-300">
-        <img
-          class="object-cover w-full h-48 md:w-48 md:h-auto rounded-t-lg md:rounded-none md:rounded-l-lg"
-          src="https://images.pexels.com/photos/266487/pexels-photo-266487.jpeg"
-          alt="Wood Fire"
-        />
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-xl font-bold tracking-tight text-white">
-            Kelas A
-          </h5>
+      <div class="group relative flex flex-col items-center bg-orange-500 border border-transparent rounded-lg shadow-lg hover:shadow-xl hover:bg-orange-600 transition-all duration-300 transform hover:scale-105">
+        <img class="object-cover w-full h-48 rounded-t-lg group-hover:opacity-90 transition-opacity duration-300" 
+             src="/abcdbakar/tipeA.webp" alt="Tipe A" loading="lazy" />
+        <div class="flex flex-col justify-between p-4 leading-normal text-center">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Kelas A</h5>
           <p class="mb-3 font-normal text-white">
-            Kebakaran benda padat seperti kayu, kain, kertas, atau sampah
-            kering.
+            Kebakaran benda padat seperti kayu, kain, kertas, atau sampah kering.
           </p>
         </div>
-      </a>
-
+      </div>
+  
       <!-- Class B - Flammable Liquids -->
-      <a
-        href="#"
-        class="flex flex-col items-center bg-red-500 border border-gray-200 rounded-lg shadow hover:bg-red-600 transition-all duration-300">
-        <img
-          class="object-cover w-full h-48 md:w-48 md:h-auto rounded-t-lg md:rounded-none md:rounded-l-lg"
-          src="https://images.pexels.com/photos/1363876/pexels-photo-1363876.jpeg"
-          alt="Flammable Liquids"
-        />
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-xl font-bold tracking-tight text-white">
-            Kelas B
-          </h5>
+      <div class="group relative flex flex-col items-center bg-red-500 border border-transparent rounded-lg shadow-lg hover:shadow-xl hover:bg-red-600 transition-all duration-300 transform hover:scale-105">
+        <img class="object-cover  w-full h-48 rounded-t-lg group-hover:opacity-90 transition-opacity duration-300" 
+             src="/abcdbakar/tipeB.webp" alt="Tipe B" loading="lazy" />
+        <div class="flex flex-col justify-between p-4 leading-normal text-center">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Kelas B</h5>
           <p class="mb-3 font-normal text-white">
-            Kebakaran yang disebabkan oleh bahan bakar seperti bensin, minyak,
-            dan LPG.
+            Kebakaran yang disebabkan oleh bahan bakar seperti bensin, minyak, dan LPG.
           </p>
         </div>
-      </a>
-
+      </div>
+  
       <!-- Class C - Electrical Fires -->
-      <a
-        href="#"
-        class="flex flex-col items-center bg-yellow-500 border border-gray-200 rounded-lg shadow hover:bg-yellow-600 transition-all duration-300">
-        <img
-          class="object-cover w-full h-48 md:w-48 md:h-auto rounded-t-lg md:rounded-none md:rounded-l-lg"
-          src="https://images.pexels.com/photos/1082354/pexels-photo-1082354.jpeg"
-          alt="Electrical Fire"
-        />
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-xl font-bold tracking-tight text-white">
-            Kelas C
-          </h5>
+      <div class="group relative flex flex-col items-center bg-yellow-500 border border-transparent rounded-lg shadow-lg hover:shadow-xl hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105">
+        <img class="object-cover w-full h-48 rounded-t-lg group-hover:opacity-90 transition-opacity duration-300" 
+             src="/abcdbakar/tipeC.webp" alt="Tipe C" loading="lazy" />
+        <div class="flex flex-col justify-between p-4 leading-normal text-center">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Kelas C</h5>
           <p class="mb-3 font-normal text-white">
             Kebakaran yang disebabkan oleh alat listrik atau instalasi listrik.
           </p>
         </div>
-      </a>
-
+      </div>
+  
       <!-- Class D - Metal Fires -->
-      <a
-        href="#"
-        class="flex flex-col items-center bg-blue-500 border border-gray-200 rounded-lg shadow hover:bg-blue-600 transition-all duration-300">
-        <img
-          class="object-cover w-full h-48 md:w-48 md:h-auto rounded-t-lg md:rounded-none md:rounded-l-lg"
-          src="https://images.pexels.com/photos/273234/pexels-photo-273234.jpeg"
-          alt="Metal Fire"
-        />
-        <div class="flex flex-col justify-between p-4 leading-normal">
-          <h5 class="mb-2 text-xl font-bold tracking-tight text-white">
-            Kelas D
-          </h5>
+      <div class="group relative flex flex-col items-center bg-blue-500 border border-transparent rounded-lg shadow-lg hover:shadow-xl hover:bg-blue-600 transition-all duration-300 transform hover:scale-105">
+        <img class="object-cover w-full h-48 rounded-t-lg group-hover:opacity-90 transition-opacity duration-300" 
+             src="/abcdbakar/tipeD.webp" alt="Tipe D" loading="lazy" />
+        <div class="flex flex-col justify-between p-4 leading-normal text-center">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Kelas D</h5>
           <p class="mb-3 font-normal text-white">
             Kebakaran logam seperti magnesium, titanium, atau potassium.
           </p>
         </div>
-      </a>
+      </div>
+  
     </div>
   </section>
+  
+  
 
   <!-- Product Section -->
   <section class="container mx-auto mt-10 p-6">

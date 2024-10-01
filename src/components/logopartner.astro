@@ -1,0 +1,36 @@
+---
+// Import komponen Image dari astro:assets
+import { Image } from 'astro:assets';
+
+// Buat array gambar dengan src dan alt
+const mitraImages = [
+  { src: "/mitra rumahapi/1.pertamina.webp", alt: "Pertamina" },
+  { src: "/mitra rumahapi/2.bi.webp", alt: "BI" },
+  { src: "/mitra rumahapi/3.kemenker.webp", alt: "Kemenker" },
+  { src: "/mitra rumahapi/4.telkom.webp", alt: "Telkom" },
+  { src: "/mitra rumahapi/5.pustekom.webp", alt: "Pustekom" },
+  { src: "/mitra rumahapi/6.lp.webp", alt: "LP" },
+  { src: "/mitra rumahapi/7.esar.webp", alt: "Esar" },
+  { src: "/mitra rumahapi/8.pt delta djakarta.webp", alt: "PT Delta Djakarta" },
+  { src: "/mitra rumahapi/9.mikie.webp", alt: "Mikie" },
+  { src: "/mitra rumahapi/10.oalkwood.webp", alt: "Oalkwood" },
+  { src: "/mitra rumahapi/11.indokomas.webp", alt: "Indokomas" },
+  { src: "/mitra rumahapi/12.deut bank.webp", alt: "Deut Bank" },
+  { src: "/mitra rumahapi/13.kominfo.webp", alt: "Kominfo" },
+  { src: "/mitra rumahapi/14.bank jateng.webp", alt: "Bank Jateng" },
+  { src: "/mitra rumahapi/15.lg.webp", alt: "LG" },
+];
+---
+
+<div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center p-2">
+  {mitraImages.map((image) => (
+    <Image 
+      src={image.src} 
+      alt={image.alt} 
+      width={100}  
+      height={100}
+      loading="lazy" 
+      class="mx-auto"
+    />
+  ))}
+</div>

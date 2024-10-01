@@ -12,7 +12,6 @@ const entries = await contentfulClient.getEntries<BlogPost>({
 // Mapping data
 const posts = entries.items.map((item) => {
   const { title, slug, description, date, image } = item.fields;
-  console.log("DATANYA: ", image);
   return {
     title,
     slug,

@@ -1,10 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Logopartner from "../components/logopartner.astro";
+import { Image } from "astro:assets";
 
 // Title dan description untuk meta
 const titlemeta = "Lindungi Semuanya dari Api seperti Melindungi Rumahmu";
 const descriptionmeta =
   "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
+const product1Image = "https://i.postimg.cc/rpX5DnKq/robotfire.webp";
+const product2Image = "https://i.postimg.cc/DwbqykfC/cctvrobot.webp";
+const certificationImageUrl =
+  "https://i.postimg.cc/yx359BW2/Standard-1-2048x712.webp";
 ---
 
 <BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
@@ -27,7 +33,7 @@ const descriptionmeta =
         </p>
         <div class="flex justify-center animate-fade-in-up-delay-long">
           <a
-            href="https://wa.me/6281387013123"
+            href="https://wa.me/6281382529368?text=Halo%20Rumah%20Api,%20Saya%20Mau%20Konsultasi"
             target="_blank"
             class="ml-4 inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-gray-800 bg-white hover:bg-gray-200 rounded-lg shadow-md transition-all duration-300 ease-in-out focus:outline-none">
             Konsultasi Sekarang
@@ -223,7 +229,7 @@ const descriptionmeta =
 
   <section
     class="text-white bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 body-font">
-    <h2 class="text-3xl font-extrabold text-center text-white pt-10">
+    <h2 class="text-3xl font-extrabold text-center text-white pt-28 px-1">
       Kebutuhan Anda Semua Tersedia Disini
     </h2>
     <div class="container px-5 py-24 mx-auto flex flex-wrap">
@@ -251,9 +257,9 @@ const descriptionmeta =
             </svg>
           </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <h2 class="font-medium title-font text-white mb-1 text-xl">
+            <div class="font-medium title-font text-white mb-1 text-xl">
               Alat Pemadam Api
-            </h2>
+            </div>
             <p class="leading-relaxed">
               APAR, APAB, dan Fire Blanket untuk perlindungan kebakaran cepat
               dan efektif.
@@ -287,9 +293,9 @@ const descriptionmeta =
             </svg>
           </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <h2 class="font-medium title-font text-white mb-1 text-xl">
+            <div class="font-medium title-font text-white mb-1 text-xl">
               Fire Alarm
-            </h2>
+            </div>
             <p class="leading-relaxed">
               Fire Alarm Addressable dan Konvensional untuk deteksi dini
               kebakaran.
@@ -323,9 +329,9 @@ const descriptionmeta =
             </svg>
           </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <h2 class="font-medium title-font text-white mb-1 text-xl">
+            <div class="font-medium title-font text-white mb-1 text-xl">
               Fire Hydrant
-            </h2>
+            </div>
             <p class="leading-relaxed">
               Perlengkapan Fire Hydrant dan Sprinkler untuk proteksi maksimal.
             </p>
@@ -358,9 +364,9 @@ const descriptionmeta =
             </svg>
           </div>
           <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <h2 class="font-medium title-font text-white mb-1 text-xl">
+            <div class="font-medium title-font text-white mb-1 text-xl">
               Fire System
-            </h2>
+            </div>
             <p class="leading-relaxed">
               Sistem proteksi kebakaran komprehensif dengan Foam dan Water Mist.
             </p>
@@ -450,12 +456,79 @@ const descriptionmeta =
 
   <!--Marketplace Product -->
   <section
-    class="text-gray-900 body-font py-10 bg-gradient-to-r from-orange-500 via-yellow-500 to-red-500 animate-gradient-x">
-    <div class="container mx-auto">
-      <h2
-        class="text-4xl font-bold text-center text-white mb-12 text-opacity-75">
-        Marketplace Produk Kami
+    class="text-gray-900 body-font py-10 bg-gradient-to-r from-red-600 to-orange-500 animate-gradient-x">
+    <div class="text-center text-white mt-10 mb-12 text-opacity-75 mx-auto">
+      <h2 class="text-4xl font-bold text-shadow-md">
+        Produk Dengan Inovasi Terbaru Kami
       </h2>
+    </div>
+    <div class="flex flex-wrap justify-center gap-8 my-8 px-2">
+      <!-- First Card -->
+      <div
+        class="relative flex flex-col bg-white shadow-lg border border-slate-200 rounded-2xl w-96 hover:scale-105 transition-transform duration-300">
+        <div
+          class="relative p-3 h-96 overflow-hidden rounded-xl bg-clip-border">
+          <Image
+            src={product1Image}
+            alt="product-image-1"
+            class="h-full w-full object-cover rounded-2xl transition-transform duration-300 hover:scale-110"
+            format="webp"
+            width={400}
+            height={400}
+          />
+        </div>
+        <div class="p-5 flex flex-col justify-between flex-grow">
+          <div class="mb-4">
+            <p class="text-slate-800 text-xl font-semibold">
+              SMART FIREFIGHTING ROBOT SERIES
+            </p>
+          </div>
+          <a
+            href="/robotfire"
+            class="rounded-full w-full bg-red-600 py-3 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-red-700 focus:bg-red-700 focus:shadow-none active:bg-red-700 active:shadow-none hover:scale-105"
+            role="button">
+            Lihat Detail
+          </a>
+        </div>
+      </div>
+
+      <!-- Second Card -->
+      <div
+        class="relative flex flex-col bg-white shadow-lg border border-slate-200 rounded-2xl w-96 hover:scale-105 transition-transform duration-300">
+        <div
+          class="relative p-3 h-96 overflow-hidden rounded-xl bg-clip-border">
+          <Image
+            src={product2Image}
+            alt="product-image-2"
+            class="h-full w-full object-cover rounded-2xl transition-transform duration-300 hover:scale-110"
+            format="webp"
+            width={400}
+            height={400}
+          />
+        </div>
+        <div class="p-5 flex flex-col justify-between flex-grow">
+          <div class="mb-4">
+            <p class="text-slate-800 text-xl font-semibold">
+              AUTOMATIC TRACKING AND AIMING JET FIRE EXTINGUISHING DEVICE
+            </p>
+          </div>
+          <a
+            href="/cctv"
+            class="rounded-full w-full bg-red-600 py-3 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-red-700 focus:bg-red-700 focus:shadow-none active:bg-red-700 active:shadow-none hover:scale-105"
+            role="button">
+            Lihat Detail
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mx-auto">
+      <div class="text-center text-white mt-36 mb-12 text-opacity-75 mx-auto">
+        <h2 class="text-4xl font-bold inline-block text-shadow-sm">
+          Produk Kami Lainnya
+        </h2>
+      </div>
+
       <div
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-5 py-10">
         <!-- Card 1: APAR -->
@@ -463,22 +536,25 @@ const descriptionmeta =
           class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
           <figure class="h-56 w-full rounded-lg overflow-hidden">
             <img
-              src="/hmarketproduct/1.apar.webp"
+              src="/hmarketproduct/1.apar (1).webp"
               alt="APAR"
               class="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-50"
             />
           </figure>
           <div
             class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg p-4">
-            <h2 class="text-white text-2xl mb-4 text-center font-bold">APAR</h2>
+            <div class="text-white text-2xl mb-4 text-center font-bold">
+              APAR
+            </div>
             <p class="text-white mb-4 text-center">
               Alat Pemadam Api Ringan untuk proteksi kebakaran cepat dan
               efektif.
             </p>
-            <button
+            <a
+              href="/produk/apar"
               class="px-6 py-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition duration-300">
               Selengkapnya
-            </button>
+            </a>
           </div>
         </div>
 
@@ -487,23 +563,24 @@ const descriptionmeta =
           class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
           <figure class="h-56 w-full rounded-lg overflow-hidden">
             <img
-              src="/hmarketproduct/2.firealarm.webp"
+              src="/hmarketproduct/2.firealarm (1).webp"
               alt="Fire Alarm"
               class="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-50"
             />
           </figure>
           <div
             class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg p-4">
-            <h2 class="text-white text-2xl mb-4 text-center font-bold">
+            <div class="text-white text-2xl mb-4 text-center font-bold">
               Fire Alarm
-            </h2>
+            </div>
             <p class="text-white mb-4 text-center">
               Fire Alarm untuk deteksi dini kebakaran.
             </p>
-            <button
+            <a
+              href="/produk/firealarm"
               class="px-6 py-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition duration-300">
               Selengkapnya
-            </button>
+            </a>
           </div>
         </div>
 
@@ -512,23 +589,24 @@ const descriptionmeta =
           class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
           <figure class="h-56 w-full rounded-lg overflow-hidden">
             <img
-              src="/hmarketproduct/3.fire hydrant.webp"
+              src="/hmarketproduct/3.firesprinkler.webp"
               alt="Fire Hydrant"
               class="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-50"
             />
           </figure>
           <div
             class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg p-4">
-            <h2 class="text-white text-2xl mb-4 text-center font-bold">
-              Fire Hydrant
-            </h2>
+            <div class="text-white text-2xl mb-4 text-center font-bold">
+              Fire Sprinkler
+            </div>
             <p class="text-white mb-4 text-center">
-              Perlengkapan Fire Hydrant untuk proteksi maksimal.
+              Perlengkapan Fire Sprinkler untuk proteksi maksimal.
             </p>
-            <button
+            <a
+              href="/produk/firesprinkler"
               class="px-6 py-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition duration-300">
               Selengkapnya
-            </button>
+            </a>
           </div>
         </div>
 
@@ -537,23 +615,24 @@ const descriptionmeta =
           class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
           <figure class="h-56 w-full rounded-lg overflow-hidden">
             <img
-              src="/hmarketproduct/4.fire pump.webp"
+              src="/hmarketproduct/4.fire pump (1).webp"
               alt="Fire Pump"
               class="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-50"
             />
           </figure>
           <div
             class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg p-4">
-            <h2 class="text-white text-2xl mb-4 text-center font-bold">
+            <div class="text-white text-2xl mb-4 text-center font-bold">
               Fire Pump
-            </h2>
+            </div>
             <p class="text-white mb-4 text-center">
               Fire Pump untuk memastikan suplai air kebakaran.
             </p>
-            <button
+            <a
+              href="/produk/firepump"
               class="px-6 py-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition duration-300">
               Selengkapnya
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -584,7 +663,7 @@ const descriptionmeta =
       <!-- Section Header -->
       <div class="text-center mb-12">
         <h2 class="text-3xl font-bold text-gray-800">Klien Terpercaya Kami</h2>
-        <p class="mt-4 text-gray-600">
+        <p class="mt-4 text-gray-600 md:px-32 px-1">
           Kami bangga telah bekerja sama dengan berbagai perusahaan terkemuka
           untuk menghadirkan solusi perlindungan kebakaran yang terbaik. Jadilah
           bagian dari mereka dan pastikan keamanan bisnis Anda bersama kami.
@@ -592,72 +671,7 @@ const descriptionmeta =
       </div>
 
       <!-- Partners Logos -->
-      <div
-        class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-center p-2">
-        <img
-          src="/mitra rumahapi/1.pertamina.webp"
-          alt="Pertamina"
-          class="h-16 mx-auto"
-        />
-        <img src="/mitra rumahapi/2.bi.webp" alt="BI" class="h-16 mx-auto" />
-        <img
-          src="/mitra rumahapi/3.kemenker.webp"
-          alt="Kemenker"
-          class="h-16 mx-auto"
-        />
-        <img
-          src="/mitra rumahapi/4.telkom.webp"
-          alt="Telkom"
-          class="h-16 mx-auto"
-        />
-        <img
-          src="/mitra rumahapi/5.pustekom.webp"
-          alt="Pustekom"
-          class="h-16 mx-auto"
-        />
-        <img src="/mitra rumahapi/6.lp.webp" alt="LP" class="h-16 mx-auto" />
-        <img
-          src="/mitra rumahapi/7.esar.webp"
-          alt="Esar"
-          class="h-16 mx-auto"
-        />
-        <img
-          src="/mitra rumahapi/8.pt delta djakarta.webp"
-          alt="PT Delta Djakarta"
-          class="h-16 mx-auto"
-        />
-        <img
-          src="/mitra rumahapi/9.mikie.webp"
-          alt="Mikie"
-          class="h-16 mx-auto"
-        />
-        <img
-          src="/mitra rumahapi/10.oalkwood.webp"
-          alt="Oalkwood"
-          class="h-16 mx-auto"
-        />
-        <img
-          src="/mitra rumahapi/11.indokomas.webp"
-          alt="Indokomas"
-          class="h-16 mx-auto"
-        />
-        <img
-          src="/mitra rumahapi/12.deut bank.webp"
-          alt="Deut Bank"
-          class="h-16 mx-auto"
-        />
-        <img
-          src="/mitra rumahapi/13.kominfo.webp"
-          alt="Kominfo"
-          class="h-16 mx-auto"
-        />
-        <img
-          src="/mitra rumahapi/14.bank jateng.webp"
-          alt="Bank Jateng"
-          class="h-16 mx-auto"
-        />
-        <img src="/mitra rumahapi/15.lg.webp" alt="LG" class="h-16 mx-auto" />
-      </div>
+      <Logopartner />
       <div>
         <img
           src="/mitra rumahapi/lebihdari100klient.webp"
@@ -674,6 +688,34 @@ const descriptionmeta =
             Lihat Portofolio Klien
           </button>
         </a>
+      </div>
+    </div>
+  </section>
+  <!--Sertifikasi Produk Kami -->
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <!-- Header Section -->
+      <div class="text-center mb-8">
+        <h2 class="text-3xl font-bold text-gray-900">
+          Sertifikasi Resmi Produk Kami
+        </h2>
+        <p class="mt-4 text-lg text-gray-600">
+          Kami telah memperoleh sertifikasi internasional yang membuktikan bahwa
+          produk kami memenuhi standar keamanan dan kualitas terbaik.
+        </p>
+      </div>
+
+      <!-- Sertifikasi Gambar -->
+      <div class="flex justify-center bg-gray-100">
+        <Image
+          src={certificationImageUrl}
+          alt="Sertifikasi Resmi"
+          class="max-w-full h-auto shadow-lg rounded-lg"
+          loading="lazy"
+          width={2048}
+          height={712}
+          format="webp"
+        />
       </div>
     </div>
   </section>
