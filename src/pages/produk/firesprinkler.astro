@@ -1,56 +1,28 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import Heropagetitle from "../../components/heropagetitle.astro";
 
-// Title dan description untuk meta
-const titlemeta =
-  "Layanan Proteksi Kebakaran Tangguh-Fire Alarm Sistem Product";
-const descriptionmeta =
-  "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
+const {
+  titlemeta = "Fire Sprinkler",
+  descriptionmeta = "Produk Berkulitas Fire Sprinkler Kami",
+  pagetitle = "Fire Sprinkler",
+  pagesubtitle = "Dirancang untuk beroperasi secara otomatis pada suhu tertentu, alat pemadam api ini selalu siaga, memberikan perlindungan yang andal kapan pun diperlukan",
+} = Astro.props;
 ---
 
 <BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
-  <section
-    class="relative py-16 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 overflow-hidden">
-    <!-- Animated Background Particles -->
-    <div class="absolute inset-0">
-      <div
-        class="w-80 h-80 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 opacity-40 rounded-full blur-2xl absolute -top-10 -left-10 animate-float-slow">
-      </div>
-      <div
-        class="w-64 h-64 bg-gradient-to-r from-orange-300 via-yellow-400 to-red-400 opacity-40 rounded-full blur-2xl absolute top-20 right-0 animate-float-slow">
-      </div>
-      <div
-        class="w-72 h-72 bg-gradient-to-r from-yellow-500 via-orange-300 to-red-600 opacity-40 rounded-full blur-2xl absolute -bottom-20 right-16 animate-float-slow">
-      </div>
-    </div>
+  <Heropagetitle pagetitle={pagetitle} pagesubtitle={pagesubtitle}/>
 
-    <!-- Content -->
-    <div
-      class="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 text-white">
-      <!-- Section Header -->
-      <div class="text-center">
-        <h2
-          class="text-5xl font-bold leading-tight tracking-tight text-shadow-md">
-          Fire Sprinkler
-        </h2>
-        <p class="text-center text-lg font-extralight leading-8 px-3 md:px-36">
-          Dirancang untuk beroperasi secara otomatis pada suhu tertentu, alat
-          pemadam api ini selalu siaga, memberikan perlindungan yang andal kapan
-          pun diperlukan
-        </p>
-      </div>
-    </div>
-  </section>
 
   <section
-    class="text-gray-600 body-font bg-gradient-to-t from-orange-300 to-white bg-opacity-5">
+    class="text-gray-600 body-font bg-blue-500 bg-opacity-25">
     <div
       class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
       <div
         class="lg:flex-grow md:w-1/2 lg:px-24 md:px-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
         <h1
-          class="title-font sm:text-4xl text-3xl mb-4 font-extrabold text-gray-900">
-          Splinkler
+          class="title-font sm:text-4xl text-6xl mb-4 font-extrabold text-gray-900">
+          Fire Splinkler
         </h1>
         <p class="mb-8 leading-relaxed text-2xl">
           Perlindungan Otomatis dari Kebakaran, Siaga Setiap Saat
@@ -68,11 +40,11 @@ const descriptionmeta =
 
   <!-- Service Section -->
   <div class="my-14">
-    <h2 class="text-center text-2xl mb-2 font-bold leading-8">
+    <h2 class="text-center text-3xl mb-2 font-bold leading-8">
       Produk Fire Sprinkler
     </h2>
     <p class="text-center text-lg font-extralight leading-8 px-3 md:px-36">
-      RumahApi menawarkan produk proteksi kebakaran berkualitas tinggi yang
+      Tigrisfire menawarkan produk proteksi kebakaran berkualitas tinggi yang
       dirancang untuk ketahanan maksimal dan keandalan jangka panjang. Kami
       memastikan keamanan terbaik dengan teknologi terkini yang siap melindungi
       aset Anda.
@@ -81,7 +53,7 @@ const descriptionmeta =
       <!-- Service 1 -->
       <div
         class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
-        <h2 class="text-xl font-bold text-red-600 mb-4">
+        <h2 class="text-xl font-bold text-blue-600 mb-4">
           Perlindungan untuk Risiko Kebakaran Rendah
         </h2>
         <p class="text-gray-700 mb-6">
@@ -94,7 +66,7 @@ const descriptionmeta =
       <!-- Service 2 -->
       <div
         class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
-        <h2 class="text-xl font-bold text-red-600 mb-4">
+        <h2 class="text-xl font-bold text-blue-600 mb-4">
           Perlindungan untuk Risiko Kebakaran Sedang
         </h2>
         <p class="text-gray-700 mb-6">
@@ -107,7 +79,7 @@ const descriptionmeta =
       <!-- Service 3 -->
       <div
         class="bg-white p-8 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 hover:scale-105">
-        <h2 class="text-xl font-bold text-red-600 mb-4">
+        <h2 class="text-xl font-bold text-blue-600 mb-4">
           Perlindungan untuk Risiko Kebakaran Tinggi
         </h2>
         <p class="text-gray-700 mb-6">
@@ -122,11 +94,11 @@ const descriptionmeta =
 
   <!--Swipper logo -->
   <section class="bg-gray-200 text-black py-8 shadow-md">
-    <h2 class="text-center text-2xl mb-2 font-bold leading-8">
+    <h2 class="text-center text-3xl mb-2 font-bold leading-8">
       Produk Fire Sprinkler
     </h2>
     <p class="text-center text-lg font-extralight leading-8 px-3 md:px-36">
-      RumahApi menawarkan produk proteksi kebakaran berkualitas tinggi yang
+      Tigrisfire menawarkan produk proteksi kebakaran berkualitas tinggi yang
       dirancang untuk ketahanan maksimal dan keandalan jangka panjang. Kami
       memastikan keamanan terbaik dengan teknologi terkini yang siap melindungi
       aset Anda.

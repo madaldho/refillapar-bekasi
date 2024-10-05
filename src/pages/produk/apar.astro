@@ -1,12 +1,17 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Heropagetitle from "../../components/heropagetitle.astro";
+import { Image } from "astro:assets";
 
 const {
   titlemeta = "Hubungi Kami",
   descriptionmeta = "AMANKAN ASSET BERHARGAMU DI MASA DEPAN DENGAN KAMI AHLINYA",
   pagetitle = "APAR-Alat Pemadam Api Ringan",
 } = Astro.props;
+
+import foamApar from "../../assets/foam-apar.webp";
+import powderApar from "../../assets/powder-apar.webp";
+import co2Apar from "../../assets/co2-apar.webp";
 ---
 
 <BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
@@ -20,121 +25,146 @@ const {
         Kategori Alat Pemadam Api
       </h2>
       <p class="text-lg text-gray-600 mb-8 md:px-36 px-4">
-        Pilih alat pemadam api yang dirancang khusus untuk mengatasi berbagai jenis kebakaran. Setiap kategori dilengkapi dengan media pemadam terbaik, disesuaikan untuk kebutuhan perlindungan Anda.
+        Pilih alat pemadam api yang dirancang khusus untuk mengatasi berbagai
+        jenis kebakaran. Setiap kategori dilengkapi dengan media pemadam
+        terbaik, disesuaikan untuk kebutuhan perlindungan Anda.
       </p>
     </div>
-  
-    <div class="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:px-16 px-8">
-  
+
+    <div
+      class="container mx-auto grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-8 md:px-16 px-8">
       <!-- Class A - Wood Fires -->
-      <div class="group relative flex flex-col items-center bg-orange-500 border border-transparent rounded-lg shadow-lg hover:shadow-xl hover:bg-orange-600 transition-all duration-300 transform hover:scale-105">
-        <img class="object-cover w-full h-48 rounded-t-lg group-hover:opacity-90 transition-opacity duration-300" 
-             src="/abcdbakar/tipeA.webp" alt="Tipe A" loading="lazy" />
-        <div class="flex flex-col justify-between p-4 leading-normal text-center">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Kelas A</h5>
+      <div
+        class="group relative flex flex-col items-center bg-orange-500 border border-transparent rounded-lg shadow-lg hover:shadow-xl hover:bg-orange-600 transition-all duration-300 transform hover:scale-105">
+        <img
+          class="object-square w-full rounded-t-lg group-hover:opacity-90 transition-opacity duration-300"
+          src="/abcdbakar/tipeA.webp"
+          alt="Tipe A"
+          loading="lazy"
+        />
+        <div
+          class="flex flex-col justify-between p-4 leading-normal text-center">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
+            Kelas A
+          </h5>
           <p class="mb-3 font-normal text-white">
-            Kebakaran benda padat seperti kayu, kain, kertas, atau sampah kering.
+            Kebakaran benda padat seperti kayu, kain, kertas, atau sampah
+            kering.
           </p>
         </div>
       </div>
-  
+
       <!-- Class B - Flammable Liquids -->
-      <div class="group relative flex flex-col items-center bg-red-500 border border-transparent rounded-lg shadow-lg hover:shadow-xl hover:bg-red-600 transition-all duration-300 transform hover:scale-105">
-        <img class="object-cover  w-full h-48 rounded-t-lg group-hover:opacity-90 transition-opacity duration-300" 
-             src="/abcdbakar/tipeB.webp" alt="Tipe B" loading="lazy" />
-        <div class="flex flex-col justify-between p-4 leading-normal text-center">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Kelas B</h5>
+      <div
+        class="group relative flex flex-col items-center bg-red-500 border border-transparent rounded-lg shadow-lg hover:shadow-xl hover:bg-red-600 transition-all duration-300 transform hover:scale-105">
+        <img
+          class="object-square w-full rounded-t-lg group-hover:opacity-90 transition-opacity duration-300"
+          src="/abcdbakar/tipeB.webp"
+          alt="Tipe B"
+          loading="lazy"
+        />
+        <div
+          class="flex flex-col justify-between p-4 leading-normal text-center">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
+            Kelas B
+          </h5>
           <p class="mb-3 font-normal text-white">
-            Kebakaran yang disebabkan oleh bahan bakar seperti bensin, minyak, dan LPG.
+            Kebakaran yang disebabkan oleh bahan bakar seperti bensin, minyak,
+            dan LPG.
           </p>
         </div>
       </div>
-  
+
       <!-- Class C - Electrical Fires -->
-      <div class="group relative flex flex-col items-center bg-yellow-500 border border-transparent rounded-lg shadow-lg hover:shadow-xl hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105">
-        <img class="object-cover w-full h-48 rounded-t-lg group-hover:opacity-90 transition-opacity duration-300" 
-             src="/abcdbakar/tipeC.webp" alt="Tipe C" loading="lazy" />
-        <div class="flex flex-col justify-between p-4 leading-normal text-center">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Kelas C</h5>
+      <div
+        class="group relative flex flex-col items-center bg-yellow-500 border border-transparent rounded-lg shadow-lg hover:shadow-xl hover:bg-yellow-600 transition-all duration-300 transform hover:scale-105">
+        <img
+          class="object-square w-full rounded-t-lg group-hover:opacity-90 transition-opacity duration-300"
+          src="/abcdbakar/tipeC.webp"
+          alt="Tipe C"
+          loading="lazy"
+        />
+        <div
+          class="flex flex-col justify-between p-4 leading-normal text-center">
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">
+            Kelas C
+          </h5>
           <p class="mb-3 font-normal text-white">
             Kebakaran yang disebabkan oleh alat listrik atau instalasi listrik.
           </p>
         </div>
       </div>
-  
-      <!-- Class D - Metal Fires -->
-      <div class="group relative flex flex-col items-center bg-blue-500 border border-transparent rounded-lg shadow-lg hover:shadow-xl hover:bg-blue-600 transition-all duration-300 transform hover:scale-105">
-        <img class="object-cover w-full h-48 rounded-t-lg group-hover:opacity-90 transition-opacity duration-300" 
-             src="/abcdbakar/tipeD.webp" alt="Tipe D" loading="lazy" />
-        <div class="flex flex-col justify-between p-4 leading-normal text-center">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-white">Kelas D</h5>
-          <p class="mb-3 font-normal text-white">
-            Kebakaran logam seperti magnesium, titanium, atau potassium.
-          </p>
-        </div>
-      </div>
-  
     </div>
   </section>
-  
-  
 
-  <!-- Product Section -->
+  <!-- Final CTA Section -->
+  <div class=" text-center shadow-md pb-12 pt-12 bg-blue-200">
+    <h3 class="text-3xl font-bold text-gray-900">
+      Semua Jenis dan Merek APAR Tersedia di Kami
+    </h3>
+    <p class="mt-4 text-gray-600">
+      Tersedia berbagai jenis APAR, mulai dari
+      APAR Powder hingga CO2 dan Foam. Garansi kualitas terbaik untuk setiap
+      layanan kami.
+    </p>
+    <a
+      href="https://wa.me/6287787500580?text=Hallo%20Tigrisfire%20Saya%20Mau%20Beli%20APAR
+"
+      class="mt-6 inline-block px-8 py-3 bg-gradient-to-r from-blue-500 to-blue-800 hover:bg-blue-700 text-white font-bold rounded-full shadow-lg hover:shadow-xl transition-transform hover:scale-105"
+      >Pesan Disini</a
+    >
+  </div>
+
+  <!-- Produk APAR Section -->
   <section class="container mx-auto mt-10 p-6">
-    <h2 class="text-3xl font-semibold text-gray-900 mb-6">
-      Pilihan Produk Alat Pemadam Api
+    <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">
+      Pilihan Produk APAR
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Firefix Product Card -->
-      <div class="bg-white shadow-md rounded-lg p-6">
-        <img
-          src="firefix-image.png"
-          alt="Firefix"
-          class="h-48 w-full object-cover rounded-t-md"
+      <!-- Foam APAR Product Card -->
+      <div class="bg-blue-500 shadow-md rounded-lg p-6">
+        <Image
+          src={foamApar}
+          alt="Foam APAR"
+          class="w-full object-square rounded-lg"
         />
-        <h3 class="text-xl font-bold text-orange-600 mt-4">Firefix</h3>
-        <p class="text-gray-600 mt-2">
-          Firefix hadir sebagai solusi perlindungan untuk aset bisnis dari
-          risiko kebakaran.
+        <h3 class="text-xl font-bold text-gray-50 mt-4">Foam APAR</h3>
+        <p class="text-white mt-2">
+          APAR Foam digunakan untuk kebakaran kelas A dan B, terutama untuk
+          kebakaran minyak dan cairan.
         </p>
-        <a href="#" class="mt-4 inline-block text-orange-600 font-semibold"
-          >Lihat Produk</a
-        >
+          
       </div>
 
-      <!-- GuardALL Product Card -->
-      <div class="bg-white shadow-md rounded-lg p-6">
-        <img
-          src="guardall-image.png"
-          alt="GuardALL"
-          class="h-48 w-full object-cover rounded-t-md"
+      <!-- Powder APAR Product Card -->
+      <div class="bg-blue-500 shadow-md rounded-lg p-6">
+        <Image
+          src={powderApar}
+          alt="Powder APAR"
+          class="w-full object-square rounded-lg"
         />
-        <h3 class="text-xl font-bold text-orange-600 mt-4">GuardALL</h3>
-        <p class="text-gray-600 mt-2">
-          GuardALL dilengkapi kode QR untuk monitoring alat pemadam api Anda
-          dengan aplikasi FireCheck.
+        <h3 class="text-xl font-bold text-gray-50 mt-4">Powder APAR</h3>
+        <p class="text-white mt-2">
+          APAR Powder cocok untuk semua kelas kebakaran, terutama untuk
+          kebakaran jenis padat, cair, dan gas.
         </p>
-        <a href="#" class="mt-4 inline-block text-orange-600 font-semibold"
-          >Lihat Produk</a
-        >
+        
       </div>
 
-      <!-- Hooseki Product Card -->
-      <div class="bg-white shadow-md rounded-lg p-6">
-        <img
-          src="hooseki-image.png"
-          alt="Hooseki"
-          class="h-48 w-full object-cover rounded-t-md"
+      <!-- CO2 APAR Product Card -->
+      <div class="bg-blue-500 shadow-md rounded-lg p-6">
+        <Image
+          src={co2Apar}
+          alt="CO2 APAR"
+          class="w-full object-square rounded-xl"
         />
-        <h3 class="text-xl font-bold text-orange-600 mt-4">Hooseki</h3>
-        <p class="text-gray-600 mt-2">
-          Hooseki tersedia dalam berbagai ukuran untuk memenuhi kebutuhan
-          industri, perkantoran, maupun rumah.
+        <h3 class="text-xl font-bold text-gray-50 mt-4">CO2 APAR</h3>
+        <p class="text-white mt-2">
+          APAR CO2 ideal untuk kebakaran elektrik, bekerja cepat memadamkan api
+          tanpa meninggalkan residu.
         </p>
-        <a href="#" class="mt-4 inline-block text-orange-600 font-semibold"
-          >Lihat Produk</a
-        >
+        
       </div>
     </div>
   </section>

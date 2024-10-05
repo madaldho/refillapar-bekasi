@@ -2,7 +2,7 @@
 export default {
   darkMode: "media",
   content: [
-    "./src/**/*.{html,js,astro}", // Add the necessary paths
+    "./src/**/*.{html,js,astro,jsx,md,mdx,svelte,ts,tsx,vue}", // Add the necessary paths
   ],
   theme: {
     extend: {

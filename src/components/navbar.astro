@@ -1,6 +1,6 @@
 ---
 import { Image } from "astro:assets";
-import favicon from "../assets/rumahapilogo.webp";
+import favicon from "../assets/favicon.png";
 ---
 
 <nav class="bg-white border-gray-20 z-50">
@@ -9,19 +9,19 @@ import favicon from "../assets/rumahapilogo.webp";
     <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
       <Image
         src={favicon}
-        alt="RumahApi Logo"
-        width={64}
-        height={64}
-        class="h-16"
+        alt="Tigris Logo"
+        width={90}
+        height={90}
+        class="h-20 w-20"
         loading="lazy" 
       />
     </a>
     <div
       class="flex items-center md:order-2 space-x-1 md:space-x-2 rtl:space-x-reverse">
       <a
-        href="https://wa.me/6287787500580?text=Hallo%20RumahApi,%20Saya%20Mau%20Buat%20Penawaran
+        href="https://wa.me/6287787500580?text=Hallo%2Tigrisfire,%20Saya%20Mau%20Buat%20Penawaran
 "
-        class="text-white bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-offset-2">
+        class="text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 shadow-md hover:shadow-lg transition-all duration-300 ease-in-out focus:outline-none focus:ring-offset-2">
         Buat Penawaran
       </a>
 
@@ -55,14 +55,14 @@ import favicon from "../assets/rumahapilogo.webp";
         <li>
           <a
             href="/"
-            class="block text-black py-2 px-3 text-blue-6 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0"
+            class="block text-black py-2 px-3 text-blue-6 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0"
             aria-current="page">Beranda</a
           >
         </li>
         <li class="relative group">
           <div
             id="dropdownTentangKamiButton"
-            class="flex items-center justify-between w-full py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0">
+            class="flex items-center justify-between w-full py-2 px-3 text-black border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0">
             Tentang
             <svg
               class="w-2.5 h-2.5 ms-3"
@@ -103,7 +103,7 @@ import favicon from "../assets/rumahapilogo.webp";
         <li class="relative group">
           <div
             id="dropdownLayananButton"
-            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0">
+            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0">
             Layanan
             <svg
               class="w-2.5 h-2.5 ms-3"
@@ -162,7 +162,7 @@ import favicon from "../assets/rumahapilogo.webp";
         <li class="relative group">
           <div
             id="dropdownProdukButton"
-            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0">
+            class="flex items-center justify-between w-full py-2 px-3 text-gray-900 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0">
             Produk
             <svg
               class="w-2.5 h-2.5 ms-3"
@@ -195,7 +195,7 @@ import favicon from "../assets/rumahapilogo.webp";
                 <a href="/robotfire" class="block px-4 py-2 hover:bg-gray-100">
                   Robot Firefighting
                 </a>
-                <span class="absolute top-0 right-0 mt-1 mr-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                <span class="absolute top-0 right-0 mt-1 mr-2 bg-blue-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
                   NEW
                 </span>
               </li>
@@ -204,7 +204,7 @@ import favicon from "../assets/rumahapilogo.webp";
                 <a href="/cctv" class="block px-4 py-2 hover:bg-gray-100">
                   Camera Fire Detection AI
                 </a>
-                <span class="absolute top-0 right-0 mt-1 mr-2 bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
+                <span class="absolute top-0 right-0 mt-1 mr-2 bg-blue-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full">
                   NEW
                 </span>
               </li>
@@ -233,7 +233,7 @@ import favicon from "../assets/rumahapilogo.webp";
                 </a>
               </li>
               <li>
-                <a href="#" class="block px-4 py-2 hover:bg-gray-100">
+                <a href="/produk/firesystems" class="block px-4 py-2 hover:bg-gray-100">
                   Fire Systems
                 </a>
               </li>
@@ -252,13 +252,13 @@ import favicon from "../assets/rumahapilogo.webp";
         <li>
           <a
             href="/portofolio"
-            class="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 text-black"
+            class="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 text-black"
             aria-current="page">Portofolio</a
           >
         </li><li>
           <a
             href="/kontak"
-            class="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-red-600 md:p-0 text-black"
+            class="block py-2 px-3 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-600 md:p-0 text-black"
             aria-current="page">Hubungi Kami</a
           >
         </li>

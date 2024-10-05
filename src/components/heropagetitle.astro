@@ -1,18 +1,19 @@
 ---
 const { pagetitle } = Astro.props; // Menangkap props yang dikirim dari halaman
+const { pagesubtitle = "Solusi Proteksi Kebakaran Terbaik untuk Keamanan Aset Anda" } = Astro.props; // Menangkap props yang dikirim dari halaman dengan nilai default
 ---
-<section class="relative bg-gradient-to-r from-red-600 via-orange-500 to-red-500 py-20 w-full overflow-hidden group">
+<section class="relative bg-gradient-to-r from-blue-600 via-blue-500 to-blue-800 py-20 w-full overflow-hidden group">
     <!-- Moving Background Gradient -->
-    <div class="absolute inset-0 bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 bg-gradient-animate group-hover:animate-gradient-move transition-transform duration-500"></div>
+    <div class="absolute inset-0 bg-gradient-to-r from-blue-800 via-blue-500 to-blue-600 bg-gradient-animate group-hover:animate-gradient-move transition-transform duration-500"></div>
 
     <!-- Flame-Like Particle Effect -->
     <div class="absolute top-0 left-0 w-full h-full opacity-50 overflow-hidden">
         <!-- Flame Particles -->
-        <div class="absolute bottom-0 left-10 w-10 h-10 bg-red-600 rounded-sm transform rotate-45 mix-blend-overlay animate-ping-slow"></div>
-        <div class="absolute bottom-10 left-20 w-8 h-8 bg-orange-500 rounded-sm transform rotate-45 mix-blend-overlay animate-ping-slow"></div>
-        <div class="absolute bottom-5 right-10 w-12 h-12 bg-yellow-400 rounded-sm transform rotate-45 mix-blend-overlay animate-ping-slow"></div>
-        <div class="absolute bottom-16 right-16 w-9 h-9 bg-orange-400 rounded-sm transform rotate-45 mix-blend-overlay animate-ping-slow"></div>
-        <div class="absolute bottom-20 left-32 w-6 h-6 bg-red-400 rounded-sm transform rotate-45 mix-blend-overlay animate-ping-slow"></div>
+        <div class="absolute bottom-0 left-10 w-10 h-10 bg-blue-600 rounded-sm transform rotate-45 mix-blend-overlay animate-ping-slow"></div>
+        <div class="absolute bottom-10 left-20 w-8 h-8 bg-blue-500 rounded-sm transform rotate-45 mix-blend-overlay animate-ping-slow"></div>
+        <div class="absolute bottom-5 right-10 w-12 h-12 bg-blue-400 rounded-sm transform rotate-45 mix-blend-overlay animate-ping-slow"></div>
+        <div class="absolute bottom-16 right-16 w-9 h-9 bg-blue-800 rounded-sm transform rotate-45 mix-blend-overlay animate-ping-slow"></div>
+        <div class="absolute bottom-20 left-32 w-6 h-6 bg-blue-700 rounded-sm transform rotate-45 mix-blend-overlay animate-ping-slow"></div>
     </div>
 
     <!-- Banner Content -->
@@ -21,7 +22,7 @@ const { pagetitle } = Astro.props; // Menangkap props yang dikirim dari halaman
         { pagetitle }
       </h1>
       <p class="text-white text-lg md:text-xl mt-4 transition-opacity duration-500 group-hover:opacity-90">
-        Solusi Proteksi Kebakaran Terbaik untuk Keamanan Aset Anda
+        { pagesubtitle }
       </p>
     </div>
 </section>

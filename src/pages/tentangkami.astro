@@ -1,45 +1,19 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Heropagetitle from "../components/heropagetitle.astro";
 
-// Title dan description untuk meta
-const titlemeta = "Layanan Proteksi Kebakaran Tangguh-Tentang Kami";
-const descriptionmeta =
-  "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
+  
+const {
+  titlemeta = "Layanan Proteksi Kebakaran Tangguh-Tentang Kami",
+  descriptionmeta = "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda",
+  pagetitle = "Tentang Kami",
+  pagesubtitle = "Kami berkomitmen untuk menjaga keselamatan Anda dengan teknologi mutakhir dan tim ahli yang berdedikasi tinggi.",
+} = Astro.props;
 ---
 
 <BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
-  <section
-    class="relative py-16 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 overflow-hidden">
-    <!-- Animated Background Particles -->
-    <div class="absolute inset-0">
-      <div
-        class="w-80 h-80 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 opacity-40 rounded-full blur-2xl absolute -top-10 -left-10 animate-float-slow">
-      </div>
-      <div
-        class="w-64 h-64 bg-gradient-to-r from-orange-300 via-yellow-400 to-red-400 opacity-40 rounded-full blur-2xl absolute top-20 right-0 animate-float-slow">
-      </div>
-      <div
-        class="w-72 h-72 bg-gradient-to-r from-yellow-500 via-orange-300 to-red-600 opacity-40 rounded-full blur-2xl absolute -bottom-20 right-16 animate-float-slow">
-      </div>
-    </div>
+  <Heropagetitle pagetitle={pagetitle} pagesubtitle={pagesubtitle}/>
 
-    <!-- Content -->
-    <div
-      class="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 text-white">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2
-          class="text-5xl font-bold leading-tight tracking-tight text-shadow-md">
-          Tentang RumahApi
-        </h2>
-        <p
-          class="mt-4 text-lg lg:text-xl max-w-2xl mx-auto opacity-90 leading-relaxed">
-          Kami berkomitmen untuk menjaga keselamatan Anda dengan teknologi
-          mutakhir dan tim ahli yang berdedikasi tinggi.
-        </p>
-      </div>
-    </div>
-  </section>
   <section class="relative py-16 bg-gray-50">
   <!-- Content -->
   <div class="container mx-auto px-6 md:px-12 lg:px-16 text-gray-900">
@@ -50,37 +24,37 @@ const descriptionmeta =
       <!-- Vision Card -->
       <div
         class="p-6 bg-white rounded-xl shadow-lg transition-all duration-500 hover:shadow-2xl hover:scale-105 transform hover:-translate-y-2">
-        <h3 class="text-3xl font-bold text-red-600 mb-4">Visi Kami</h3>
+        <h3 class="text-3xl font-bold text-blue-600 mb-4">Visi Kami</h3>
         <p class="text-lg leading-relaxed text-gray-700">
           Menjadi pelopor dalam solusi proteksi kebakaran yang inovatif dan mudah diakses, memberikan keamanan maksimal.
         </p>
-        <div class="absolute inset-x-0 bottom-0 left-0 right-0 opacity-10 bg-red-600 h-2 rounded-b-xl"></div>
+        <div class="absolute inset-x-0 bottom-0 left-0 right-0 opacity-10 bg-blue-600 h-2 rounded-b-xl"></div>
       </div>
 
       <!-- Mission Card -->
       <div
         class="p-6 bg-white rounded-xl shadow-lg transition-all duration-500 hover:shadow-2xl hover:scale-105 transform hover:-translate-y-2">
-        <h3 class="text-3xl font-bold text-red-600 mb-4">Misi Kami</h3>
+        <h3 class="text-3xl font-bold text-blue-600 mb-4">Misi Kami</h3>
         <ul class="list-disc list-inside text-lg space-y-3 leading-relaxed text-gray-700">
           <li>Menyediakan layanan unggulan bagi semua klien kami.</li>
           <li>Mengembangkan teknologi perlindungan kebakaran yang inovatif.</li>
           <li>Menciptakan lingkungan yang aman melalui edukasi dan pencegahan.</li>
         </ul>
-        <div class="absolute inset-x-0 bottom-0 left-0 right-0 opacity-10 bg-red-600 h-2 rounded-b-xl"></div>
+        <div class="absolute inset-x-0 bottom-0 left-0 right-0 opacity-10 bg-blue-600 h-2 rounded-b-xl"></div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- Sejarah Kami -->
-<section class="relative py-16 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-300">
+<section class="relative py-16 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700">
   <!-- Content -->
-  <div class="container mx-auto px-6 md:px-12 lg:px-16 text-gray-900">
+  <div class="container mx-auto px-6 md:px-12 lg:px-16 text-white">
     <!-- History Section -->
     <div class="text-center">
-      <h3 class="text-4xl font-extrabold text-gray-800 mb-8">Sejarah Kami</h3>
-      <p class="text-lg max-w-3xl mx-auto leading-relaxed text-gray-700">
-        Didirikan pada tahun 2005, RumahApi telah menjadi pemimpin dalam industri proteksi kebakaran, menyediakan solusi aman dan efektif untuk individu, bisnis, dan masyarakat di seluruh Indonesia.
+      <h3 class="text-4xl font-extrabold text-white mb-8">Sejarah Kami</h3>
+      <p class="text-lg max-w-3xl mx-auto leading-relaxed text-white">
+        Didirikan pada tahun 2008, Tigrisfire telah menjadi pemimpin dalam industri proteksi kebakaran, menyediakan solusi aman dan efektif untuk individu, bisnis, dan masyarakat di seluruh Indonesia.
       </p>
     </div>
 
@@ -169,7 +143,7 @@ const descriptionmeta =
         <!-- Service 4: Fire Training -->
         <div
           class="p-6 bg-white shadow-lg rounded-lg hover:bg-gray-50 transition duration-300">
-          <div class="w-16 h-16 mx-auto mb-4 text-red-600">
+          <div class="w-16 h-16 mx-auto mb-4 text-blue-600">
             <!-- Training Icon -->
             <img src="/icontentanglayanan/training.webp" alt="training icon" />
           </div>
@@ -221,10 +195,10 @@ const descriptionmeta =
   <!--Swipper logo -->
   <section class="bg-gray-100 text-black py-8 shadow-md">
     <h2 class="text-center text-2xl mb-2 font-bold leading-8">
-      Produk Andalan RumahApi
+      Produk Andalan Tigrisfire
     </h2>
     <p class="text-center text-lg font-extralight leading-8 px-3 md:px-36">
-      RumahApi menawarkan produk proteksi kebakaran berkualitas tinggi yang
+      Tigrisfire menawarkan produk proteksi kebakaran berkualitas tinggi yang
       dirancang untuk ketahanan maksimal dan keandalan jangka panjang. Kami
       memastikan keamanan terbaik dengan teknologi terkini yang siap melindungi
       aset Anda.
@@ -425,7 +399,7 @@ const descriptionmeta =
       <div class="flex justify-center mt-10 space-x-6">
         <a href="/portofolio" class="no-underline">
           <button
-            class="px-6 py-2 bg-gradient-to-r from-red-500 via-red-600 to-red-700 text-white rounded-lg shadow hover:bg-red-800 transition-all duration-300 hover:shadow-lg transform hover:scale-105">
+            class="px-6 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-lg shadow hover:bg-blue-800 transition-all duration-300 hover:shadow-lg transform hover:scale-105">
             Lihat Portofolio Klien
           </button>
         </a>

@@ -1,48 +1,22 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Klikporto from "../components/klikporto.astro";
+import Heropagetitle from "../components/heropagetitle.astro";
 
-// Title dan description untuk meta
-const titlemeta = "Layanan Proteksi Kebakaran Tangguh-Tentang Kami";
-const descriptionmeta =
-  "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
+const {
+  titlemeta = "LLayanan Proteksi Kebakaran Tangguh-Tentang Kami",
+  descriptionmeta = "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda",
+  pagetitle = " Produk Kami Yang Luarbiasa",
+  pagesubtitle = "Kami berkomitmen untuk menjaga keselamatan Anda dengan teknologi mutakhir dan tim ahli yang berdedikasi tinggi",
+} = Astro.props;
+
 ---
 
 <BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
-  <section
-    class="relative py-16 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 overflow-hidden">
-    <!-- Animated Background Particles -->
-    <div class="absolute inset-0">
-      <div
-        class="w-80 h-80 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 opacity-40 rounded-full blur-2xl absolute -top-10 -left-10 animate-float-slow">
-      </div>
-      <div
-        class="w-64 h-64 bg-gradient-to-r from-orange-300 via-yellow-400 to-red-400 opacity-40 rounded-full blur-2xl absolute top-20 right-0 animate-float-slow">
-      </div>
-      <div
-        class="w-72 h-72 bg-gradient-to-r from-yellow-500 via-orange-300 to-red-600 opacity-40 rounded-full blur-2xl absolute -bottom-20 right-16 animate-float-slow">
-      </div>
-    </div>
-
-    <!-- Content -->
-    <div
-      class="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 text-white">
-      <!-- Section Header -->
-      <div class="text-center mb-16">
-        <h2
-          class="text-5xl font-bold leading-tight tracking-tight text-shadow-md">
-          Produk Kami Yang Luarbiasa
-        </h2>
-        <p
-          class="mt-4 text-lg lg:text-xl max-w-2xl mx-auto opacity-90 leading-relaxed">
-          Kami berkomitmen untuk menjaga keselamatan Anda dengan teknologi
-          mutakhir dan tim ahli yang berdedikasi tinggi.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <section class="py-12 md:px-52 px-2">
+  <Heropagetitle pagetitle={pagetitle} pagesubtitle={pagesubtitle}/>
+ 
+  
+  <section class=" md:p-52 px-2">
     <h2 class="text-center text-2xl mb-2 font-bold leading-8">
       Lihat Lebih Dekat Dengan Produk Kami
     </h2>
@@ -73,7 +47,7 @@ const descriptionmeta =
         <!-- Card 6 -->
         <div
           class="relative group shadow-lg hover:shadow-2xl transition-shadow duration-300">
-          <a href="/produk/firesystem">
+          <a href="/produk/firesystems">
             <img
               src="/logo page rumah api/fire system.webp"
               alt="Fire System"
@@ -190,10 +164,10 @@ const descriptionmeta =
   <!--Swipper logo -->
   <section class="bg-gray-200 text-black py-8 shadow-md">
     <h2 class="text-center text-2xl mb-2 font-bold leading-8">
-      Produk Andalan RumahApi
+      Produk Andalan Tigrisfire
     </h2>
     <p class="text-center text-lg font-extralight leading-8 px-3 md:px-36">
-      RumahApi menawarkan produk proteksi kebakaran berkualitas tinggi yang
+      Tigrisfire menawarkan produk proteksi kebakaran berkualitas tinggi yang
       dirancang untuk ketahanan maksimal dan keandalan jangka panjang. Kami
       memastikan keamanan terbaik dengan teknologi terkini yang siap melindungi
       aset Anda.

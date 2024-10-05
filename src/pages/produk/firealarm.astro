@@ -1,41 +1,18 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
-
+import Heropagetitle from "../../components/heropagetitle.astro";
 // Title dan description untuk meta
-const titlemeta =
-  "Layanan Proteksi Kebakaran Tangguh-Fire Alarm Sistem Product";
-const descriptionmeta =
-  "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
+
+const {
+  titlemeta = "Fire Alarm",
+  descriptionmeta = "Produk Berkulitas",
+  pagetitle = "Fire Alarm",
+} = Astro.props;
 ---
 
 <BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
-  <section
-    class="relative py-16 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 overflow-hidden">
-    <!-- Animated Background Particles -->
-    <div class="absolute inset-0">
-      <div
-        class="w-80 h-80 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 opacity-40 rounded-full blur-2xl absolute -top-10 -left-10 animate-float-slow">
-      </div>
-      <div
-        class="w-64 h-64 bg-gradient-to-r from-orange-300 via-yellow-400 to-red-400 opacity-40 rounded-full blur-2xl absolute top-20 right-0 animate-float-slow">
-      </div>
-      <div
-        class="w-72 h-72 bg-gradient-to-r from-yellow-500 via-orange-300 to-red-600 opacity-40 rounded-full blur-2xl absolute -bottom-20 right-16 animate-float-slow">
-      </div>
-    </div>
-
-    <!-- Content -->
-    <div
-      class="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 text-white">
-      <!-- Section Header -->
-      <div class="text-center">
-        <h2
-          class="text-5xl font-bold leading-tight tracking-tight text-shadow-md">
-          Fire Alarm
-        </h2>
-      </div>
-    </div>
-  </section>
+  <Heropagetitle pagetitle={pagetitle} />
+ 
 
   <main class="container mx-auto py-10">
     <h1 class="text-3xl font-bold text-center mb-6 text-gray-700">
@@ -47,7 +24,7 @@ const descriptionmeta =
       <!-- Fire Alarm Control Center -->
       <div
         class="bg-white rounded-lg shadow-lg p-8 hover:drop-shadow-[0_10px_15px_rgba(249,115,22,0.4)] transition-shadow">
-        <h2 class="text-xl font-bold text-orange-600 mb-4">
+        <h2 class="text-xl font-bold text-blue-600 mb-4">
           Fire Alarm Control Center
         </h2>
         <p class="text-gray-600">
@@ -59,7 +36,7 @@ const descriptionmeta =
       <!-- Fire Sensors -->
       <div
         class="bg-white rounded-lg shadow-lg p-8 hover:drop-shadow-[0_10px_15px_rgba(249,115,22,0.4)] transition-shadow">
-        <h2 class="text-xl font-bold text-orange-600 mb-4">Fire Sensors</h2>
+        <h2 class="text-xl font-bold text-blue-600 mb-4">Fire Sensors</h2>
         <p class="text-gray-600">
           Early detection is key. Reliable fire detectors for various hazards.
         </p>
@@ -68,7 +45,7 @@ const descriptionmeta =
       <!-- Alarm Sirens -->
       <div
         class="bg-white rounded-lg shadow-lg p-8 hover:drop-shadow-[0_10px_15px_rgba(249,115,22,0.4)] transition-shadow">
-        <h2 class="text-xl font-bold text-orange-600 mb-4">Alarm Sirens</h2>
+        <h2 class="text-xl font-bold text-blue-600 mb-4">Alarm Sirens</h2>
         <p class="text-gray-600">
           Powerful and audible alarm bells for immediate notification during
           fire.
@@ -78,7 +55,7 @@ const descriptionmeta =
       <!-- Emergency Buttons -->
       <div
         class="bg-white rounded-lg shadow-lg p-8 hover:drop-shadow-[0_10px_15px_rgba(249,115,22,0.4)] transition-shadow">
-        <h2 class="text-xl font-bold text-orange-600 mb-4">
+        <h2 class="text-xl font-bold text-blue-600 mb-4">
           Emergency Buttons
         </h2>
         <p class="text-gray-600">
@@ -89,7 +66,7 @@ const descriptionmeta =
       <!-- Alarm Indicators -->
       <div
         class="bg-white rounded-lg shadow-lg p-8 hover:drop-shadow-[0_10px_15px_rgba(249,115,22,0.4)] transition-shadow">
-        <h2 class="text-xl font-bold text-orange-600 mb-4">
+        <h2 class="text-xl font-bold text-blue-600 mb-4">
           Alarm Indicators
         </h2>
         <p class="text-gray-600">
@@ -100,7 +77,7 @@ const descriptionmeta =
       <!-- Fire Alarm Display Systems -->
       <div
         class="bg-white rounded-lg shadow-lg p-8 hover:drop-shadow-[0_10px_15px_rgba(249,115,22,0.4)] transition-shadow">
-        <h2 class="text-xl font-bold text-orange-600 mb-4">
+        <h2 class="text-xl font-bold text-blue-600 mb-4">
           Fire Alarm Display Systems
         </h2>
         <p class="text-gray-600">
@@ -112,7 +89,7 @@ const descriptionmeta =
       <!-- System Accessories -->
       <div
         class="bg-white rounded-lg shadow-lg p-8 hover:drop-shadow-[0_10px_15px_rgba(249,115,22,0.4)] transition-shadow">
-        <h2 class="text-xl font-bold text-orange-600 mb-4">
+        <h2 class="text-xl font-bold text-blue-600 mb-4">
           System Accessories
         </h2>
         <p class="text-gray-600">
@@ -129,7 +106,7 @@ const descriptionmeta =
       Produk Fire Alarm Kami
     </h2>
     <p class="text-center text-lg font-extralight leading-8 px-3 md:px-36">
-      RumahApi menawarkan produk proteksi kebakaran berkualitas tinggi yang
+      Tigrisfire menawarkan produk proteksi kebakaran berkualitas tinggi yang
       dirancang untuk ketahanan maksimal dan keandalan jangka panjang. Kami
       memastikan keamanan terbaik dengan teknologi terkini yang siap melindungi
       aset Anda.
@@ -243,7 +220,7 @@ const descriptionmeta =
         <div
           class="bg-gray-50 bg-opacity-80 shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105 hover:shadow-2xl group">
           <div
-            class="w-16 h-16 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <img
               src="https://via.placeholder.com/150?text=Konvensional"
               alt="Konvensional Icon"
@@ -265,7 +242,7 @@ const descriptionmeta =
         <div
           class="bg-gray-50 bg-opacity-80 shadow-xl rounded-lg p-6 transition-transform transform hover:scale-105 hover:shadow-2xl group">
           <div
-            class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-6">
+            class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-6">
             <img
               src="https://via.placeholder.com/150?text=Addressable"
               alt="Addressable Icon"

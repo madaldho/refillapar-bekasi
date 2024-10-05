@@ -42,6 +42,18 @@ export interface Produkcctv {
   };
 }
 
+export interface Producttigris {
+  contentTypeId: 'producttigris';
+  fields: {
+    title: EntryFieldTypes.Text;
+    slug: EntryFieldTypes.Text;
+    image: EntryFieldTypes.AssetLink;
+    price: EntryFieldTypes.Number;
+    content: EntryFieldTypes.Text;
+    spesifikasi: EntryFieldTypes.Text;
+  };
+}
+
 export interface proyekkami {
   contentTypeId: 'proyekkami';
   fields: {

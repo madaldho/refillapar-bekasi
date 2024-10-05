@@ -81,10 +81,13 @@ const relatedPosts = relatedPostsEntries.items.map((item) => {
       </div>
     )}
  <!-- Bagian Artikel -->
- <article class="prose mx-auto bg-white shadow-md rounded-lg p-2">
-  <!-- Konten yang sudah dikonversi dari Markdown ke HTML -->
-  <div set:html={contentHtml}></div>
-</article>
+  <div>
+    <article class="prose mx-auto bg-white shadow-md rounded-lg p-2 md:p-16">
+      <!-- Konten yang sudah dikonversi dari Markdown ke HTML -->
+      <div set:html={contentHtml}></div>
+    </article>
+  </div>
+ 
 
 
     <!-- Bagian Footer atau tambahan lainnya -->
@@ -123,7 +126,7 @@ const relatedPosts = relatedPostsEntries.items.map((item) => {
 
         <!-- Content Section -->
         <div class="p-3">
-          <h2 class="text-xl font-bold text-gray-800 group-hover:text-red-600 transition-colors duration-300 truncate">
+          <h2 class="text-xl font-bold text-gray-800 group-hover:text-blue-600 transition-colors duration-300 truncate">
             {post.title}
           </h2>
           <p class="text-gray-600 mt-3 truncate">

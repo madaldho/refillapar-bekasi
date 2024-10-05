@@ -1,0 +1,100 @@
+---
+import { Image } from "astro:assets";
+import klienImage from "../assets/logoberandastatistik/klien.webp";
+import proyekImage from "../assets/logoberandastatistik/proyek.webp";
+import timImage from "../assets/logoberandastatistik/tim.webp";
+import areaImage from "../assets/logoberandastatistik/area.webp";
+
+---
+
+<section class="text-gray-900 bg-white py-16">
+  <div class="container mx-auto">
+    <!-- Section Header -->
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold text-gray-800">Keunggulan Tigris Fire</h2>
+      <p class="mt-4 text-gray-600">
+        Memberikan solusi proteksi kebakaran yang terpercaya, efektif, dan
+        efisien untuk melindungi bisnis Anda.
+      </p>
+    </div>
+
+    <!-- Statistics Cards -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-5 py-10">
+      <!-- Card 1: Klien Terpercaya -->
+      <div
+        class="relative bg-white shadow-xl rounded-lg p-6 text-center transition-transform transform hover:scale-105 hover:shadow-2xl group">
+        <div
+          class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-800 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:from-blue-600 group-hover:to-blue-600">
+          <Image
+            src={klienImage}
+            alt="klien logo"
+            class="p-2"
+            width={64}
+            height={64}
+            format="webp"
+            quality={85}
+          />
+        </div>
+        <h2 class="title-font font-bold text-3xl text-gray-900">500+</h2>
+        <p class="leading-relaxed text-gray-600">Klien Terpercaya</p>
+      </div>
+
+      <!-- Card 2: Proyek Selesai -->
+      <div
+        class="relative bg-white shadow-xl rounded-lg p-6 text-center transition-transform transform hover:scale-105 hover:shadow-2xl group">
+        <div
+          class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:from-blue-600 group-hover:to-blue-500">
+          <Image
+            src={proyekImage}
+            alt="proyek icon"
+            class="p-2"
+            width={64}
+            height={64}
+            format="webp"
+            quality={85}
+          />
+        </div>
+        <h2 class="title-font font-bold text-3xl text-gray-900">700+</h2>
+        <p class="leading-relaxed text-gray-600">Proyek Selesai</p>
+      </div>
+
+      <!-- Card 3: Tim Profesional -->
+      <div
+        class="relative bg-white shadow-xl rounded-lg p-6 text-center transition-transform transform hover:scale-105 hover:shadow-2xl group">
+        <div
+          class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:from-blue-600 group-hover:to-blue-700">
+          <Image
+            src={timImage}
+            alt="tim logo"
+            class="p-2"
+            width={64}
+            height={64}
+            format="webp"
+            quality={85}
+          />
+        </div>
+        <h2 class="title-font font-bold text-3xl text-gray-900">150+</h2>
+        <p class="leading-relaxed text-gray-600">Tim Profesional</p>
+      </div>
+
+      <!-- Card 4: Area Layanan -->
+      <div
+        class="relative bg-white shadow-xl rounded-lg p-6 text-center transition-transform transform hover:scale-105 hover:shadow-2xl group">
+        <div
+          class="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-700 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:from-blue-800 group-hover:to-blue-600">
+          <Image
+            src={areaImage}
+            alt="area icon"
+            class="p-2"
+            width={64}
+            height={64}
+            format="webp"
+            quality={85}
+          />
+        </div>
+        <h2 class="title-font font-bold text-3xl text-gray-900">30+</h2>
+        <p class="leading-relaxed text-gray-600">Area Layanan</p>
+      </div>
+    </div>
+  </div>
+</section>

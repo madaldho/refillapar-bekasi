@@ -8,13 +8,13 @@ import Footer from "../components/Footer.astro";
 
 // Mengambil props titlemeta dan descriptionmeta dari halaman
 const {
-  titlemeta = "LAYANAN PROTEKSI KEBAKARAN - Beranda Rumah APi",
+  titlemeta = "LAYANAN PROTEKSI KEBAKARAN - Beranda Tigrisfire",
   descriptionmeta = "AMANKAN ASSET BERHARGAMU DI MASA DEPAN DENGAN KAMI AHLINYA.",
 } = Astro.props;
 
-const siteURL = new URL("https://rumahapi.tigrisfire.com/"); // Ganti dengan URL situs Anda
-const imageURL = "../assets/favicon.png"; // Path gambar OpenGraph harus sesuai dengan path yang ada
-const twitterHandle = "@rumahapi"; // Ganti dengan username Twitter Anda
+const siteURL = new URL("https://tigrisfire.com/"); // Ganti dengan URL situs Anda
+const imageURL = "../../assets/favicon.png"; // Path gambar OpenGraph harus sesuai dengan path yang ada
+const twitterHandle = "@tigrisfire"; // Ganti dengan username Twitter Anda
 
 ---
 
@@ -37,7 +37,7 @@ const twitterHandle = "@rumahapi"; // Ganti dengan username Twitter Anda
         },
         image: {
           url: new URL(imageURL, siteURL).href, // Properti URL di-build menggunakan objek URL
-          alt: "RumahApi OpenGraph Image", // Alt text gambar
+          alt: "Tigrisfire OpenGraph Image", // Alt text gambar
           width: 1200, // Lebar gambar OG
           height: 630, // Tinggi gambar OG
         },
@@ -49,14 +49,14 @@ const twitterHandle = "@rumahapi"; // Ganti dengan username Twitter Anda
       }}
       extend={{
         // Menambahkan favicon
-        link: [{ rel: "icon", href: "/favicon.png", type: "image/png" }],
+        link: [{ rel: "icon", href: "favicon.png", type: "image/png" }],
         // Menambahkan meta tambahan
         meta: [
-          { name: "author", content: "RumahApi" },
+          { name: "author", content: "Tigrisfire" },
           {
             name: "keywords",
             content:
-              "proteksi kebakaran, rumah api, fire protection, amankan aset, alat pemadam, apar",
+              "proteksi kebakaran, Tigrisfire, fire protection, amankan aset, alat pemadam, apar",
           },
           { name: "robots", content: "index, follow" }, // Memberikan izin mesin pencari untuk mengindeks halaman
           { name: "twitter:site", content: twitterHandle },
@@ -65,8 +65,7 @@ const twitterHandle = "@rumahapi"; // Ganti dengan username Twitter Anda
       }}
     />
 
-    <!-- Menambahkan CSS external untuk Flowbite -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet">
+ 
   </head>
 
   <body class="font-nunito">
@@ -86,17 +85,17 @@ const twitterHandle = "@rumahapi"; // Ganti dengan username Twitter Anda
           class="bg-white shadow-lg rounded-lg p-4 py-5 md:p-10 flex flex-col md:flex-row justify-between items-center mx-auto md:max-w-7xl space-y-4 md:space-y-0 hover:shadow-2xl transition-shadow duration-500 ease-in-out">
           <div class="text-center md:text-left">
             <h2
-              class="text-xl md:text-2xl font-bold text-gray-800 leading-snug hover:text-red-600 transition-colors duration-500 ease-in-out">
+              class="text-xl md:text-2xl font-bold text-gray-800 leading-snug hover:text-blue-600 transition-colors duration-500 ease-in-out">
               Bisnis Aman, Hidup Tenang!
             </h2>
             <p class="text-gray-500 mt-2 text-sm md:text-base">
               Kebakaran bisa terjadi kapan saja – jangan ambil risiko! <br />
-              Dengan RumahApi, perlindungan bisnis Anda ada di tangan para ahli.
+              Dengan Tigrisfire, perlindungan bisnis Anda ada di tangan para ahli.
             </p>
           </div>
           <a
-            href="https://wa.me/6287787500580?text=Hallo%20RumahApi,%20Saya%20Mau%20Konsultasi"
-            class="relative text-white bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 shadow-md hover:shadow-xl transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-offset-2">
+            href="https://wa.me/6287787500580?text=Hallo%20Tigrisfire,%20Saya%20Mau%20Konsultasi"
+            class="relative text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 shadow-md hover:shadow-xl transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-offset-2">
             Konsultasi Sekarang
           </a>
         </div>

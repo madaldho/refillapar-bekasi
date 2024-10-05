@@ -1,5 +1,25 @@
+---
+import { Image } from "astro:assets";
+import Alfamart from "../assets/Logo Pembayaran/Alfamart.jpg";
+import AmericanExpress from "../assets/Logo Pembayaran/American-Express.jpg";
+import BCA from "../assets/Logo Pembayaran/bca.jpg";
+import BNI from "../assets/Logo Pembayaran/bni.jpg";
+import BRI from "../assets/Logo Pembayaran/BRI.jpg";
+import Dana from "../assets/Logo Pembayaran/Dana.jpg";
+import JCB from "../assets/Logo Pembayaran/JCB.jpg";
+import LinkAja from "../assets/Logo Pembayaran/Link-Aja.jpg";
+import Mandiri from "../assets/Logo Pembayaran/Mandiri.jpg";
+import MasterCard from "../assets/Logo Pembayaran/Master-card-2.jpg";
+import Ovo from "../assets/Logo Pembayaran/Ovo.jpg";
+import PermataBank from "../assets/Logo Pembayaran/Permata-Bank.jpg";
+import QRIS from "../assets/Logo Pembayaran/QRIS.jpg";
+import ShopeePay from "../assets/Logo Pembayaran/Shopee-Pay.jpg";
+import Visa from "../assets/Logo Pembayaran/Visa.jpg";
+
+---
+
 <footer>
-  <div class="bg-gradient-to-r from-red-600 to-orange-500 text-white pt-32">
+  <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white pt-32">
     <div
       class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8">
       <div class="grid row-gap-10 mb-8 lg:grid-cols-5">
@@ -11,9 +31,8 @@
               <li>
                 <p
                   class="text-gray-50 transition-colors duration-300 hover:text-deep-purple-accent-200"
-                  >PT. Rumah Api Indosafety<br />
-                  Jl Gading Kirana Timur A-12 RT 001 RW 08, Kel. Kelapa Gading Barat,
-                  Kec. Kelapa Gading,14240, - Jakarta Utara</p
+                  >PT. Tigris Berkat Sejati<br />
+                  Jl. Tigris No 7.8.9 Kp Pintu, Babelan Kota, Kec. Babelan, Kabupaten Bekasi, Jawa Barat, Indonesia</p
                 >
               </li>
             </ul>
@@ -81,100 +100,39 @@
         </div>
         <div>
           <!-- Metode Pembayaran Section -->
-          <div class="">
-            <h2 class="text-lg font-semibold mb-4 text-white">
-              Metode Pembayaran
-            </h2>
-            <div class="grid grid-cols-5 gap-2">
-              <img
-                src="/Logo Pembayaran/Alfamart.jpg"
-                alt="Alfamart"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/American-Express.jpg"
-                alt="American Express"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/bca.jpg"
-                alt="BCA"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/bni.jpg"
-                alt="BNI"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/BRI.jpg"
-                alt="BRI"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/Dana.jpg"
-                alt="Dana"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/JCB.jpg"
-                alt="JCB"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/Link-Aja.jpg"
-                alt="Link Aja"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/Mandiri.jpg"
-                alt="Mandiri"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/Master-card-2.jpg"
-                alt="MasterCard"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/Ovo.jpg"
-                alt="Ovo"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/Permata-Bank.jpg"
-                alt="Permata Bank"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/QRIS.jpg"
-                alt="QRIS"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/Shopee-Pay.jpg"
-                alt="Shopee Pay"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-              <img
-                src="/Logo Pembayaran/Visa.jpg"
-                alt="Visa"
-                class="object-contain h-12 lg:h-14" loading="lazy"
-              />
-            </div>
-          </div>
+        
+<div>
+  <h2 class="text-lg font-semibold mb-4 text-white">Metode Pembayaran</h2>
+  <div class="grid grid-cols-5 gap-2">
+    <Image src={Alfamart} alt="Alfamart" class="object-contain h-12 lg:h-14" />
+    <Image src={AmericanExpress} alt="American Express" class="object-contain h-12 lg:h-14" />
+    <Image src={BCA} alt="BCA" class="object-contain h-12 lg:h-14" />
+    <Image src={BNI} alt="BNI" class="object-contain h-12 lg:h-14" />
+    <Image src={BRI} alt="BRI" class="object-contain h-12 lg:h-14" />
+    <Image src={Dana} alt="Dana" class="object-contain h-12 lg:h-14" />
+    <Image src={JCB} alt="JCB" class="object-contain h-12 lg:h-14" />
+    <Image src={LinkAja} alt="Link Aja" class="object-contain h-12 lg:h-14" />
+    <Image src={Mandiri} alt="Mandiri" class="object-contain h-12 lg:h-14" />
+    <Image src={MasterCard} alt="MasterCard" class="object-contain h-12 lg:h-14" />
+    <Image src={Ovo} alt="Ovo" class="object-contain h-12 lg:h-14" />
+    <Image src={PermataBank} alt="Permata Bank" class="object-contain h-12 lg:h-14" />
+    <Image src={QRIS} alt="QRIS" class="object-contain h-12 lg:h-14" />
+    <Image src={ShopeePay} alt="Shopee Pay" class="object-contain h-12 lg:h-14" />
+    <Image src={Visa} alt="Visa" class="object-contain h-12 lg:h-14" />
+  </div>
+</div>
         </div>
       </div>
 
       <div
         class="flex flex-col justify-between pt-5 pb-10 border-t border-gray-200 sm:flex-row">
         <p class="text-sm text-gray-50">
-          © Copyright 2024 RumahApi. All rights reserved.
+          © Copyright 2024 Tigrisfire. All rights reserved.
         </p>
         <div class="flex items-center mt-4 space-x-4 sm:mt-0">
          <!-- IG -->
 <a
-href="https://www.instagram.com/rumahapi"
+href="https://www.instagram.com/tigrisfire"
 class="text-gray-50 transition-colors duration-300 hover:text-teal-accent-400"
 aria-label="Instagram"
 >

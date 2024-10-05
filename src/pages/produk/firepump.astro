@@ -1,43 +1,20 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import Klikporto from "../../components/klikporto.astro";
+import Heropagetitle from "../../components/heropagetitle.astro";
 
 // Title dan description untuk meta
-const titlemeta =
-  "Layanan Proteksi Kebakaran Tangguh-Fire Alarm Sistem Product";
-const descriptionmeta =
-  "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
+
+const {
+  titlemeta = "Our Fire Pump",
+  descriptionmeta = "Produk Berkulitas Fire Pump Kami",
+  pagetitle = "Our Fire Pump",
+} = Astro.props;
 ---
 
 <BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
-  <section
-    class="relative py-16 bg-gradient-to-r from-orange-400 via-yellow-400 to-red-500 overflow-hidden">
-    <!-- Animated Background Particles -->
-    <div class="absolute inset-0">
-      <div
-        class="w-80 h-80 bg-gradient-to-r from-yellow-300 via-orange-400 to-red-400 opacity-40 rounded-full blur-2xl absolute -top-10 -left-10 animate-float-slow">
-      </div>
-      <div
-        class="w-64 h-64 bg-gradient-to-r from-orange-300 via-yellow-400 to-red-400 opacity-40 rounded-full blur-2xl absolute top-20 right-0 animate-float-slow">
-      </div>
-      <div
-        class="w-72 h-72 bg-gradient-to-r from-yellow-500 via-orange-300 to-red-600 opacity-40 rounded-full blur-2xl absolute -bottom-20 right-16 animate-float-slow">
-      </div>
-    </div>
-
-    <!-- Content -->
-    <div
-      class="relative z-10 container mx-auto px-6 md:px-12 lg:px-16 text-white">
-      <!-- Section Header -->
-      <div class="text-center">
-        <h2
-          class="text-5xl font-bold leading-tight tracking-tight text-shadow-md">
-          Our Fire Pump
-        </h2>
-      </div>
-    </div>
-  </section>
-
+  <Heropagetitle pagetitle={pagetitle} />
+  
   <!-- Main Content -->
   <main class="py-16" id="products">
     <div class="container mx-auto">
@@ -50,16 +27,16 @@ const descriptionmeta =
             class="w-28 md:w-60 h-auto rounded-lg mr-6"
           />
           <div>
-            <h3 class="text-3xl font-bold text-orange-600 mb-3">
+            <h3 class="text-3xl font-bold text-blue-600 mb-3">
               Electric Fire Pump
             </h3>
             <p class="text-gray-700 mb-4">
-              The primary pump in a fire hydrant installation, powered by
+              The primary pump in a fire hydrant installation, poweblue by
               electricity to ensure quick response during emergencies.
             </p>
             <a
-              href="https://tigrisfire.com/tigris-engine/"
-              class="inline-block px-6 py-3 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-500 transition"
+              href="/tigrisproduct/tigris-engine"
+              class="inline-block px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-500 transition"
               >View Product</a
             >
           </div>
@@ -73,16 +50,16 @@ const descriptionmeta =
             class="w-28 md:w-60 h-auto rounded-lg mr-6"
           />
           <div>
-            <h3 class="text-3xl font-bold text-orange-600 mb-3">
+            <h3 class="text-3xl font-bold text-blue-600 mb-3">
               Diesel Fire Pump
             </h3>
             <p class="text-gray-700 mb-4">
-              Powered by diesel, this pump serves as a backup for the electric
+              Poweblue by diesel, this pump serves as a backup for the electric
               pump, ensuring fire safety even during power outages.
             </p>
             <a
-              href="https://tigrisfire.com/tefsc-series-devsb/"
-              class="inline-block px-6 py-3 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-500 transition"
+              href="/tigrisproduct/tefsc-series-2"
+              class="inline-block px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-500 transition"
               >View Product</a
             >
           </div>
@@ -96,7 +73,7 @@ const descriptionmeta =
             class="w-28 md:w-60 h-auto rounded-lg mr-6"
           />
           <div>
-            <h3 class="text-3xl font-bold text-orange-600 mb-3">
+            <h3 class="text-3xl font-bold text-blue-600 mb-3">
               Jockey Fire Pump
             </h3>
             <p class="text-gray-700 mb-4">
@@ -104,8 +81,8 @@ const descriptionmeta =
               system to avoid water hammer.
             </p>
             <a
-              href="https://tigrisfire.com/pompa-jockey/"
-              class="inline-block px-6 py-3 bg-orange-600 text-white rounded-full font-semibold hover:bg-orange-500 transition"
+              href="/tigrisproduct/pompa-jockey"
+              class="inline-block px-6 py-3 bg-blue-600 text-white rounded-full font-semibold hover:bg-blue-500 transition"
               >View Product</a
             >
           </div>
@@ -120,7 +97,7 @@ const descriptionmeta =
       Produk Firepump Kami
     </h2>
     <p class="text-center text-lg font-extralight leading-8 px-3 md:px-36">
-      RumahApi menawarkan produk proteksi kebakaran berkualitas tinggi yang
+      Tigrisfire menawarkan produk proteksi kebakaran berkualitas tinggi yang
       dirancang untuk ketahanan maksimal dan keandalan jangka panjang. Kami
       memastikan keamanan terbaik dengan teknologi terkini yang siap melindungi
       aset Anda.

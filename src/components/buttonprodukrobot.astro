@@ -1,26 +1,5 @@
   <!-- Tombol Beli -->
-  <a href="https://wa.me/6281382529368?text=" class="whatsapp-button">Pesan Produk Ini</a>
-
-  <style>
-      .whatsapp-button {
-          display: inline-block;
-          padding: 10px 20px;
-          background: linear-gradient(45deg, #ff3b3b, #ff0000); /* Gradien merah */
-          color: white;
-          text-decoration: none;
-          border-radius: 50px; /* Membuat tombol berbentuk oval */
-          font-size: 18px;
-          font-weight: bold;
-          text-align: center;
-          box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); /* Efek bayangan */
-          transition: background 0.3s ease, transform 0.3s ease, color 0.3s ease; /* Transisi pada warna dan transformasi */
-      }
-      .whatsapp-button:hover {
-          background: linear-gradient(45deg, #ff4d4d, #e60000); /* Gradien merah yang lebih terang saat hover */
-          transform: translateY(-5px); /* Efek hover dengan gerakan */
-          color: #ffcccc; /* Warna teks saat hover, lebih soft (light pink) */
-      }
-  </style>
+  <a href="https://wa.me/6281382529368?text=" class="whatsapp-button inline-flex items-center px-8 py-3 text-lg font-semibold text-white  bg-gradient-to-r from-blue-800 to-blue-600 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 transition-all duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">Pesan Produk Ini</a>
 
   <script>
       document.addEventListener("DOMContentLoaded", function () {
@@ -34,7 +13,7 @@
           var pageURL = window.location.href;
   
           // Teks pesan dinamis yang diinginkan
-          var message = "Hallo RumahApi, Saya Mau Pesan Produk " + productTitle + " di " + pageURL;
+          var message = "Hallo Tigrisfire, Saya Mau Pesan Produk " + productTitle + " di " + pageURL;
   
           // Dapatkan elemen tombol WhatsApp, dengan memastikan bahwa elemen yang diambil adalah anchor
           var whatsappButton = document.querySelector('.whatsapp-button') as HTMLAnchorElement;

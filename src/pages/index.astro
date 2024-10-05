@@ -1,25 +1,34 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Logopartner from "../components/logopartner.astro";
+import Keunggulan from "../../src/components/keunggulan.astro";
 import { Image } from "astro:assets";
+import { Picture } from 'astro:assets';
 
 // Title dan description untuk meta
 const titlemeta = "Lindungi Semuanya dari Api seperti Melindungi Rumahmu";
 const descriptionmeta =
   "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
-const product1Image = "https://i.postimg.cc/rpX5DnKq/robotfire.webp";
-const product2Image = "https://i.postimg.cc/DwbqykfC/cctvrobot.webp";
-const certificationImageUrl =
-  "https://i.postimg.cc/yx359BW2/Standard-1-2048x712.webp";
+import product2jet from "../assets/cctvrobot.webp";
+import product1robot from "../assets/robotfire.webp";
+import certificationImageUrl from "../assets/Standard-1-2048x712.webp";
+import certification1 from "../assets/certification1.webp";
+import herotigris from "../assets/herotigris.webp";
+import lebihdari100klient from "../assets/lebihdari100klient.webp";
+
+import aparImage from "../assets/hmarketproduct/1.apar (1).webp";
+import fireAlarmImage from "../assets/hmarketproduct/2.firealarm (1).webp";
+import fireSprinklerImage from "../assets/hmarketproduct/3.firesprinkler.webp";
+import firePumpImage from "../assets/hmarketproduct/4.fire pump (1).webp";
 ---
 
 <BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
   <section
-    class="relative bg-gradient-to-r from-red-600 to-orange-500 text-white py-16 lg:py-24">
+    class="relative bg-gradient-to-r from-blue-600 to-blue-900 text-white py-16 lg:py-24 lg:px-24">
     <div
-      class="container mx-auto flex px-10 py-8 md:flex-row flex-col items-center">
+      class="container mx-auto flex md:px-10 py-8 md:flex-row flex-col items-center">
       <div
-        class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        class="lg:flex-grow md:w-1/2 lg:pr-24 px-5 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
         <h1
           class="title-font sm:text-5xl text-4xl mb-6 font-extrabold leading-tight animate-fade-in-up">
           Perlindungan Terbaik Untuk Masa Depan <br
@@ -27,13 +36,13 @@ const certificationImageUrl =
           />Aset Berharga Anda
         </h1>
         <p class="mb-8 leading-relaxed max-w-lg animate-fade-in-up-delay">
-          Rumah API hadir dengan solusi proteksi kebakaran yang andal dan
+          Tigrisfire hadir dengan solusi proteksi kebakaran yang andal dan
           canggih, menjaga keamanan aset Anda dari risiko tak terduga. Jadikan
           bisnis dan rumah Anda lebih aman bersama kami.
         </p>
         <div class="flex justify-center animate-fade-in-up-delay-long">
           <a
-            href="https://wa.me/6281382529368?text=Halo%20Rumah%20Api,%20Saya%20Mau%20Konsultasi"
+            href="https://wa.me/6287787500580?text=Halo%20Tigrisfire,%20Saya%20Mau%20Konsultasi"
             target="_blank"
             class="ml-4 inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-gray-800 bg-white hover:bg-gray-200 rounded-lg shadow-md transition-all duration-300 ease-in-out focus:outline-none">
             Konsultasi Sekarang
@@ -41,22 +50,18 @@ const certificationImageUrl =
         </div>
       </div>
       <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-        <img
-          class="object-cover object-center rounded-lg animate-slide-in-left"
-          alt="hero"
-          src="/rumahapi hero.webp"
-        />
+        <Picture src={herotigris} formats={['avif', 'webp']} alt="Tigris Banner Person"/>
       </div>
     </div>
 
     <!-- Flame-like floating animation (background effect) -->
     <div
-      class="absolute inset-0 z-0 overflow-hidden opacity-20 pointer-events-none">
+      class="absolute inset-0 z-10 overflow-hidden opacity-20 pointer-events-none">
       <div
-        class="absolute -bottom-10 -left-10 w-64 h-64 bg-red-300 opacity-50 rounded-full animate-pulse-slow">
+        class="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-300 opacity-50 rounded-full animate-pulse-slow">
       </div>
       <div
-        class="absolute top-20 right-20 w-96 h-96 bg-orange-400 opacity-50 rounded-full animate-pulse-slow">
+        class="absolute top-20 right-20 w-96 h-96 bg-blue-500 opacity-50 rounded-full animate-pulse-slow">
       </div>
     </div>
   </section>
@@ -118,7 +123,7 @@ const certificationImageUrl =
       <div
         class="p-8 bg-white shadow-md rounded-lg hover:shadow-xl transition-shadow duration-500 ease-in-out hover:scale-105">
         <div
-          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-red-100">
+          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -133,9 +138,9 @@ const certificationImageUrl =
             ></path>
           </svg>
         </div>
-        <h6 class="text-xl font-semibold text-gray-800 text-center">
+        <param class="text-xl font-semibold text-gray-800 text-center">
           Konsultan
-        </h6>
+      </p>
         <p class="text-sm text-gray-900 text-center mt-3">
           Dengan keunggulan perencanaan yang sistematis dan mengedepankan
           efisiensi.
@@ -146,7 +151,7 @@ const certificationImageUrl =
       <div
         class="p-8 bg-white shadow-md rounded-lg hover:shadow-xl transition-shadow duration-500 ease-in-out hover:scale-105">
         <div
-          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-yellow-100">
+          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -161,9 +166,9 @@ const certificationImageUrl =
             ></path>
           </svg>
         </div>
-        <h6 class="text-xl font-semibold text-gray-800 text-center">
+        <p class="text-xl font-semibold text-gray-800 text-center">
           Training
-        </h6>
+        </p>
         <p class="text-sm text-gray-600 text-center mt-3">
           Pembekalan dasar pemadam kebakaran oleh trainer berpengalaman.
         </p>
@@ -173,7 +178,7 @@ const certificationImageUrl =
       <div
         class="p-8 bg-white shadow-md rounded-lg hover:shadow-xl transition-shadow duration-500 ease-in-out hover:scale-105">
         <div
-          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-purple-100">
+          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -188,9 +193,9 @@ const certificationImageUrl =
             ></path>
           </svg>
         </div>
-        <h6 class="text-xl font-semibold text-gray-800 text-center">
+        <p class="text-xl font-semibold text-gray-800 text-center">
           Audit Keamanan
-        </h6>
+        </p>
         <p class="text-sm text-gray-600 text-center mt-3">
           Audit untuk memastikan bahwa sistem keamanan Anda berjalan sesuai
           standar.
@@ -201,7 +206,7 @@ const certificationImageUrl =
       <div
         class="p-8 bg-white shadow-md rounded-lg hover:shadow-xl transition-shadow duration-500 ease-in-out hover:scale-105">
         <div
-          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-pink-100">
+          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -216,9 +221,9 @@ const certificationImageUrl =
             ></path>
           </svg>
         </div>
-        <h6 class="text-xl font-semibold text-gray-800 text-center">
+        <p class="text-xl font-semibold text-gray-800 text-center">
           Sertifikasi
-        </h6>
+        </p>
         <p class="text-sm text-gray-600 text-center mt-3">
           Memberikan sertifikasi yang diakui oleh badan resmi untuk setiap
           pelatihan dan audit.
@@ -228,7 +233,7 @@ const certificationImageUrl =
   </div>
 
   <section
-    class="text-white bg-gradient-to-r from-red-500 via-orange-500 to-yellow-500 body-font">
+    class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 body-font">
     <h2 class="text-3xl font-extrabold text-center text-white pt-28 px-1">
       Kebutuhan Anda Semua Tersedia Disini
     </h2>
@@ -376,101 +381,26 @@ const certificationImageUrl =
     </div>
   </section>
 
-  <!--Keunggulan Rumah API -->
-  <section class="text-gray-900 bg-white py-16">
-    <div class="container mx-auto">
-      <!-- Section Header -->
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800">Keunggulan Rumah Api</h2>
-        <p class="mt-4 text-gray-600">
-          Memberikan solusi proteksi kebakaran yang terpercaya, efektif, dan
-          efisien untuk melindungi bisnis Anda.
-        </p>
-      </div>
-
-      <!-- Statistics Cards -->
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 px-5 py-10">
-        <!-- Card 1: Klien Terpercaya -->
-        <div
-          class="relative bg-white shadow-xl rounded-lg p-6 text-center transition-transform transform hover:scale-105 hover:shadow-2xl group">
-          <div
-            class="w-16 h-16 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:from-red-600 group-hover:to-yellow-600">
-            <img
-              src="/logoberandastatistik/klien.webp"
-              alt="klien logo"
-              class="p-2"
-            />
-          </div>
-          <h2 class="title-font font-bold text-3xl text-gray-900">500+</h2>
-          <p class="leading-relaxed text-gray-600">Klien Terpercaya</p>
-        </div>
-
-        <!-- Card 2: Proyek Selesai -->
-        <div
-          class="relative bg-white shadow-xl rounded-lg p-6 text-center transition-transform transform hover:scale-105 hover:shadow-2xl group">
-          <div
-            class="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:from-blue-600 group-hover:to-purple-600">
-            <img
-              src="/logoberandastatistik/proyek.webp"
-              alt="proyek icon"
-              class="p-2"
-            />
-          </div>
-          <h2 class="title-font font-bold text-3xl text-gray-900">700+</h2>
-          <p class="leading-relaxed text-gray-600">Proyek Selesai</p>
-        </div>
-
-        <!-- Card 3: Tim Profesional -->
-        <div
-          class="relative bg-white shadow-xl rounded-lg p-6 text-center transition-transform transform hover:scale-105 hover:shadow-2xl group">
-          <div
-            class="w-16 h-16 bg-gradient-to-r from-green-500 to-teal-500 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:from-green-600 group-hover:to-teal-600">
-            <img
-              src="/logoberandastatistik/tim.webp"
-              alt="tim logo"
-              class="p-2"
-            />
-          </div>
-          <h2 class="title-font font-bold text-3xl text-gray-900">150+</h2>
-          <p class="leading-relaxed text-gray-600">Tim Profesional</p>
-        </div>
-
-        <!-- Card 4: Area Layanan -->
-        <div
-          class="relative bg-white shadow-xl rounded-lg p-6 text-center transition-transform transform hover:scale-105 hover:shadow-2xl group">
-          <div
-            class="w-16 h-16 bg-gradient-to-r from-red-500 to-pink-500 rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:from-red-600 group-hover:to-pink-600">
-            <img
-              src="/logoberandastatistik/area.webp"
-              alt="area icon"
-              class="p-2"
-            />
-          </div>
-          <h2 class="title-font font-bold text-3xl text-gray-900">30+</h2>
-          <p class="leading-relaxed text-gray-600">Area Layanan</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!--Keunggulan Tigrisfire -->
+  <Keunggulan />
 
   <!--Marketplace Product -->
   <section
-    class="text-gray-900 body-font py-10 bg-gradient-to-r from-red-600 to-orange-500 animate-gradient-x">
+    class="text-gray-900 body-font py-10 bg-gradient-to-r from-blue-500 to-blue-800 animate-gradient-x">
     <div class="text-center text-white mt-10 mb-12 text-opacity-75 mx-auto">
       <h2 class="text-4xl font-bold text-shadow-md">
         Produk Dengan Inovasi Terbaru Kami
       </h2>
     </div>
-    <div class="flex flex-wrap justify-center gap-8 my-8 px-2">
+    <div class="flex flex-wrap justify-center gap-8 my-8 px-3">
       <!-- First Card -->
       <div
         class="relative flex flex-col bg-white shadow-lg border border-slate-200 rounded-2xl w-96 hover:scale-105 transition-transform duration-300">
         <div
-          class="relative p-3 h-96 overflow-hidden rounded-xl bg-clip-border">
+          class="relative p-5 h-96 overflow-hidden rounded-xl bg-clip-border">
           <Image
-            src={product1Image}
-            alt="product-image-1"
+            src={product1robot}
+            alt="product-robot"
             class="h-full w-full object-cover rounded-2xl transition-transform duration-300 hover:scale-110"
             format="webp"
             width={400}
@@ -485,7 +415,7 @@ const certificationImageUrl =
           </div>
           <a
             href="/robotfire"
-            class="rounded-full w-full bg-red-600 py-3 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-red-700 focus:bg-red-700 focus:shadow-none active:bg-red-700 active:shadow-none hover:scale-105"
+            class="rounded-full w-full bg-blue-600 py-3 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-blue-700 focus:bg-blue-700 focus:shadow-none active:bg-blue-700 active:shadow-none hover:scale-105"
             role="button">
             Lihat Detail
           </a>
@@ -498,8 +428,8 @@ const certificationImageUrl =
         <div
           class="relative p-3 h-96 overflow-hidden rounded-xl bg-clip-border">
           <Image
-            src={product2Image}
-            alt="product-image-2"
+            src={product2jet}
+            alt="product-jetwater"
             class="h-full w-full object-cover rounded-2xl transition-transform duration-300 hover:scale-110"
             format="webp"
             width={400}
@@ -514,7 +444,7 @@ const certificationImageUrl =
           </div>
           <a
             href="/cctv"
-            class="rounded-full w-full bg-red-600 py-3 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-red-700 focus:bg-red-700 focus:shadow-none active:bg-red-700 active:shadow-none hover:scale-105"
+            class="rounded-full w-full bg-blue-600 py-3 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-blue-700 focus:bg-blue-700 focus:shadow-none active:bg-blue-700 active:shadow-none hover:scale-105"
             role="button">
             Lihat Detail
           </a>
@@ -530,15 +460,19 @@ const certificationImageUrl =
       </div>
 
       <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-5 py-10">
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-5 py-10 lg:px-36">
         <!-- Card 1: APAR -->
         <div
           class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
           <figure class="h-56 w-full rounded-lg overflow-hidden">
-            <img
-              src="/hmarketproduct/1.apar (1).webp"
+            <Image
+              src={aparImage}
               alt="APAR"
-              class="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-50"
+              width={800}
+              height={550}
+              format="webp"
+              quality={85}
+              class="w-full h-full object-cover"
             />
           </figure>
           <div
@@ -552,20 +486,24 @@ const certificationImageUrl =
             </p>
             <a
               href="/produk/apar"
-              class="px-6 py-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition duration-300">
+              class="px-6 py-2 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
               Selengkapnya
             </a>
           </div>
         </div>
 
-        <!-- Card 1: Fire Alarm -->
+        <!-- Card 2: Fire Alarm -->
         <div
           class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
           <figure class="h-56 w-full rounded-lg overflow-hidden">
-            <img
-              src="/hmarketproduct/2.firealarm (1).webp"
+            <Image
+              src={fireAlarmImage}
               alt="Fire Alarm"
-              class="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-50"
+              width={800}
+              height={550}
+              format="webp"
+              quality={85}
+              class="w-full h-full object-cover"
             />
           </figure>
           <div
@@ -578,20 +516,24 @@ const certificationImageUrl =
             </p>
             <a
               href="/produk/firealarm"
-              class="px-6 py-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition duration-300">
+              class="px-6 py-2 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
               Selengkapnya
             </a>
           </div>
         </div>
 
-        <!-- Card 3: Fire Hydrant -->
+        <!-- Card 3: Fire Sprinkler -->
         <div
           class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
           <figure class="h-56 w-full rounded-lg overflow-hidden">
-            <img
-              src="/hmarketproduct/3.firesprinkler.webp"
-              alt="Fire Hydrant"
-              class="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-50"
+            <Image
+              src={fireSprinklerImage}
+              alt="Fire Sprinkler"
+              width={800}
+              height={550}
+              format="webp"
+              quality={85}
+              class="w-full h-full object-cover"
             />
           </figure>
           <div
@@ -604,7 +546,7 @@ const certificationImageUrl =
             </p>
             <a
               href="/produk/firesprinkler"
-              class="px-6 py-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition duration-300">
+              class="px-6 py-2 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
               Selengkapnya
             </a>
           </div>
@@ -614,10 +556,14 @@ const certificationImageUrl =
         <div
           class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
           <figure class="h-56 w-full rounded-lg overflow-hidden">
-            <img
-              src="/hmarketproduct/4.fire pump (1).webp"
+            <Image
+              src={firePumpImage}
               alt="Fire Pump"
-              class="h-full w-full object-cover transition-opacity duration-500 group-hover:opacity-50"
+              width={800}
+              height={550}
+              format="webp"
+              quality={85}
+          class="w-full h-full object-cover"
             />
           </figure>
           <div
@@ -630,7 +576,7 @@ const certificationImageUrl =
             </p>
             <a
               href="/produk/firepump"
-              class="px-6 py-2 bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-white font-semibold rounded-lg hover:bg-pink-600 transition duration-300">
+              class="px-6 py-2 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
               Selengkapnya
             </a>
           </div>
@@ -673,10 +619,10 @@ const certificationImageUrl =
       <!-- Partners Logos -->
       <Logopartner />
       <div>
-        <img
-          src="/mitra rumahapi/lebihdari100klient.webp"
-          alt="100 klien lebih"
-          class="w-full md:w-9/12 mx-auto mt-10"
+        <Image
+          src={lebihdari100klient}
+          alt="100++ client"
+          class="w-screen md:w-9/12 mx-auto mt-10"
         />
       </div>
 
@@ -684,7 +630,7 @@ const certificationImageUrl =
       <div class="flex justify-center mt-10 space-x-6">
         <a href="/portofolio" class="no-underline">
           <button
-            class="px-6 py-2 bg-gradient-to-r from-red-500 via-red-600 to-red-700 text-white rounded-lg shadow hover:bg-red-800 transition-all duration-300 hover:shadow-lg transform hover:scale-105">
+            class="px-6 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-lg shadow-md hover:bg-blue-800 transition-all duration-300 hover:shadow-lg transform hover:scale-105">
             Lihat Portofolio Klien
           </button>
         </a>
@@ -697,16 +643,27 @@ const certificationImageUrl =
       <!-- Header Section -->
       <div class="text-center mb-8">
         <h2 class="text-3xl font-bold text-gray-900">
-          Sertifikasi Resmi Produk Kami
+          Jaminan Standar Kualitas Internasional
         </h2>
         <p class="mt-4 text-lg text-gray-600">
-          Kami telah memperoleh sertifikasi internasional yang membuktikan bahwa
-          produk kami memenuhi standar keamanan dan kualitas terbaik.
+          Produk kami telah teruji dan mengikuti standar internasional,
+          memastikan keamanan dan kualitas terbaik untuk kebutuhan Anda.
         </p>
       </div>
 
       <!-- Sertifikasi Gambar -->
-      <div class="flex justify-center bg-gray-100">
+      <div class="flex justify-center bg-gray-100 mt-10">
+        <Image
+          src={certification1}
+          alt="Sertifikasinya"
+          class="max-w-full h-auto shadow-lg rounded-lg"
+          loading="lazy"
+          width={2048}
+          height={712}
+          format="webp"
+        />
+      </div>
+      <div class="flex justify-center bg-gray-100 mt-20">
         <Image
           src={certificationImageUrl}
           alt="Sertifikasi Resmi"
@@ -717,6 +674,8 @@ const certificationImageUrl =
           format="webp"
         />
       </div>
+
+    
     </div>
   </section>
 </BaseLayout>

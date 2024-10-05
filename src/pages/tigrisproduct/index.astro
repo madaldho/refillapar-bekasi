@@ -1,0 +1,105 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { contentfulClient } from "../../lib/contentful";
+import type { Producttigris } from "../../lib/contentful";
+import Heropagetitle from "../../components/heropagetitle.astro";
+
+// Mengambil produk dari Contentful
+const entries = await contentfulClient.getEntries<Producttigris>({
+  content_type: "producttigris", // Sesuaikan dengan content_type produk di Contentful
+});
+const producttigris = entries.items.map((item) => {
+  const { title, slug, price, image, content, spesifikasi } = item.fields;
+
+  // Periksa apakah image array memiliki setidaknya satu elemen dan dapatkan URL gambar pertama
+  const imageUrl =
+    Array.isArray(image) && image.length > 0 && image[0]?.fields?.file
+      ? image[0].fields.file.url
+      : "/default-producttigris-image.png"; // URL default jika tidak ada gambar
+
+  return {
+    title,
+    slug,
+    price,
+    imageUrl, // Menggunakan URL gambar pertama dari array
+    content,
+    spesifikasi,
+  };
+});
+
+const {
+  titlemeta = "TIGRIS PRODUCT",
+  descriptionmeta = "Kami Memberikan Kualitas Produk Dengan Qualitas Terbaik",
+  pagetitle = "TIGRIS PRODUCT",
+} = Astro.props;
+---
+
+<BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
+  <Heropagetitle pagetitle={pagetitle} />
+
+  <div class="container mx-auto pt-20 md:py-12 px-4 sm:px-6 lg:px-8">
+    <!-- Grid Produk -->
+    <div class="flex flex-wrap items-center justify-center">
+      {
+        producttigris.map((producttigris) => (
+          <div class="flex-shrink-0 m-6 relative overflow-hidden bg-gray-50 rounded-lg max-w-xs shadow-lg">
+            <svg
+              class="absolute bottom-0 left-0 mb-8"
+              viewBox="0 0 375 283"
+              fill="none"
+              style="transform: scale(1.5); opacity: 0.1;">
+              <rect
+                x="159.52"
+                y="175"
+                width="152"
+                height="152"
+                rx="8"
+                transform="rotate(-45 159.52 175)"
+                fill="gray"
+              />
+              <rect
+                y="107.48"
+                width="152"
+                height="152"
+                rx="8"
+                transform="rotate(-45 0 107.48)"
+                fill="gray"
+              />
+            </svg>
+            <div class="relative pt-10 px-10 flex items-center justify-center">
+              <div
+                class="block absolute w-48 h-48 bottom-0 left-0 -mb-24 ml-3"
+                style="background: radial-gradient(circle, rgba(0, 0, 0, 0.5), transparent 70%);
+transform: translate(-50%, -50%) scale(2);
+opacity: 0.4;
+position: absolute;
+top: 50%;
+left: 50%;
+"
+              />
+              <a href={`/tigrisproduct/${producttigris.slug}`}>
+                {" "}
+                <img
+                  class="flex w-80 object-cover aspect-square"
+                  src={producttigris.imageUrl}
+                  alt={producttigris.title}
+                />
+              </a>
+            </div>
+            <div class="relative text-black px-6 pb-6 mt-6">
+              <span class="block opacity-75 -mb-1">Produk Kami</span>
+              <div class="flex justify-between">
+                <span class="block font-semibold text-xl">{producttigris.title}</span>
+              </div>
+              <a
+                href={`/tigrisproduct/${producttigris.slug}`}
+                class="block mt-4 text-sm bg-blue-900 text-white font-semibold py-2 px-4 rounded-lg shadow-lg hover:bg-blue-400 transition">
+                Lihat Detail
+              </a>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</BaseLayout>
