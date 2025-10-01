@@ -2,6 +2,8 @@
 import { defineConfig } from "astro/config";
 import react from "@astrojs/react";
 import sitemap from "@astrojs/sitemap";
+import partytown from "@astrojs/partytown";
+import robotsTxt from "astro-robots-txt";
 
 //https://astro.build/config
 export default defineConfig({
@@ -14,12 +16,13 @@ export default defineConfig({
       },
     },
   },
-  site: "https://tigrisfire.com/", // Tambahkan URL situs di sini
-  integrations: [
-    sitemap(),
-    react({
-      experimentalReactChildren: true,
-    }),
-  ],
+  site: "https://refillaparbekasi.dokterfire.com/", // Tambahkan URL situs di sini
+  integrations: [sitemap(), partytown({
+    config: {
+      forward: ["dataLayer.push"],
+    },
+  }), react({
+    experimentalReactChildren: true,
+  }), robotsTxt()],
   // Konfigurasi lain
 });

@@ -1,0 +1,621 @@
+---
+import Ctabase from "../components/ctabase.astro";
+import Sidewilayah from "../components/sidewilayah.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Image from "astro/components/Image.astro";
+
+// Title dan description untuk meta
+const titlemeta = "Refill APAR Powder Bekasi - Isi Ulang Dry Chemical Powder Bergaransi Mulai 45rb | Dokterfire";
+const descriptionmeta = "🔥 Refill APAR Powder Bekasi Terpercaya ✅ Dry Chemical Powder ABC ✅ Bergaransi 2 Tahun ✅ Gratis Ongkir ✅ Harga Mulai 45rb ☎️ 0811-842-909";
+// Import gambar yang sudah dioptimasi
+import foamapar from "../assets/foam.webp";
+import co2apar from "../assets/co2.webp";
+import powderapar from "../assets/powder.webp";
+
+
+// Data produk statis (menggunakan URL gambar biasa)
+const producttigris = {
+  title: "Harga Isi Ulang / Refill APAR Powder (Dry Chemical Powder)",
+  description:
+    "Dapatkan layanan pengisian ulang APAR Powder (Dry Chemical Powder) untuk semua merk dan kapasitas APAR. Kami menyediakan refill APAR Powder dengan harga kompetitif dan jaminan kualitas tinggi. Media Powder sangat efektif untuk memadamkan kebakaran kelas A, B, dan C, menjadikannya solusi serbaguna untuk berbagai jenis kebakaran, termasuk kebakaran yang melibatkan bahan padat, cairan mudah terbakar, serta peralatan listrik yang masih menyala.",
+  price: "45.000",
+  images: [
+   
+    { src: "/powder.webp", alt: "APAR Dry Chemical Powder" },
+  ],
+};
+
+// Galeri gambar
+const galleryImages = producttigris.images;
+---
+
+<BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
+  <!-- Container Utama -->
+  <div class="bg-gray-100 py-12 lg:px-10">
+    <div class="container mx-auto md:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-10 gap-8">
+        <!-- Bagian Konten Utama (75%) -->
+        <div class="md:col-span-7">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:px-1 px-4 mb-14">
+            <!-- Galeri Produk -->
+            <div class="flex flex-col items-center md:pt-7">
+              <!-- Gambar Utama -->
+              <div class="mb-2 w-full">
+                <img
+                  id="mainImage"
+                  src={galleryImages[0].src}
+                  alt={galleryImages[0].alt}
+                  class="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+
+              <!-- Thumbnail Galeri -->
+              <div class="grid grid-cols-4 gap-2">
+                {
+                  galleryImages.map((image, index) => (
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      class="h-20 w-20 object-cover rounded-md cursor-pointer opacity-60 hover:opacity-100 transition-opacity duration-300"
+                      data-image={image.src}
+                      onclick="document.getElementById('mainImage').src = this.getAttribute('data-image')"
+                    />
+                  ))
+                }
+              </div>
+            </div>
+
+            <!-- Detail Produk -->
+            <div class="flex flex-col justify-between md:p-5 md:pt-7">
+              <div>
+                <!-- Judul Produk -->
+                <h2 class="text-3xl font-bold mb-4 text-gray-800">
+                  {producttigris.title}
+                </h2>
+
+                <!-- Deskripsi Singkat Produk -->
+                <p class="mb-6 text-gray-700">
+                  {producttigris.description}
+                </p>
+
+                <!-- Harga Produk -->
+                <p class="text-4xl text-red-600 font-bold mb-4">
+                  <span class="text-sm align-bottom">Rp</span>
+                  {producttigris.price}
+                </p>
+
+                <!-- Tombol Pesan -->
+                <div class="flex flex-col md:flex-row justify-center items-center gap-4 mt-4">
+                  <!-- Pesan Sekarang Button -->
+                  <a
+                    href="https://wa.me/62811842909?text=Halo Dokterfire, saya ingin Refil APAR Powder."
+                    class="w-full md:w-auto text-center px-5 py-3 md:text-lg text-md font-semibold text-white bg-gradient-to-r from-red-800 to-red-600 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-red-600 hover:to-red-800 transition-all duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+                    Pesan Sekarang
+                  </a>
+                  
+                  <!-- Hubungi Sekarang Button -->
+                  <a
+                    href="tel:+62811842909"
+                    class="w-full md:w-auto text-center px-5 py-3 md:text-lg text-md font-semibold text-white bg-gradient-to-r from-blue-800 to-blue-600 rounded-full shadow-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-800 transition-all duration-300 focus:outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600">
+                    Hubungi Sekarang
+                  </a>
+                </div>
+                
+              </div>
+            </div>
+          </div>
+          <!-- Container for the Tabs -->
+          <div class="w-full mx-auto">
+            <div class="relative right-0">
+              <!-- Tab Header -->
+              <ul
+                class="relative flex flex-wrap px-2 py-2 list-none rounded-lg bg-gray-200 gap-3"
+                data-tabs="tabs"
+                role="list">
+                <!-- Tab 1: Deskripsi -->
+                <li class="flex-auto text-center">
+                  <div
+                    class="flex items-center justify-center w-full px-3 py-2 text-sm mb-0 font-medium transition-all ease-in-out border-0 rounded-md cursor-pointer text-slate-600 bg-slate-100 hover:bg-white hover:text-slate-900"
+                    data-tab-target="#deskripsi"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="deskripsi">
+                    Deskripsi
+                </div>
+                </li>
+                <!-- Tab 2: Info Lainnya -->
+                <li class="flex-auto text-center">
+                  <div
+                    class="flex items-center justify-center w-full px-3 py-2 mb-0 text-sm font-medium transition-all ease-in-out border-0 rounded-md cursor-pointer text-slate-600 bg-slate-100 hover:bg-white hover:text-slate-900"
+                    data-tab-target="#info"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="info">
+                    Info Lainnya
+                </div>
+                </li>
+              </ul>
+
+              <!-- Tab Content -->
+              <div
+                data-tab-content=""
+                class="p-5 bg-white border border-gray-200 rounded-lg mt-2 shadow-md">
+                <!-- Tab Panel 1: Deskripsi -->
+                <div id="deskripsi" role="tabpanel">
+                  <div class="prose max-w-4xl mx-auto py-8">
+                    <h3 class="text-xl font-bold text-slate-800">
+                      Proteksi aset dan bisnis Anda dari risiko kebakaran ABC
+                      DRY CHEMICAL POWDER dengan APAR Dokterfire
+                    </h3>
+
+                    <p class="text-base text-slate-600">
+                      APAR di <strong>Dokterfire</strong> dapat digunakan baik untuk
+                      kebutuhan komersial maupun non-komersial, seperti pada gedung
+                      perkantoran, hotel, rumah sakit, dan berbagai macam tempat
+                      lainnya.
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-slate-800 mt-6">
+                      APAR Anda Sudah Melewati Masa Berlaku? TENANG, Kami Siap
+                      Membantu!
+                    </h4>
+
+                    <p class="text-base text-slate-600">
+                      Jangan biarkan keamanan Anda terganggu hanya karena masa
+                      berlaku APAR Anda habis. Dengan layanan refill APAR Powder
+                      dari kami, tabung pemadam Anda akan kembali siap siaga
+                      untuk melindungi Anda dari risiko kebakaran kapan saja.
+                      Media serbuk kimia kering (Dry Chemical Powder) ini sangat
+                      ampuh dalam memadamkan kebakaran Kelas A, B, dan C, serta
+                      aman digunakan bahkan pada peralatan listrik yang masih
+                      menyala.
+                    </p>
+
+                    <p class="text-base text-slate-600">
+                      Kami menyediakan jasa pengisian ulang untuk semua jenis
+                      dan ukuran APAR, dari yang kecil hingga APAR yang lebih
+                      besar. Tidak perlu khawatir, dengan kami, Anda bisa
+                      memastikan APAR Anda selalu dalam kondisi prima. Jangan
+                      tunggu sampai terlambat, cek masa berlaku APAR Anda
+                      sekarang dan hubungi kami untuk layanan refill yang cepat,
+                      aman, dan profesional. Pastikan keselamatan Anda dan
+                      orang-orang yang Anda cintai tetap terjaga!
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-slate-800 mt-6">
+                      Daftar Harga Isi Ulang / Refill APAR Powder (Dry Chemical
+                      Powder)
+                    </h4>
+
+                    <table
+                      class="table-auto w-full border-collapse bg-white shadow-sm rounded-lg my-4">
+                      <thead>
+                        <tr class="bg-gray-100 text-slate-800">
+                          <th
+                            class="text-left px-4 py-2 border-b border-slate-200"
+                            >Deskripsi dan Ukuran</th
+                          >
+                          <th
+                            class="text-left px-4 py-2 border-b border-slate-200"
+                            >Harga (Rp)</th
+                          >
+                        </tr>
+                      </thead>
+                      <tbody class="text-slate-600">
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TEF 1 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >45,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TEF 2 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >90,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TEF 3 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >135,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TEF 3.5 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >157,500</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TEF 4 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >180,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TEF 4.5 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >202,500</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TEF 5 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >225,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TEF 6 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >270,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TEF 9 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >405,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TEF 12 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >540,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFC 2 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >100,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFC 5 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >250,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFC 6 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >300,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFC 20 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >1,000,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFM 25 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >1,250,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFM 35 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >1,750,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFM 50 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >2,500,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFM 65 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >3,250,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFM 70 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >3,500,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFB 60 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >3,600,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFB 75 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >4,500,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFB 85 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >5,100,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFB 100 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >6,000,000</td
+                          >
+                        </tr>
+                        <tr class="even:bg-gray-50">
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >Harga Refill / Isi Ulang APAR DRY CHEMICAL POWDER
+                            TFB 150 Kg</td
+                          >
+                          <td class="px-4 py-2 border-b border-slate-200"
+                            >9,000,000</td
+                          >
+                        </tr>
+                      </tbody>
+                    </table>
+
+                    <h4 class="text-lg font-semibold text-slate-800 mt-6">
+                      Jangan Biarkan Keamanan Anda Terancam! Isi Ulang APAR Anda
+                      Sekarang dengan Harga Terbaik!
+                    </h4>
+
+                    <p class="text-base text-slate-600">
+                      Kami di <strong>Dokterfire</strong> menawarkan harga terbaik
+                      untuk refill / isi ulang APAR Powder (Dry Chemical Powder)
+                      yang dapat digunakan untuk semua merk dan ukuran tabung APAR.
+                      Pastikan APAR Anda selalu dalam kondisi prima untuk melindungi
+                      dari bahaya kebakaran dengan harga yang sangat terjangkau!
+                    </p>
+
+                    <h4 class="text-lg font-semibold text-slate-800 mt-6">
+                      Hubungi Kami Sekarang untuk Layanan Refill APAR Terbaik!
+                    </h4>
+
+                    <p class="text-base text-slate-600">
+                      Pastikan APAR Anda selalu siap melindungi dari bahaya
+                      kebakaran.
+                      <a
+                        href="https://api.whatsapp.com/send/?phone=62811842909&text=Hallo+Dokterfire%2C+saya+mau+order+Refil+APAR+POWDER"
+                        class="text-blue-600 hover:underline">
+                        Hubungi kami via WhatsApp
+                      </a>
+                      untuk info lebih lanjut dan konsultasi langsung dengan tim
+                      ahli kami!
+                    </p>
+                  </div>
+                </div>
+                <!-- Tab Panel 2: Info Lainnya -->
+                <div class="hidden opacity-0" id="info" role="tabpanel">
+                  <h2 class="text-lg font-semibold text-slate-800 mb-2">
+                    Spesifikasi
+                  </h2>
+                  <table style="width: 100%; border-collapse: collapse;">
+                    <tbody>
+                      <tr>
+                        <th
+                          style="padding: 12px; border: 1px solid #dddddd; text-align: left; background-color: #f2f2f2;"
+                          >Jenis Media</th
+                        >
+                        <td
+                          style="padding: 12px; border: 1px solid #dddddd; text-align: left;"
+                          >Powder (Dry Chemical Powder)</td
+                        >
+                      </tr>
+                      <tr style="background-color: #f9f9f9;">
+                        <th
+                          style="padding: 12px; border: 1px solid #dddddd; text-align: left; background-color: #f2f2f2;"
+                          >Kelas Kebakaran</th
+                        >
+                        <td
+                          style="padding: 12px; border: 1px solid #dddddd; text-align: left;"
+                          >ABC</td
+                        >
+                      </tr>
+                      <tr>
+                        <th
+                          style="padding: 12px; border: 1px solid #dddddd; text-align: left; background-color: #f2f2f2;"
+                          >Expired Media</th
+                        >
+                        <td
+                          style="padding: 12px; border: 1px solid #dddddd; text-align: left;"
+                          >2 Tahun</td
+                        >
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Script to Handle Tabs Switching -->
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              const tabs = document.querySelectorAll("[data-tab-target]");
+              const tabContents =
+                document.querySelectorAll("[role='tabpanel']");
+
+              tabs.forEach((tab) => {
+                tab.addEventListener("click", function () {
+                  // Remove active states from all tabs and contents
+                  tabs.forEach((t) => {
+                    t.classList.remove("text-slate-900", "bg-white", "shadow");
+                    t.classList.add("text-slate-600", "bg-slate-100");
+                    t.setAttribute("aria-selected", "false");
+                  });
+                  tabContents.forEach((content) => {
+                    content.classList.add("hidden", "opacity-0");
+                  });
+
+                  // Activate the selected tab and content
+                  const target = document.querySelector(
+                    tab.getAttribute("data-tab-target")
+                  );
+                  tab.classList.add("text-slate-900", "bg-white", "shadow");
+                  tab.setAttribute("aria-selected", "true");
+                  target.classList.remove("hidden", "opacity-0");
+                });
+              });
+            });
+          </script>
+        </div>
+
+        <!-- Bagian Sidebar (25%) -->
+        <div class="md:col-span-3 px-3">
+          <Sidewilayah/>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+  <div
+      class="max-w-7xl mx-auto py-8 lg:px-36 bg-white mt-8 rounded-xl px-3 pt-10">
+      <div class="flex items-center mb-6">
+        <!-- Icon with a blue gradient and slight drop shadow -->
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-red-600 mr-3 shadow-lg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 3h18M3 7h18M4 21h16l1.5-11H2.5L4 21z" />
+        </svg>
+        
+        <!-- Gradient Text with shadow and hover animation -->
+        <h2 class="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-red-800 drop-shadow-md hover:scale-105 transition-transform duration-300">
+          Related Products
+        </h2>
+      </div>
+      
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 dry powder -->
+        <a
+          href="/refil-powder-dry-chemical-apar"
+          class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+      
+          <Image
+          src={powderapar}
+          alt="refill APAR Dry Chemical Powder alat pemadam"
+          width={600}
+          height={600}
+          format="webp"
+          quality={85}
+          class="rounded-t-lg w-full aspect-square"
+        />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-slate-800">
+              Isi Ulang / Refill APAR Powder (Dry Chemical Powder)
+            </h3>
+            <p class="text-red-600 text-xl font-bold mt-2">Rp45.000</p>
+          </div>
+        </a>
+
+        <!-- Card 2 foam -->
+        <a
+          href="/refil-foam-apar"
+          class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <Image
+          src={foamapar}
+          alt="isi ulang refill APAR Foam alat pemadam"
+          width={600}
+          height={600}
+          format="webp"
+          quality={85}
+          class="rounded-t-lg w-full aspect-square"
+        />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-slate-800">
+              Isi Ulang / Refill APAR Foam (Busa)
+            </h3>
+            <p class="text-red-600 text-xl font-bold mt-2">Rp360.000</p>
+          </div>
+        </a>
+
+        <!-- Card 3 CO2 -->
+        <a
+          href="/refil-c02-apar"
+          class="block bg-white shadow-lg rounded-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+          <Image
+          src={co2apar}
+          alt="Isi Ulang Refill APAR CO2 alat pemadam"
+          width={600}
+          height={600}
+          format="webp"
+          quality={85}
+          class="rounded-t-lg w-full aspect-square"
+        />
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-slate-800">
+              Isi Ulang / Refill APAR Carbon Dioxid (CO2)
+            </h3>
+            <p class="text-red-600 text-xl font-bold mt-2">Rp100.000</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+  <Ctabase/>
+</BaseLayout>

@@ -1,681 +1,625 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Logopartner from "../components/logopartner.astro";
-import Keunggulan from "../../src/components/keunggulan.astro";
 import { Image } from "astro:assets";
-import { Picture } from 'astro:assets';
+import Picture from "astro/components/Picture.astro";
 
 // Title dan description untuk meta
-const titlemeta = "Lindungi Semuanya dari Api seperti Melindungi Rumahmu";
+const titlemeta = "Refill APAR Bekasi Terpercaya - Isi Ulang Tabung Pemadam Api Bergaransi | Dokterfire";
 const descriptionmeta =
-  "Perlindungan Terbaik Untuk Masa Depan Aset Berharga Anda";
-import product2jet from "../assets/cctvrobot.webp";
-import product1robot from "../assets/robotfire.webp";
-import certificationImageUrl from "../assets/Standard-1-2048x712.webp";
-import certification1 from "../assets/certification1.webp";
-import herotigris from "../assets/herotigris.webp";
-import lebihdari100klient from "../assets/lebihdari100klient.webp";
+  "🔥 Layanan Refill APAR Bekasi Terpercaya ✅ Gratis Ongkir ✅ Bergaransi 2 Tahun ✅ COD ✅ Powder, CO2, Foam ✅ Harga Mulai 45rb ☎️ 0811-842-909";
 
-import aparImage from "../assets/hmarketproduct/1.apar (1).webp";
-import fireAlarmImage from "../assets/hmarketproduct/2.firealarm (1).webp";
-import fireSprinklerImage from "../assets/hmarketproduct/3.firesprinkler.webp";
-import firePumpImage from "../assets/hmarketproduct/4.fire pump (1).webp";
+// Import gambar yang sudah dioptimasi
+import foamapar from "../assets/foam.webp";
+import co2apar from "../assets/co2.webp";
+import powderapar from "../assets/powder.webp";
+import peta from "../assets//peta indo.webp";
+
 ---
 
 <BaseLayout titlemeta={titlemeta} descriptionmeta={descriptionmeta}>
+  <!-- Redesigned Hero Section -->
   <section
-    class="relative bg-gradient-to-r from-blue-600 to-blue-900 text-white py-16 lg:py-24 lg:px-24">
-    <div
-      class="container mx-auto flex md:px-10 py-8 md:flex-row flex-col items-center">
-      <div
-        class="lg:flex-grow md:w-1/2 lg:pr-24 px-5 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+    class="relative px-4 pt-16 mx-auto max-w-screen-xl lg:py-32 md:px-8 xl:px-20">
+    <div class="lg:flex lg:items-center lg:justify-between">
+      <!-- Text Content -->
+      <div class="lg:max-w-lg">
+        <div class="mb-6">
+          <span
+            class="inline-block px-3 py-1 text-xs font-semibold text-white bg-red-600 rounded-full">
+            Promo Terbatas
+          </span>
+        </div>
         <h1
-          class="title-font sm:text-5xl text-4xl mb-6 font-extrabold leading-tight animate-fade-in-up">
-          Perlindungan Terbaik Untuk Masa Depan <br
-            class="hidden lg:inline-block"
-          />Aset Berharga Anda
+          class="text-4xl font-bold text-gray-900 leading-tight sm:text-5xl sm:leading-snug mb-6">
+          Refill APAR Bekasi Terpercaya - Isi Ulang APAR Bergaransi <br />
+          <span class="text-red-600">Gratis Ongkir | COD | Harga Mulai 45rb</span>
         </h1>
-        <p class="mb-8 leading-relaxed max-w-lg animate-fade-in-up-delay">
-          Tigrisfire hadir dengan solusi proteksi kebakaran yang andal dan
-          canggih, menjaga keamanan aset Anda dari risiko tak terduga. Jadikan
-          bisnis dan rumah Anda lebih aman bersama kami.
+        <p class="text-lg text-gray-700 mb-8">
+          ✅ <strong>Refill APAR Bekasi Berkualitas</strong> dengan Media Baru & Bergaransi 2 Tahun<br/>
+          ✅ <strong>Gratis Ongkir</strong> ke Seluruh Bekasi & Sekitarnya<br/>
+          ✅ <strong>COD (Cash on Delivery)</strong> - Bayar Setelah Terima<br/>
+          ✅ <strong>Harga Terjangkau</strong> Mulai dari Rp45.000
         </p>
-        <div class="flex justify-center animate-fade-in-up-delay-long">
+        <div class="flex space-x-4">
           <a
-            href="https://wa.me/6287787500580?text=Halo%20Tigrisfire,%20Saya%20Mau%20Konsultasi"
-            target="_blank"
-            class="ml-4 inline-flex items-center justify-center px-6 py-3 text-lg font-semibold text-gray-800 bg-white hover:bg-gray-200 rounded-lg shadow-md transition-all duration-300 ease-in-out focus:outline-none">
-            Konsultasi Sekarang
+            href="https://wa.me/62811842909?text=Hallo%20Dokterfire,%20Saya%20Mau%20Refill%20APAR"
+            class="px-8 py-3 bg-red-600 text-white text-lg font-semibold rounded-lg shadow-md hover:bg-red-700 transition-transform duration-300 transform hover:scale-105">
+            Isi Refill Sekarang
           </a>
         </div>
       </div>
-      <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
-        <Picture src={herotigris} formats={['avif', 'webp']} alt="Tigris Banner Person"/>
-      </div>
-    </div>
-
-    <!-- Flame-like floating animation (background effect) -->
-    <div
-      class="absolute inset-0 z-10 overflow-hidden opacity-20 pointer-events-none">
-      <div
-        class="absolute -bottom-10 -left-10 w-64 h-64 bg-blue-300 opacity-50 rounded-full animate-pulse-slow">
-      </div>
-      <div
-        class="absolute top-20 right-20 w-96 h-96 bg-blue-500 opacity-50 rounded-full animate-pulse-slow">
+      <!-- Hero Image -->
+      <div class="relative mt-10 lg:mt-0 lg:ml-10">
+        <img
+          src="https://dokterfire.com/wp-content/uploads/2024/09/WhatsApp-Image-2024-09-06-at-12.39.19.webp"
+          alt="Refill APAR Bekasi Dokterfire - Layanan Isi Ulang Tabung Pemadam Api Bergaransi"
+          class="rounded-lg shadow-lg transform hover:scale-105 hover:rotate-1 transition-all duration-500 ease-in-out lg:w-3/4"
+        />
       </div>
     </div>
   </section>
 
-  <!-- Add Tailwind Custom Animations -->
+  <!-- Redesigned Mengapa Pilih Kami Section with Enhancements -->
+  <section class="py-16 bg-gray-50 overflow-hidden">
+    <div class="max-w-7xl mx-auto text-center px-6 lg:px-8">
+      <h2
+        class="text-4xl font-extrabold text-gray-900 mb-7 leading-tight sm:text-5xl md:text-6xl animate-fadeIn">
+        <span
+          class="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-yellow-500 to-red-600">
+          Mengapa Pilih Dokterfire
+        </span>
+        <span class="block">untuk Isi Ulang APAR?</span>
+      </h2>
+
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center animate-fadeIn delay-100">
+        <!-- Left Side: Text Content -->
+        <div class="space-y-6 text-left">
+          <p class="text-gray-700 text-lg leading-relaxed">
+            Kami adalah penyedia layanan isi ulang APAR terdepan dengan
+            pengalaman bertahun-tahun. Tim profesional kami memastikan setiap
+            tabung APAR diisi dengan media berkualitas tinggi dan diperiksa
+            secara ketat untuk menjamin keamanan optimal.
+          </p>
+          <p class="text-gray-700 text-lg leading-relaxed">
+            Kami melayani berbagai jenis media APAR, termasuk Powder, CO2, dan
+            Foam. Dengan komitmen pada kepuasan pelanggan, kami memberikan
+            layanan cepat, gratis ongkir, dan jaminan media hingga 2 tahun.
+          </p>
+        </div>
+
+        <!-- Right Side: Image Grid with Animation -->
+        <div class="grid grid-cols-2 gap-6">
+          <img
+            src="https://dokterfire.com/wp-content/uploads/2024/09/refil7.webp"
+            alt="APAR Service 1"
+            class="rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl animate-fadeIn delay-200"
+          />
+          <img
+            src="https://dokterfire.com/wp-content/uploads/2024/09/refil3.webp"
+            alt="APAR Service 2"
+            class="rounded-lg shadow-lg transition-transform duration-500 ease-in-out transform hover:scale-105 hover:shadow-2xl animate-fadeIn delay-300"
+          />
+        </div>
+      </div>
+
+      <!-- CTA Button with Glow Effect -->
+      <div class="mt-12">
+        <a
+          href="https://wa.me/62811842909?text=Hallo%20Dokterfire,%20Saya%20Mau%20Refill%20APAR"
+          class="inline-block bg-red-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-red-700 transition-transform duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-red-600/50 glow-effect animate-pulse">
+          Isi Ulang APAR Sekarang !!!
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tailwind Keyframe Animations -->
   <style>
-    @keyframes fadeInUp {
-      0% {
+    @keyframes fadeIn {
+      from {
         opacity: 0;
         transform: translateY(20px);
       }
-      100% {
+      to {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    .animate-fade-in-up {
-      animation: fadeInUp 1s ease-out forwards;
+    .animate-fadeIn {
+      animation: fadeIn 1s ease-out forwards;
     }
 
-    .animate-fade-in-up-delay {
-      animation: fadeInUp 1s ease-out forwards;
-      animation-delay: 0.5s;
-    }
-
-    .animate-fade-in-up-delay-long {
-      animation: fadeInUp 1s ease-out forwards;
-      animation-delay: 1s;
-    }
-
-    @keyframes slideInLeft {
-      0% {
-        opacity: 0;
-        transform: translateX(-100px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    .animate-slide-in-left {
-      animation: slideInLeft 1s ease-out forwards;
-    }
-
-    .animate-pulse-slow {
-      animation: pulse 5s infinite;
+    .glow-effect {
+      box-shadow: 0 4px 15px rgba(255, 0, 0, 0.3);
     }
   </style>
 
-  <!-- Layanan Kami -->
-  <div class="px-4 py-16 mx-auto max-w-7xl sm:px-6 lg:px-8 lg:py-20">
-    <h2 class="text-3xl font-extrabold text-center text- mb-12">
-      Layanan Kami
+  <!-- Produk Refill Section -->
+  <section id="services" class="py-16 md:px-6 px-1 bg-gray-100">
+    <div class="max-w-7xl mx-auto">
+      <!-- Stylish Heading Section -->
+
+      <h2
+        class="text-4xl font-extrabold text-gray-900 mb-4 leading-tight sm:text-5xl md:text-6xl text-center">
+        <span
+          class="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-yellow-500 to-red-600">
+          Pilih Refill APAR
+        </span>
+        <span class="block">yang Anda Butuhkan</span>
+      </h2>
+
+      <div
+        class="bg-gray-100 p-7 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 md:py-10">
+        <!-- Card 1: Foam -->
+        <div
+          class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg">
+          <a href="/refil-foam-apar">
+            <Image
+              src={foamapar}
+              alt="APAR Foam"
+              width={600}
+              height={600}
+              format="webp"
+              quality={85}
+              class="rounded-t-lg w-full aspect-square"
+            />
+          </a>
+          <div class="p-5">
+            <a href="/refil-foam-apar">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                Harga Isi Ulang / Refill APAR Busa / Foam
+              </h5>
+            </a>
+            <p class="mb-3 text-lg font-semibold text-red-600">Rp 360.000</p>
+            <p class="mb-3 font-normal text-gray-700">
+              APAR Foam digunakan untuk memadamkan kebakaran bahan cair seperti
+              minyak dan bahan organik lainnya.
+            </p>
+            <a
+              href="/refil-foam-apar"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+              Lihat Detail
+              <svg
+                class="w-3.5 h-3.5 ml-2"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+                aria-hidden="true">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 2: CO2 -->
+        <div
+          class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg">
+          <a href="/refil-c02-apar">
+            <Image
+              src={co2apar}
+              alt="APAR CO2"
+              width={600}
+              height={600}
+              format="webp"
+              quality={85}
+              class="rounded-t-lg w-full aspect-square"
+            />
+          </a>
+          <div class="p-5">
+            <a href="/refil-c02-apar">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                Harga Isi Ulang / Refill APAR CO2 (Carbon Dioxide)
+              </h5>
+            </a>
+            <p class="mb-3 text-lg font-semibold text-red-600">Rp 100.000</p>
+            <p class="mb-3 font-normal text-gray-700">
+              APAR CO2 digunakan untuk memadamkan kebakaran yang disebabkan oleh
+              bahan cair dan gas mudah terbakar.
+            </p>
+            <a
+              href="refil-c02-apar"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+              Lihat Detail
+              <svg
+                class="w-3.5 h-3.5 ml-2"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+                aria-hidden="true">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Card 3: Dry Chemical Powder -->
+        <div
+          class="max-w-sm bg-white border border-gray-200 rounded-lg shadow-lg">
+          <a href="/refil-powder-dry-chemical-apar">
+            <Image
+              src={powderapar}
+              alt="APAR Dry Chemical Powder"
+              width={600}
+              height={600}
+              format="webp"
+              quality={85}
+              class="rounded-t-lg w-full aspect-square"
+            />
+          </a>
+          <div class="p-5">
+            <a href="/refil-powder-dry-chemical-apar">
+              <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">
+                Harga Isi Ulang / Refill APAR Dry Chemical Powder
+              </h5>
+            </a>
+            <p class="mb-3 text-lg font-semibold text-red-600">Rp 45.000</p>
+            <p class="mb-3 font-normal text-gray-700">
+              APAR Dry Chemical Powder efektif untuk memadamkan kebakaran kelas
+              A, B, dan C, cocok untuk digunakan di tempat umum dan industri.
+            </p>
+            <a
+              href="/refil-powder-dry-chemical-apar"
+              class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-red-700 rounded-lg hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300">
+              Lihat Detail
+              <svg
+                class="w-3.5 h-3.5 ml-2"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 14 10"
+                aria-hidden="true">
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 5h12m0 0L9 1m4 4L9 9"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Keunggulan Layanan Section -->
+  <section class="py-16 px-6 bg-red-700 text-white">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-4xl font-bold mb-12">
+        Keunggulan Refill Menggunakan Layanan Kami
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div class="space-y-4">
+          <div class="bg-white rounded-md w-16 h-16 mx-auto p-2">
+            <picture>
+              <source
+                srcset="https://dokterfire.com/wp-content/uploads/2024/09/sandclock-6090.svg"
+                type="image/svg"
+              />
+              <img
+                src="https://dokterfire.com/wp-content/uploads/2024/09/sandclock-6090.svg"
+                alt="Tahan Lama"
+                class=""
+                loading="eager"
+              />
+            </picture>
+          </div>
+
+          <h3 class="text-2xl font-bold">Tahan Hingga 2 Tahun</h3>
+          <p>Media APAR kami efektif hingga 2 tahun, tanpa khawatir expired.</p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-white rounded-md w-16 h-16 mx-auto p-2">
+            <picture>
+              <source
+                srcset="https://dokterfire.com/wp-content/uploads/2024/09/certificate-1358.svg"
+                type="image/svg"
+              />
+              <img
+                src="https://dokterfire.com/wp-content/uploads/2024/09/certificate-1358.svg"
+                alt="Tahan Lama"
+                class=""
+                loading="eager"
+              />
+            </picture>
+          </div>
+          <h3 class="text-2xl font-bold">Sertifikasi & Standar Keamanan</h3>
+          <p>
+            Memastikan setiap pengisian APAR memenuhi standar keamanan yang
+            optimal.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-white rounded-md w-16 h-16 mx-auto p-2">
+            <picture>
+              <source
+                srcset="https://dokterfire.com/wp-content/uploads/2024/09/user-network-297.svg"
+                type="image/svg"
+              />
+              <img
+                src="https://dokterfire.com/wp-content/uploads/2024/09/user-network-297.svg"
+                alt="Tahan Lama"
+                class=""
+                loading="eager"
+              />
+            </picture>
+          </div>
+          <h3 class="text-2xl font-bold">Dipercaya Banyak Perusahaan</h3>
+          <p>
+            Perusahaan besar di Indonesia mempercayakan pengisian APAR mereka
+            kepada kami.
+          </p>
+        </div>
+        <div class="space-y-4">
+          <div class="bg-white rounded-md w-16 h-16 mx-auto p-2">
+            <picture>
+              <source
+                srcset="https://dokterfire.com/wp-content/uploads/2024/09/reset-arrow-14450.svg"
+                type="image/svg"
+              />
+              <img
+                src="https://dokterfire.com/wp-content/uploads/2024/09/reset-arrow-14450.svg"
+                alt="Tahan Lama"
+                class=""
+                loading="eager"
+              />
+            </picture>
+          </div>
+          <h3 class="text-2xl font-bold">Media Baru & Terjamin</h3>
+          <p>
+            Kami menggunakan media isi ulang APAR yang 100% baru dan
+            berkualitas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Heading Section -->
+  <div class="text-center py-12">
+    <h2
+      class="text-4xl font-extrabold text-gray-900 mb-4 leading-tight sm:text-5xl md:text-6xl">
+      <span
+        class="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-yellow-500 to-red-600">
+        Pilihan Utama
+      </span>
+      <span class="block">Perusahaan Besar</span>
     </h2>
-    <div class="grid gap-10 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
-      <!-- Service 1 -->
-      <div
-        class="p-8 bg-white shadow-md rounded-lg hover:shadow-xl transition-shadow duration-500 ease-in-out hover:scale-105">
-        <div
-          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M18 18.72a9.094 9.094 0 0 0 3.741-.479 3 3 0 0 0-4.682-2.72m.94 3.198.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0 1 12 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 0 1 6 18.719m12 0a5.971 5.971 0 0 0-.941-3.197m0 0A5.995 5.995 0 0 0 12 12.75a5.995 5.995 0 0 0-5.058 2.772m0 0a3 3 0 0 0-4.681 2.72 8.986 8.986 0 0 0 3.74.477m.94-3.197a5.971 5.971 0 0 0-.94 3.197M15 6.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm6 3a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Zm-13.5 0a2.25 2.25 0 1 1-4.5 0 2.25 2.25 0 0 1 4.5 0Z"
-            ></path>
-          </svg>
-        </div>
-        <param class="text-xl font-semibold text-gray-800 text-center">
-          Konsultan
-      </p>
-        <p class="text-sm text-gray-900 text-center mt-3">
-          Dengan keunggulan perencanaan yang sistematis dan mengedepankan
-          efisiensi.
-        </p>
-      </div>
+    <p class="mt-4 text-lg text-gray-600 md:text-xl">
+      Dipercaya oleh berbagai industri besar
+    </p>
+  </div>
 
-      <!-- Training -->
-      <div
-        class="p-8 bg-white shadow-md rounded-lg hover:shadow-xl transition-shadow duration-500 ease-in-out hover:scale-105">
-        <div
-          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 3v11.25A2.25 2.25 0 0 0 6 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0 1 18 16.5h-2.25m-7.5 0h7.5m-7.5 0-1 3m8.5-3 1 3m0 0 .5 1.5m-.5-1.5h-9.5m0 0-.5 1.5m.75-9 3-3 2.148 2.148A12.061 12.061 0 0 1 16.5 7.605"
-            ></path>
-          </svg>
-        </div>
-        <p class="text-xl font-semibold text-gray-800 text-center">
-          Training
-        </p>
-        <p class="text-sm text-gray-600 text-center mt-3">
-          Pembekalan dasar pemadam kebakaran oleh trainer berpengalaman.
-        </p>
-      </div>
+  <!-- Carousel container -->
+  <div
+    class="logos group relative overflow-hidden whitespace-nowrap py-10 [mask-image:_linear-gradient(to_right,_transparent_0,_white_128px,white_calc(100%-128px),_transparent_100%)]">
+    <!-- First set of logos -->
+    <!-- Loop pertama gambar-gambar mitra -->
+    <div
+      class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/1.pertamina.webp"
+        alt="pertamina"
+      />
+      <img class="mx-4 inline h-36" src="/mitra rumahapi/2.bi.webp" alt="bi" />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/3.kemenker.webp"
+        alt="kemenker"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/4.telkom.webp"
+        alt="telkom"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/5.pustekom.webp"
+        alt="pustekom"
+      />
+      <img class="mx-4 inline h-36" src="/mitra rumahapi/6.lp.webp" alt="lp" />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/7.esar.webp"
+        alt="esar"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/8.pt delta djakarta.webp"
+        alt="pt delta djakarta"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/9.mikie.webp"
+        alt="mikie"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/10.oalkwood.webp"
+        alt="oalkwood"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/11.indokomas.webp"
+        alt="indokomas"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/12.deut bank.webp"
+        alt="deut bank"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/13.kominfo.webp"
+        alt="kominfo"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/14.bank jateng.webp"
+        alt="bank jateng"
+      />
+      <img class="mx-4 inline h-36" src="/mitra rumahapi/15.lg.webp" alt="lg" />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/16.pln.webp"
+        alt="pln"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/17.conocophilips.webp"
+        alt="conocophilips"
+      />
+    </div>
 
-      <!-- Audit Kemanan -->
-      <div
-        class="p-8 bg-white shadow-md rounded-lg hover:shadow-xl transition-shadow duration-500 ease-in-out hover:scale-105">
-        <div
-          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
-            ></path>
-          </svg>
-        </div>
-        <p class="text-xl font-semibold text-gray-800 text-center">
-          Audit Keamanan
-        </p>
-        <p class="text-sm text-gray-600 text-center mt-3">
-          Audit untuk memastikan bahwa sistem keamanan Anda berjalan sesuai
-          standar.
-        </p>
-      </div>
-
-      <!-- Sertifikasi -->
-      <div
-        class="p-8 bg-white shadow-md rounded-lg hover:shadow-xl transition-shadow duration-500 ease-in-out hover:scale-105">
-        <div
-          class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-100">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6">
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M10.125 2.25h-4.5c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125v-9M10.125 2.25h.375a9 9 0 0 1 9 9v.375M10.125 2.25A3.375 3.375 0 0 1 13.5 5.625v1.5c0 .621.504 1.125 1.125 1.125h1.5a3.375 3.375 0 0 1 3.375 3.375M9 15l2.25 2.25L15 12"
-            ></path>
-          </svg>
-        </div>
-        <p class="text-xl font-semibold text-gray-800 text-center">
-          Sertifikasi
-        </p>
-        <p class="text-sm text-gray-600 text-center mt-3">
-          Memberikan sertifikasi yang diakui oleh badan resmi untuk setiap
-          pelatihan dan audit.
-        </p>
-      </div>
+    <!-- Loop kedua gambar-gambar mitra untuk efek infinite scroll -->
+    <div
+      class="animate-slide-left-infinite group-hover:animation-pause inline-block w-max">
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/1.pertamina.webp"
+        alt="pertamina"
+      />
+      <img class="mx-4 inline h-36" src="/mitra rumahapi/2.bi.webp" alt="bi" />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/3.kemenker.webp"
+        alt="kemenker"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/4.telkom.webp"
+        alt="telkom"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/5.pustekom.webp"
+        alt="pustekom"
+      />
+      <img class="mx-4 inline h-36" src="/mitra rumahapi/6.lp.webp" alt="lp" />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/7.esar.webp"
+        alt="esar"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/8.pt delta djakarta.webp"
+        alt="pt delta djakarta"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/9.mikie.webp"
+        alt="mikie"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/10.oalkwood.webp"
+        alt="oalkwood"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/11.indokomas.webp"
+        alt="indokomas"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/12.deut bank.webp"
+        alt="deut bank"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/13.kominfo.webp"
+        alt="kominfo"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/14.bank jateng.webp"
+        alt="bank jateng"
+      />
+      <img class="mx-4 inline h-36" src="/mitra rumahapi/15.lg.webp" alt="lg" />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/16.pln.webp"
+        alt="pln"
+      />
+      <img
+        class="mx-4 inline h-36"
+        src="/mitra rumahapi/17.conocophilips.webp"
+        alt="conocophilips"
+      />
     </div>
   </div>
 
-  <section
-    class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-800 body-font">
-    <h2 class="text-3xl font-extrabold text-center text-white pt-28 px-1">
-      Kebutuhan Anda Semua Tersedia Disini
-    </h2>
-    <div class="container px-5 py-24 mx-auto flex flex-wrap">
-      <!-- Item 1: Alat Pemadam Api -->
-      <div class="flex relative pt-10 pb-20 sm:items-center md:w-2/3 mx-auto">
-        <div
-          class="h-full w-6 absolute inset-0 flex items-center justify-center">
-          <div class="h-full w-1 bg-red-300 pointer-events-none"></div>
-        </div>
-        <div
-          class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-red-600 text-white relative z-10 title-font font-medium text-sm">
-        </div>
-        <div
-          class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-          <div
-            class="flex-shrink-0 w-24 h-24 bg-red-100 text-red-600 rounded-full inline-flex items-center justify-center transition duration-300 transform hover:scale-110 hover:bg-red-700 hover:text-white">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor"
-              class="w-12 h-12"
-              viewBox="0 0 24 24">
-              <path
-                d="M10.5,7H11.75L12,5H10.25L6,7.5V9H4V6.5L10,3H12V2H14V3H16L17,2.5V5.5L16,5H14L14.25,7H15.5A1.5,1.5 0 0,1 17,8.5V22H9V8.5A1.5,1.5 0 0,1 10.5,7Z"
-              ></path>
-            </svg>
-          </div>
-          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <div class="font-medium title-font text-white mb-1 text-xl">
-              Alat Pemadam Api
-            </div>
-            <p class="leading-relaxed">
-              APAR, APAB, dan Fire Blanket untuk perlindungan kebakaran cepat
-              dan efektif.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 2: Fire Alarm -->
-      <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
-        <div
-          class="h-full w-6 absolute inset-0 flex items-center justify-center">
-          <div class="h-full w-1 bg-yellow-300 pointer-events-none"></div>
-        </div>
-        <div
-          class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-yellow-600 text-white relative z-10 title-font font-medium text-sm">
-        </div>
-        <div
-          class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-          <div
-            class="flex-shrink-0 w-24 h-24 bg-yellow-100 text-yellow-600 rounded-full inline-flex items-center justify-center transition duration-300 transform hover:scale-110 hover:bg-yellow-700 hover:text-white">
-            <!-- Fire Alarm SVG Icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="w-12 h-12">
-              <path
-                fill="currentColor"
-                d="M15,18.66V22H5V18.66C8.09,20.45 11.91,20.45 15,18.66M22,4A2,2 0 0,0 20,2C19.69,2 19.39,2.07 19.12,2.21C18.82,2.36 18.56,2.58 18.36,2.85C17.72,3.75 17.94,5 18.85,5.64C19.18,5.87 19.59,6 20,6C20.08,6 20.16,6 20.24,6C21.97,10.43 20.66,15.46 17,18.5C16.68,18.75 16.35,19 16,19.22V21H17V19.74C20.14,17.5 22,13.86 22,10C22,8.5 21.72,7 21.17,5.62C21.69,5.24 22,4.64 22,4M18,10A8,8 0 0,1 10,18A8,8 0 0,1 2,10A8,8 0 0,1 10,2A8,8 0 0,1 18,10Z"
-              ></path>
-            </svg>
-          </div>
-          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <div class="font-medium title-font text-white mb-1 text-xl">
-              Fire Alarm
-            </div>
-            <p class="leading-relaxed">
-              Fire Alarm Addressable dan Konvensional untuk deteksi dini
-              kebakaran.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 3: Fire Hydrant -->
-      <div class="flex relative pb-20 sm:items-center md:w-2/3 mx-auto">
-        <div
-          class="h-full w-6 absolute inset-0 flex items-center justify-center">
-          <div class="h-full w-1 bg-blue-300 pointer-events-none"></div>
-        </div>
-        <div
-          class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-blue-600 text-white relative z-10 title-font font-medium text-sm">
-        </div>
-        <div
-          class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-          <div
-            class="flex-shrink-0 w-24 h-24 bg-blue-100 text-blue-600 rounded-full inline-flex items-center justify-center transition duration-300 transform hover:scale-110 hover:bg-blue-700 hover:text-white">
-            <!-- Fire Hydrant SVG Icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="w-12 h-12">
-              <path
-                fill="currentColor"
-                d="M5 15V14H4V12H5V11H7V15H5M19 12V11H17V15H19V14H20V12H19M18 6H15.86C15.5 4.6 14.4 3.5 13 3.14V2H11V3.14C9.6 3.5 8.5 4.6 8.14 6H6V8H18V6M18 22H6C6 20.9 6.9 20 8 20V9H16V20C17.11 20 18 20.9 18 22M10 13C10 14.11 10.9 15 12 15S14 14.11 14 13 13.11 11 12 11 10 11.9 10 13Z"
-              ></path>
-            </svg>
-          </div>
-          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <div class="font-medium title-font text-white mb-1 text-xl">
-              Fire Hydrant
-            </div>
-            <p class="leading-relaxed">
-              Perlengkapan Fire Hydrant dan Sprinkler untuk proteksi maksimal.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Item 4: Fire System -->
-      <div class="flex relative pb-10 sm:items-center md:w-2/3 mx-auto">
-        <div
-          class="h-full w-6 absolute inset-0 flex items-center justify-center">
-          <div class="h-full w-1 bg-green-300 pointer-events-none"></div>
-        </div>
-        <div
-          class="flex-shrink-0 w-6 h-6 rounded-full mt-10 sm:mt-0 inline-flex items-center justify-center bg-green-600 text-white relative z-10 title-font font-medium text-sm">
-        </div>
-        <div
-          class="flex-grow md:pl-8 pl-6 flex sm:items-center items-start flex-col sm:flex-row">
-          <div
-            class="flex-shrink-0 w-24 h-24 bg-green-100 text-green-600 rounded-full inline-flex items-center justify-center transition duration-300 transform hover:scale-110 hover:bg-green-700 hover:text-white">
-            <!-- Fire System SVG Icon -->
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="w-12 h-12">
-              <path
-                fill="currentColor"
-                d="M14.66 14.18C14.69 14.29 14.7 14.4 14.7 14.5C14.73 15.15 14.44 15.85 13.97 16.28C13.75 16.47 13.39 16.67 13.11 16.75C12.23 17.06 11.35 16.62 10.83 16.11C11.77 15.89 12.32 15.21 12.5 14.5C12.62 13.89 12.37 13.38 12.27 12.78C12.17 12.2 12.19 11.71 12.4 11.18C12.55 11.47 12.71 11.77 12.9 12C13.5 12.78 14.45 13.12 14.66 14.18M22 12C22 17.5 17.5 22 12 22S2 17.5 2 12 6.5 2 12 2 22 6.5 22 12M17.16 12.56L17.06 12.36C16.9 12 16.45 11.38 16.45 11.38C16.27 11.15 16.05 10.94 15.85 10.74C15.32 10.27 14.73 9.94 14.22 9.45C13.05 8.31 12.79 6.44 13.54 5C12.79 5.18 12.14 5.58 11.58 6.03C9.55 7.65 8.75 10.5 9.71 12.95C9.74 13.03 9.77 13.11 9.77 13.21C9.77 13.38 9.65 13.53 9.5 13.6C9.31 13.67 9.13 13.63 9 13.5C8.93 13.46 8.9 13.42 8.87 13.37C8 12.26 7.84 10.66 8.43 9.39C7.12 10.45 6.41 12.24 6.5 13.92C6.56 14.31 6.6 14.7 6.74 15.09C6.85 15.56 7.06 16 7.3 16.44C8.14 17.78 9.61 18.75 11.19 18.94C12.87 19.15 14.67 18.85 15.96 17.7C17.4 16.4 17.9 14.33 17.16 12.56Z"
-              ></path>
-            </svg>
-          </div>
-          <div class="flex-grow sm:pl-6 mt-6 sm:mt-0">
-            <div class="font-medium title-font text-white mb-1 text-xl">
-              Fire System
-            </div>
-            <p class="leading-relaxed">
-              Sistem proteksi kebakaran komprehensif dengan Foam dan Water Mist.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!--Keunggulan Tigrisfire -->
-  <Keunggulan />
-
-  <!--Marketplace Product -->
-  <section
-    class="text-gray-900 body-font py-10 bg-gradient-to-r from-blue-500 to-blue-800 animate-gradient-x">
-    <div class="text-center text-white mt-10 mb-12 text-opacity-75 mx-auto">
-      <h2 class="text-4xl font-bold text-shadow-md">
-        Produk Dengan Inovasi Terbaru Kami
-      </h2>
-    </div>
-    <div class="flex flex-wrap justify-center gap-8 my-8 px-3">
-      <!-- First Card -->
-      <div
-        class="relative flex flex-col bg-white shadow-lg border border-slate-200 rounded-2xl w-96 hover:scale-105 transition-transform duration-300">
-        <div
-          class="relative p-5 h-96 overflow-hidden rounded-xl bg-clip-border">
-          <Image
-            src={product1robot}
-            alt="product-robot"
-            class="h-full w-full object-cover rounded-2xl transition-transform duration-300 hover:scale-110"
-            format="webp"
-            width={400}
-            height={400}
-          />
-        </div>
-        <div class="p-5 flex flex-col justify-between flex-grow">
-          <div class="mb-4">
-            <p class="text-slate-800 text-xl font-semibold">
-              SMART FIREFIGHTING ROBOT SERIES
-            </p>
-          </div>
-          <a
-            href="/robotfire"
-            class="rounded-full w-full bg-blue-600 py-3 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-blue-700 focus:bg-blue-700 focus:shadow-none active:bg-blue-700 active:shadow-none hover:scale-105"
-            role="button">
-            Lihat Detail
-          </a>
-        </div>
-      </div>
-
-      <!-- Second Card -->
-      <div
-        class="relative flex flex-col bg-white shadow-lg border border-slate-200 rounded-2xl w-96 hover:scale-105 transition-transform duration-300">
-        <div
-          class="relative p-3 h-96 overflow-hidden rounded-xl bg-clip-border">
-          <Image
-            src={product2jet}
-            alt="product-jetwater"
-            class="h-full w-full object-cover rounded-2xl transition-transform duration-300 hover:scale-110"
-            format="webp"
-            width={400}
-            height={400}
-          />
-        </div>
-        <div class="p-5 flex flex-col justify-between flex-grow">
-          <div class="mb-4">
-            <p class="text-slate-800 text-xl font-semibold">
-              AUTOMATIC TRACKING AND AIMING JET FIRE EXTINGUISHING DEVICE
-            </p>
-          </div>
-          <a
-            href="/cctv"
-            class="rounded-full w-full bg-blue-600 py-3 px-4 border border-transparent text-center text-sm text-white transition-all shadow-md hover:shadow-lg hover:bg-blue-700 focus:bg-blue-700 focus:shadow-none active:bg-blue-700 active:shadow-none hover:scale-105"
-            role="button">
-            Lihat Detail
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="container mx-auto">
-      <div class="text-center text-white mt-36 mb-12 text-opacity-75 mx-auto">
-        <h2 class="text-4xl font-bold inline-block text-shadow-sm">
-          Produk Kami Lainnya
+  <!-- Hero Section with Indonesia Map -->
+  <section class="relative bg-gray-50 py-16 md:py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="text-center">
+        <!-- Updated Heading with Gradient Text -->
+        <h2
+          class="text-4xl font-extrabold mb-4 leading-tight sm:text-5xl md:text-6xl">
+          <span
+            class="block text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-yellow-500 to-red-600">
+            Kami Melayani Refill APAR
+          </span>
+          <span class="block text-gray-900">di Berbagai Kota di Indonesia</span>
         </h2>
-      </div>
 
-      <div
-        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-5 py-10 lg:px-36">
-        <!-- Card 1: APAR -->
-        <div
-          class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
-          <figure class="h-56 w-full rounded-lg overflow-hidden">
-            <Image
-              src={aparImage}
-              alt="APAR"
-              width={800}
-              height={550}
-              format="webp"
-              quality={85}
-              class="w-full h-full object-cover"
-            />
-          </figure>
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg p-4">
-            <div class="text-white text-2xl mb-4 text-center font-bold">
-              APAR
-            </div>
-            <p class="text-white mb-4 text-center">
-              Alat Pemadam Api Ringan untuk proteksi kebakaran cepat dan
-              efektif.
-            </p>
-            <a
-              href="/produk/apar"
-              class="px-6 py-2 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
-              Selengkapnya
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 2: Fire Alarm -->
-        <div
-          class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
-          <figure class="h-56 w-full rounded-lg overflow-hidden">
-            <Image
-              src={fireAlarmImage}
-              alt="Fire Alarm"
-              width={800}
-              height={550}
-              format="webp"
-              quality={85}
-              class="w-full h-full object-cover"
-            />
-          </figure>
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg p-4">
-            <div class="text-white text-2xl mb-4 text-center font-bold">
-              Fire Alarm
-            </div>
-            <p class="text-white mb-4 text-center">
-              Fire Alarm untuk deteksi dini kebakaran.
-            </p>
-            <a
-              href="/produk/firealarm"
-              class="px-6 py-2 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
-              Selengkapnya
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 3: Fire Sprinkler -->
-        <div
-          class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
-          <figure class="h-56 w-full rounded-lg overflow-hidden">
-            <Image
-              src={fireSprinklerImage}
-              alt="Fire Sprinkler"
-              width={800}
-              height={550}
-              format="webp"
-              quality={85}
-              class="w-full h-full object-cover"
-            />
-          </figure>
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg p-4">
-            <div class="text-white text-2xl mb-4 text-center font-bold">
-              Fire Sprinkler
-            </div>
-            <p class="text-white mb-4 text-center">
-              Perlengkapan Fire Sprinkler untuk proteksi maksimal.
-            </p>
-            <a
-              href="/produk/firesprinkler"
-              class="px-6 py-2 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
-              Selengkapnya
-            </a>
-          </div>
-        </div>
-
-        <!-- Card 4: Fire Pump -->
-        <div
-          class="relative bg-white shadow-xl overflow-hidden group rounded-lg">
-          <figure class="h-56 w-full rounded-lg overflow-hidden">
-            <Image
-              src={firePumpImage}
-              alt="Fire Pump"
-              width={800}
-              height={550}
-              format="webp"
-              quality={85}
-          class="w-full h-full object-cover"
-            />
-          </figure>
-          <div
-            class="absolute inset-0 flex flex-col items-center justify-center bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-lg p-4">
-            <div class="text-white text-2xl mb-4 text-center font-bold">
-              Fire Pump
-            </div>
-            <p class="text-white mb-4 text-center">
-              Fire Pump untuk memastikan suplai air kebakaran.
-            </p>
-            <a
-              href="/produk/firepump"
-              class="px-6 py-2 bg-gradient-to-r from-blue-400 via-blue-600 to-blue-500 text-white font-semibold rounded-lg hover:bg-blue-600 transition duration-300">
-              Selengkapnya
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <style>
-    @keyframes gradient-x {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    .animate-gradient-x {
-      background-size: 200% 200%;
-      animation: gradient-x 5s ease infinite;
-    }
-  </style>
-
-  <section class="text-gray-900 bg-white py-16">
-    <div class="container mx-auto">
-      <!-- Section Header -->
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-gray-800">Klien Terpercaya Kami</h2>
-        <p class="mt-4 text-gray-600 md:px-32 px-1">
-          Kami bangga telah bekerja sama dengan berbagai perusahaan terkemuka
-          untuk menghadirkan solusi perlindungan kebakaran yang terbaik. Jadilah
-          bagian dari mereka dan pastikan keamanan bisnis Anda bersama kami.
+        <!-- Subtext with Spacing and Typography Improvements -->
+        <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-10 md:text-xl">
+          Dokterfire hadir untuk seluruh Indonesia, siap melayani refill APAR
+          untuk memastikan keamanan Anda. Layanan cepat, aman, dan terpercaya!
         </p>
       </div>
 
-      <!-- Partners Logos -->
-      <Logopartner />
-      <div>
+      <!-- Map Image -->
+      <div class="relative mt-10 flex justify-center">
+       
         <Image
-          src={lebihdari100klient}
-          alt="100++ client"
-          class="w-screen md:w-9/12 mx-auto mt-10"
-        />
+        src={peta}
+        alt="Refill APAR Seluruh Indonesia"
+     
+        format="webp"
+        quality={85}
+        class="rounded-t-lg w-full"
+      />
       </div>
+    </div>
+  </section>
 
-      <!-- CTA Buttons -->
-      <div class="flex justify-center mt-10 space-x-6">
-        <a href="/portofolio" class="no-underline">
-          <button
-            class="px-6 py-2 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 text-white rounded-lg shadow-md hover:bg-blue-800 transition-all duration-300 hover:shadow-lg transform hover:scale-105">
-            Lihat Portofolio Klien
-          </button>
+  <!-- Bagian CTA -->
+  <div class="relative bg-gray-100 mt-52">
+    <div
+      class="absolute w-full left-0 right-0 transform -translate-y-1/2 z-30 p-2">
+      <div
+        class="bg-white shadow-lg rounded-lg p-4 py-5 md:p-10 flex flex-col md:flex-row justify-between items-center mx-auto md:max-w-7xl space-y-4 md:space-y-0 hover:shadow-2xl transition-shadow duration-500 ease-in-out">
+        <div class="text-center md:text-left">
+          <h2
+            class="text-xl md:text-2xl font-bold text-gray-800 leading-snug hover:text-red-600 transition-colors duration-500 ease-in-out">
+            Isi Ulang APAR Sekarang !!
+          </h2>
+          <p class="text-gray-500 mt-2 text-sm md:text-base">
+            Isi ulang APAR Anda dengan layanan cepat dan terpercaya. Hubungi
+            kami untuk penawaran terbaik dan gratis ongkir.
+          </p>
+        </div>
+        <a
+          href="https://wa.me/62811842909?text=Hallo%20Dokterfire,%20Saya%20Mau%20Refill%20APAR"
+          class="relative text-white bg-gradient-to-r from-red-600 to-red-700 hover:from-red-500 hover:to-red-600 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 shadow-md hover:shadow-xl transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none dark:bg-red-600 dark:hover:bg-red-700 focus:ring-offset-2">
+          Hubungi Kami
         </a>
       </div>
     </div>
-  </section>
-  <!--Sertifikasi Produk Kami -->
-  <section class="py-12 bg-white">
-    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <!-- Header Section -->
-      <div class="text-center mb-8">
-        <h2 class="text-3xl font-bold text-gray-900">
-          Jaminan Standar Kualitas Internasional
-        </h2>
-        <p class="mt-4 text-lg text-gray-600">
-          Produk kami telah teruji dan mengikuti standar internasional,
-          memastikan keamanan dan kualitas terbaik untuk kebutuhan Anda.
-        </p>
-      </div>
-
-      <!-- Sertifikasi Gambar -->
-      <div class="flex justify-center bg-gray-100 mt-10">
-        <Image
-          src={certification1}
-          alt="Sertifikasinya"
-          class="max-w-full h-auto shadow-lg rounded-lg"
-          loading="lazy"
-          width={2048}
-          height={712}
-          format="webp"
-        />
-      </div>
-      <div class="flex justify-center bg-gray-100 mt-20">
-        <Image
-          src={certificationImageUrl}
-          alt="Sertifikasi Resmi"
-          class="max-w-full h-auto shadow-lg rounded-lg"
-          loading="lazy"
-          width={2048}
-          height={712}
-          format="webp"
-        />
-      </div>
-
-    
-    </div>
-  </section>
+  </div>
 </BaseLayout>

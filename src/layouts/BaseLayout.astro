@@ -1,28 +1,28 @@
 ---
 import { SEO } from "astro-seo";
 import "../styles/global.css";
-import "../styles/slider.css";
 import Navbar from "../components/navbar.astro";
 import Footer from "../components/Footer.astro";
+import Wangambang from "../components/wangambang.astro";
 
 
 // Mengambil props titlemeta dan descriptionmeta dari halaman
 const {
-  titlemeta = "LAYANAN PROTEKSI KEBAKARAN - Beranda Tigrisfire",
-  descriptionmeta = "AMANKAN ASSET BERHARGAMU DI MASA DEPAN DENGAN KAMI AHLINYA.",
+  titlemeta = "Refill APAR Bekasi ",
+  descriptionmeta = "REFILL APARMU SEKARANG - Berkualitas, Bergaransi, & Berpengalaman.",
+  imagemeta = "/favicon.png", // Set default image jika tidak ada gambar
 } = Astro.props;
 
-const siteURL = new URL("https://tigrisfire.com/"); // Ganti dengan URL situs Anda
-const imageURL = "../../assets/favicon.png"; // Path gambar OpenGraph harus sesuai dengan path yang ada
-const twitterHandle = "@tigrisfire"; // Ganti dengan username Twitter Anda
-
+const siteURL = new URL("https://refillaparbekasi.dokterfire.com/"); // Ganti dengan URL situs Anda
+const imageURL = new URL(imagemeta, siteURL); // Properti gambar OpenGraph menggunakan URL yang valid
+const twitterHandle = "@Dokterfire"; // Ganti dengan username Twitter Anda
 ---
 
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <!-- SEO optimization menggunakan astro-seo -->
     <SEO
       title={titlemeta}
@@ -32,12 +32,12 @@ const twitterHandle = "@tigrisfire"; // Ganti dengan username Twitter Anda
         basic: {
           title: titlemeta,
           type: "website",
-          image: `${siteURL}${imageURL}`, // Properti image hanya string di basic
+          image: imageURL.href, // Gunakan URL gambar yang telah diproses
           url: siteURL.href,
         },
         image: {
-          url: new URL(imageURL, siteURL).href, // Properti URL di-build menggunakan objek URL
-          alt: "Tigrisfire OpenGraph Image", // Alt text gambar
+          url: imageURL.href, // URL gambar default atau custom
+          alt: "REFILL APAR JAKARTA OpenGraph Image", // Alt text gambar
           width: 1200, // Lebar gambar OG
           height: 630, // Tinggi gambar OG
         },
@@ -45,27 +45,151 @@ const twitterHandle = "@tigrisfire"; // Ganti dengan username Twitter Anda
       twitter={{
         card: "summary_large_image", // Menggunakan gambar besar untuk Twitter Card
         creator: twitterHandle,
-        image: `${siteURL}${imageURL}`, // Properti image sebagai URL string
+        image: imageURL.href, // URL gambar default atau custom
       }}
       extend={{
         // Menambahkan favicon
-        link: [{ rel: "icon", href: "favicon.png", type: "image/png" }],
+        link: [{ rel: "icon", href: "/favicon.png", type: "image/png" }],
         // Menambahkan meta tambahan
         meta: [
-          { name: "author", content: "Tigrisfire" },
+          { name: "author", content: "Dokterfire - Refill APAR Bekasi Terpercaya" },
           {
             name: "keywords",
             content:
-              "proteksi kebakaran, Tigrisfire, fire protection, amankan aset, alat pemadam, apar",
+              "refill apar bekasi, isi ulang apar bekasi, service apar bekasi, refil apar terdekat bekasi, jual apar bekasi, alat pemadam api bekasi, tabung pemadam bekasi, apar powder bekasi, apar co2 bekasi, apar foam bekasi, maintenance apar bekasi, harga refill apar bekasi, dokterfire bekasi, refill apar murah bekasi, apar bergaransi bekasi, refill apar berkualitas bekasi, isi ulang tabung pemadam bekasi, service alat pemadam bekasi, refill fire extinguisher bekasi",
           },
-          { name: "robots", content: "index, follow" }, // Memberikan izin mesin pencari untuk mengindeks halaman
+          { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
+          { name: "googlebot", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
+          { name: "bingbot", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
+          { name: "geo.region", content: "ID-JK" },
+          { name: "geo.placename", content: "Bekasi" },
+          { name: "geo.position", content: "-6.2088;106.8456" },
+          { name: "ICBM", content: "-6.2088, 106.8456" },
+          { name: "language", content: "id" },
+          { name: "revisit-after", content: "1 days" },
+          { property: "business:contact_data:locality", content: "Jakarta" },
+          { property: "business:contact_data:region", content: "DKI Jakarta" },
+          { property: "business:contact_data:country_name", content: "Indonesia" },
           { name: "twitter:site", content: twitterHandle },
           { name: "twitter:image", content: new URL(imageURL, siteURL).href }, // Menggunakan URL objek yang valid untuk Twitter
         ],
       }}
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@200;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+<!--Sitemap -->
+    <link rel="sitemap" href="/sitemap-index.xml" />
 
- 
+    <!-- Structured Data JSON-LD -->
+    <script type="application/ld+json">
+      [{
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Dokterfire - Refill APAR Bekasi",
+        "image": "https://refillaparbekasi.dokterfire.com/favicon.png",
+        "description": "Layanan Refill APAR Bekasi Terpercaya dengan Gratis Ongkir, Bergaransi 2 Tahun, dan COD. Melayani Powder, CO2, dan Foam.",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Jl Gading Kirana Timur A-12 RT 001 RW 08",
+          "addressLocality": "Kelapa Gading Barat",
+          "addressRegion": "Jakarta Utara",
+          "postalCode": "14240",
+          "addressCountry": "ID"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": -6.2088,
+          "longitude": 106.8456
+        },
+        "telephone": "+62811842909",
+        "url": "https://refillaparbekasi.dokterfire.com/",
+        "priceRange": "Rp45,000 - Rp9,000,000",
+        "areaServed": {
+          "@type": "City",
+          "name": "Bekasi"
+        },
+        "hasOfferCatalog": {
+          "@type": "OfferCatalog",
+          "name": "Layanan Refill APAR",
+          "itemListElement": [
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Refill APAR Powder",
+                "description": "Isi ulang APAR Dry Chemical Powder untuk kebakaran kelas ABC"
+              },
+              "price": "45000",
+              "priceCurrency": "IDR"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Refill APAR CO2",
+                "description": "Isi ulang APAR Carbon Dioxide untuk kebakaran kelas BC"
+              },
+              "price": "100000",
+              "priceCurrency": "IDR"
+            },
+            {
+              "@type": "Offer",
+              "itemOffered": {
+                "@type": "Service",
+                "name": "Refill APAR Foam",
+                "description": "Isi ulang APAR Foam AFFF untuk kebakaran kelas AB"
+              },
+              "price": "360000",
+              "priceCurrency": "IDR"
+            }
+          ]
+        },
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "150"
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+          "opens": "08:00",
+          "closes": "17:00"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Dokterfire - Refill APAR Bekasi",
+        "url": "https://refillaparbekasi.dokterfire.com/",
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": "https://refillaparbekasi.dokterfire.com/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      }]
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/partytown"
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-1FSWMWKMP9"></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-1FSWMWKMP9");
+    </script>
   </head>
 
   <body class="font-nunito">
@@ -77,36 +201,10 @@ const twitterHandle = "@tigrisfire"; // Ganti dengan username Twitter Anda
       <slot />
     </main>
 
-    <!-- Bagian CTA -->
-    <div class="relative bg-gray-100 mt-52">
-      <div
-        class="absolute w-full left-0 right-0 transform -translate-y-1/2 z-30 p-2">
-        <div
-          class="bg-white shadow-lg rounded-lg p-4 py-5 md:p-10 flex flex-col md:flex-row justify-between items-center mx-auto md:max-w-7xl space-y-4 md:space-y-0 hover:shadow-2xl transition-shadow duration-500 ease-in-out">
-          <div class="text-center md:text-left">
-            <h2
-              class="text-xl md:text-2xl font-bold text-gray-800 leading-snug hover:text-blue-600 transition-colors duration-500 ease-in-out">
-              Bisnis Aman, Hidup Tenang!
-            </h2>
-            <p class="text-gray-500 mt-2 text-sm md:text-base">
-              Kebakaran bisa terjadi kapan saja – jangan ambil risiko! <br />
-              Dengan Tigrisfire, perlindungan bisnis Anda ada di tangan para ahli.
-            </p>
-          </div>
-          <a
-            href="https://wa.me/6287787500580?text=Hallo%20Tigrisfire,%20Saya%20Mau%20Konsultasi"
-            class="relative text-white bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-500 hover:to-blue-600 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 md:px-5 md:py-2.5 shadow-md hover:shadow-xl transition-all duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-105 focus:outline-none dark:bg-blue-600 dark:hover:bg-blue-700 focus:ring-offset-2">
-            Konsultasi Sekarang
-          </a>
-        </div>
-      </div>
-    </div>
 
     <!-- Footer -->
     <Footer />
 
-    <!-- Memuat script tambahan secara defer -->
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
-
+    <Wangambang />
   </body>
 </html>

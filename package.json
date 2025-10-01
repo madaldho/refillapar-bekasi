@@ -1,5 +1,5 @@
 {
-  "name": "tigrisfire",
+  "name": "dokterfirebekasi",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,17 +10,19 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/partytown": "^2.1.2",
     "@astrojs/react": "^3.6.2",
-    "@astrojs/sitemap": "^3.1.6",
+    "@astrojs/sitemap": "^3.2.1",
     "@contentful/rich-text-html-renderer": "^16.6.10",
     "@contentful/rich-text-react-renderer": "^15.22.11",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
     "alpinejs": "^3.14.1",
-    "astro": "^4.15.4",
+    "astro": "^4.16.5",
     "astro-imagetools": "^0.9.0",
     "astro-navbar": "^2.3.3",
+    "astro-robots-txt": "^1.0.0",
     "astro-seo": "^0.8.4",
     "astro-social-share": "^2.0.2",
     "autoprefixer": "^10.4.20",
