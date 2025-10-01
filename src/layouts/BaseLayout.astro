@@ -8,12 +8,12 @@ import Wangambang from "../components/wangambang.astro";
 
 // Mengambil props titlemeta dan descriptionmeta dari halaman
 const {
-  titlemeta = "Refill APAR Bekasi ",
+  titlemeta = "Refill APAR Bogor ",
   descriptionmeta = "REFILL APARMU SEKARANG - Berkualitas, Bergaransi, & Berpengalaman.",
   imagemeta = "/favicon.png", // Set default image jika tidak ada gambar
 } = Astro.props;
 
-const siteURL = new URL("https://refillaparbekasi.dokterfire.com/"); // Ganti dengan URL situs Anda
+const siteURL = new URL("https://refillaparbogor.dokterfire.com/"); // Ganti dengan URL situs Anda
 const imageURL = new URL(imagemeta, siteURL); // Properti gambar OpenGraph menggunakan URL yang valid
 const twitterHandle = "@Dokterfire"; // Ganti dengan username Twitter Anda
 ---
@@ -37,7 +37,7 @@ const twitterHandle = "@Dokterfire"; // Ganti dengan username Twitter Anda
         },
         image: {
           url: imageURL.href, // URL gambar default atau custom
-          alt: "REFILL APAR BEKASI OpenGraph Image", // Alt text gambar
+          alt: "REFILL APAR Bogor OpenGraph Image", // Alt text gambar
           width: 1200, // Lebar gambar OG
           height: 630, // Tinggi gambar OG
         },
@@ -52,22 +52,22 @@ const twitterHandle = "@Dokterfire"; // Ganti dengan username Twitter Anda
         link: [{ rel: "icon", href: "/favicon.png", type: "image/png" }],
         // Menambahkan meta tambahan
         meta: [
-          { name: "author", content: "Dokterfire - Refill APAR Bekasi Terpercaya" },
+          { name: "author", content: "Dokterfire - Refill APAR Bogor Terpercaya" },
           {
             name: "keywords",
             content:
-              "refill apar bekasi, isi ulang apar bekasi, service apar bekasi, refil apar terdekat bekasi, jual apar bekasi, alat pemadam api bekasi, tabung pemadam bekasi, apar powder bekasi, apar co2 bekasi, apar foam bekasi, maintenance apar bekasi, harga refill apar bekasi, dokterfire bekasi, refill apar murah bekasi, apar bergaransi bekasi, refill apar berkualitas bekasi, isi ulang tabung pemadam bekasi, service alat pemadam bekasi, refill fire extinguisher bekasi",
+              "refill apar bogor, isi ulang apar bogor, service apar bogor, refil apar terdekat bogor, jual apar bogor, alat pemadam api bogor, tabung pemadam bogor, apar powder bogor, apar co2 bogor, apar foam bogor, maintenance apar bogor, harga refill apar bogor, dokterfire bogor, refill apar murah bogor, apar bergaransi bogor, refill apar berkualitas bogor, isi ulang tabung pemadam bogor, service alat pemadam bogor, refill fire extinguisher bogor",
           },
           { name: "robots", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
           { name: "googlebot", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
           { name: "bingbot", content: "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" },
           { name: "geo.region", content: "ID-JK" },
-          { name: "geo.placename", content: "Bekasi" },
+          { name: "geo.placename", content: "Bogor" },
           { name: "geo.position", content: "-6.2088;106.8456" },
           { name: "ICBM", content: "-6.2088, 106.8456" },
           { name: "language", content: "id" },
           { name: "revisit-after", content: "1 days" },
-          { property: "business:contact_data:locality", content: "Bekasi" },
+          { property: "business:contact_data:locality", content: "Bogor" },
           { property: "business:contact_data:region", content: "Jawa Barat" },
           { property: "business:contact_data:country_name", content: "Indonesia" },
           { name: "twitter:site", content: twitterHandle },
@@ -89,14 +89,14 @@ const twitterHandle = "@Dokterfire"; // Ganti dengan username Twitter Anda
       [{
         "@context": "https://schema.org",
         "@type": "LocalBusiness",
-        "name": "Dokterfire - Refill APAR Bekasi",
-        "image": "https://refillaparbekasi.dokterfire.com/favicon.png",
-        "description": "Layanan Refill APAR Bekasi Terpercaya dengan Gratis Ongkir, Bergaransi 2 Tahun, dan COD. Melayani Powder, CO2, dan Foam.",
+  "name": "Dokterfire - Refill APAR Bogor",
+  "image": "https://refillaparbogor.dokterfire.com/favicon.png",
+  "description": "Layanan Refill APAR Bogor Terpercaya dengan Gratis Ongkir, Bergaransi 2 Tahun, dan COD. Melayani Powder, CO2, dan Foam.",
         "address": {
           "@type": "PostalAddress",
           "streetAddress": "Jl Gading Kirana Timur A-12 RT 001 RW 08",
           "addressLocality": "Kelapa Gading Barat",
-          "addressRegion": "Bekasi",
+          "addressRegion": "Bogor",
           "postalCode": "14240",
           "addressCountry": "ID"
         },
@@ -106,11 +106,11 @@ const twitterHandle = "@Dokterfire"; // Ganti dengan username Twitter Anda
           "longitude": 106.8456
         },
         "telephone": "+62811842909",
-        "url": "https://refillaparbekasi.dokterfire.com/",
+  "url": "https://refillaparbogor.dokterfire.com/",
         "priceRange": "Rp45,000 - Rp9,000,000",
         "areaServed": {
           "@type": "City",
-          "name": "Bekasi"
+          "name": "Bogor"
         },
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
@@ -163,13 +163,13 @@ const twitterHandle = "@Dokterfire"; // Ganti dengan username Twitter Anda
       {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Dokterfire - Refill APAR Bekasi",
-        "url": "https://refillaparbekasi.dokterfire.com/",
+  "name": "Dokterfire - Refill APAR Bogor",
+  "url": "https://refillaparbogor.dokterfire.com/",
         "potentialAction": {
           "@type": "SearchAction",
           "target": {
             "@type": "EntryPoint",
-            "urlTemplate": "https://refillaparbekasi.dokterfire.com/?s={search_term_string}"
+            "urlTemplate": "https://refillaparbogor.dokterfire.com/?s={search_term_string}"
           },
           "query-input": "required name=search_term_string"
         }

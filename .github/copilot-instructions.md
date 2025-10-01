@@ -1,9 +1,9 @@
-# Copilot Instructions: Dokterfire APAR Refill Bekasi Website
+# Copilot Instructions: Dokterfire APAR Refill bogor Website
 
 Selalu jawab dengan bahsa indonesia dan prosesnya
 
 ## Project Overview
-This is an Astro-based business website for **Dokterfire**, specializing in APAR (Alat Pemadam Api Ringan) refill services in Bekasi. The site uses Indonesian language and focuses on fire extinguisher refilling services for three media types: Powder, Foam, and CO2.
+This is an Astro-based business website for **Dokterfire**, specializing in APAR (Alat Pemadam Api Ringan) refill services in Bogor. The site uses Indonesian language and focuses on fire extinguisher refilling services for three media types: Powder, Foam, and CO2.
 
 ## Architecture & Tech Stack
 - **Framework**: Astro 4.16.5 with TypeScript (strict mode disabled)
@@ -73,19 +73,19 @@ TailwindCSS extended with:
 - Pause animation utility (`.animation-pause`)
 
 ## Business Context
-- **Target Market**: Bekasi businesses needing fire extinguisher refills
+- **Target Market**: Bogor businesses needing fire extinguisher refills
 - **Services**: Powder (ABC), Foam (AB), CO2 (BC) fire extinguisher refills
 - **Key Features**: Free shipping, 2-year guarantee, COD payment, backup cylinder during service
 - **Pricing**: Starts from Rp45,000 (Powder) to Rp360,000 (Foam)
 
 ## SEO & Performance Strategy
-- Site URL: `https://refillaparbekasi.dokterfire.com/`
-- **Primary Keywords**: "refill apar bekasi", "isi ulang apar bekasi", "service apar bekasi"
-- **Secondary Keywords**: "refill apar murah", "apar bergaransi bekasi", "dokterfire bekasi"
-- **Target**: Rank #1 on Google and AI search engines for APAR refill services in Bekasi
+- Site URL: `https://refillaparbogor.dokterfire.com/`
+- **Primary Keywords**: "refill apar bogor", "isi ulang apar bogor", "service apar bogor"
+- **Secondary Keywords**: "refill apar murah", "apar bergaransi bogor", "dokterfire bogor"
+- **Target**: Rank #1 on Google and AI search engines for APAR refill services in Bogor
 
 ### SEO Implementation:
-- Comprehensive meta tags with geo-targeting for Bekasi
+- Comprehensive meta tags with geo-targeting for Bogor
 - Structured Data (JSON-LD) for Local Business optimization
 - Optimized Title Tags with primary keywords and emotional triggers
 - Meta descriptions with emojis, benefits, and phone number
@@ -96,10 +96,10 @@ TailwindCSS extended with:
 - Page speed optimization via Astro SSG and WebP images
 
 ### Content Strategy:
-- Use Indonesian language with local Bekasi terminology
+- Use Indonesian language with local Bogor terminology
 - Include pricing, guarantees, and unique selling points in meta descriptions
 - Emphasize "Gratis Ongkir", "COD", "Bergaransi 2 Tahun" in all content
 - Local business information (address, phone, service areas)
 - Client testimonials and trust signals
 
-When working on this project, maintain the Indonesian business language, consistent contact information, and the established design patterns for optimal user experience and SEO performance. Always prioritize local SEO signals and user intent for APAR refill services in Bekasi.
+When working on this project, maintain the Indonesian business language, consistent contact information, and the established design patterns for optimal user experience and SEO performance. Always prioritize local SEO signals and user intent for APAR refill services in Bogor.

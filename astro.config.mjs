@@ -16,7 +16,7 @@ export default defineConfig({
       },
     },
   },
-  site: "https://refillaparbekasi.dokterfire.com/", // Tambahkan URL situs di sini
+  site: "https://refillaparbogor.dokterfire.com/", // Tambahkan URL situs di sini
   integrations: [sitemap(), partytown({
     config: {
       forward: ["dataLayer.push"],
