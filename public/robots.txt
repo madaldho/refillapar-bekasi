@@ -24,5 +24,5 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
-Sitemap: https://refillaparjakarta.dokterfire.com/sitemap-index.xml
-Sitemap: https://refillaparjakarta.dokterfire.com/sitemap-0.xml
+Sitemap: https://refillaparbekasi.dokterfire.com/sitemap-index.xml
+Sitemap: https://refillaparbekasi.dokterfire.com/sitemap-0.xml
